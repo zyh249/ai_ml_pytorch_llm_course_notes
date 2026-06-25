@@ -1,0 +1,11 @@
+# 项目实战章节的可选依赖
+pandas
+jieba
+scikit-learn
+fasttext-wheel
+flask
+requests
+streamlit
+python-dotenv
+transformers
+torch

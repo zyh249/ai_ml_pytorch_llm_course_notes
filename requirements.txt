@@ -1,0 +1,12 @@
+numpy
+torch
+scikit-learn
+matplotlib
+jieba
+pandas
+flask
+requests
+transformers
+python-dotenv
+fasttext-wheel
+streamlit
