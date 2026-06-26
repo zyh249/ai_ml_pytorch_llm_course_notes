@@ -23,3 +23,9 @@
 - `requirements-project.txt`：项目实战可选依赖
 
 解压后直接打开 `index.html`。所有动态图例均使用本地 JavaScript，不依赖网络。
+
+## DrawIO 串讲图补充
+- `DRAWIO_EXTRACTED_NOTES.md`：从两个 draw.io 文件整理出的学习清单。
+- `assets/drawio/`：提取出的 16 张串讲图和原始 `.drawio` 文件。
+
+本次更新：DrawIO 串讲内容不再单独成章，已分别补充到投满分项目、TF-IDF、随机森林、FastText、部署、PyTorch、CNN、RNN、BERT 等对应章节。

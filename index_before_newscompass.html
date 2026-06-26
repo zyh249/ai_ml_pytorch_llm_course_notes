@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 
-<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>AI / 机器学习 / 深度学习 / NLP / Transformer / NewsCompass 项目课程笔记</title><style>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>AI / 机器学习 / 深度学习 / NLP / RNN / Transformer 课程笔记（增强版）</title><style>
 :root{--bg:#f5f7fb;--paper:#fff;--ink:#202633;--muted:#667188;--line:#e5eaf2;--line2:#d7deea;--side:#141a24;--brand:#d93b3b;--brand2:#3169ff;--green:#14865d;--soft-red:#fff2f2;--soft-blue:#eef4ff;--soft-green:#effaf4;--soft-yellow:#fff8e8;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;--shadow:0 18px 45px rgba(27,35,51,.09)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 var(--sans)}a{text-decoration:none;color:inherit}.progress{position:fixed;left:0;top:0;height:4px;width:0;background:linear-gradient(90deg,var(--brand),var(--brand2));z-index:50}.mobile-toggle{display:none;position:fixed;left:14px;top:14px;z-index:60;background:var(--side);color:#fff;border:0;border-radius:12px;padding:10px 12px}
 .sidebar{position:fixed;left:0;top:0;bottom:0;width:340px;background:var(--side);color:#eef3fc;padding:22px 18px;overflow:auto;z-index:20}.brand-wrap{display:flex;gap:14px;align-items:center;margin-bottom:16px}.logo{width:48px;height:48px;border-radius:16px;display:grid;place-items:center;font-weight:900;color:#fff;background:linear-gradient(135deg,var(--brand),#ff8f43)}.brand-wrap h1{font-size:18px;margin:0}.brand-wrap p{margin:4px 0 0;color:#aab6ca;font-size:12px}.sidebar input{width:100%;padding:12px 13px;border-radius:14px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.08);color:#fff;outline:none}.nav-actions{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 18px}.nav-actions button{border:0;background:rgba(255,255,255,.09);color:#eef3fc;padding:8px 12px;border-radius:999px;cursor:pointer;font-size:12px}.nav-group{border-top:1px solid rgba(255,255,255,.08);padding:10px 0}.nav-group summary{cursor:pointer;list-style:none;font-weight:800;display:flex;justify-content:space-between}.nav-group summary::-webkit-details-marker{display:none}.nav-group summary span{font-size:12px;color:#aeb8cb;border:1px solid rgba(255,255,255,.13);padding:1px 8px;border-radius:999px}.nav-group a{display:block;padding:10px 10px 10px 14px;margin:7px 0;border-radius:12px;color:#c6d0df;border-left:3px solid transparent}.nav-group a span{display:block;font-size:14px;font-weight:700;line-height:1.35}.nav-group a em{display:block;font-style:normal;color:#8f98aa;font-size:11px;margin-top:2px}.nav-group a.active,.nav-group a:hover{background:rgba(255,255,255,.08);border-left-color:var(--brand);color:#fff}
-.content{margin-left:340px;padding:38px 42px 80px}.hero{background:radial-gradient(circle at 15% 10%, rgba(217,59,59,.18), transparent 28%),radial-gradient(circle at 80% 5%, rgba(49,105,255,.18), transparent 30%),var(--paper);border:1px solid var(--line);border-radius:28px;padding:42px 44px;box-shadow:var(--shadow);margin-bottom:24px}.kicker,.section-kicker{color:var(--brand);font-weight:900;letter-spacing:.08em;text-transform:uppercase;font-size:12px}.hero h1{margin:12px 0 16px;font-size:clamp(34px,5vw,58px);line-height:1.08}.hero p{margin:0;max-width:920px;color:var(--muted);font-size:18px}.hero-meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.pill{background:#f1f4fa;border:1px solid #e5ebf5;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:700;color:#3c4659}.project-launch-banner{display:flex;align-items:center;justify-content:space-between;gap:24px;margin:0 0 26px;padding:24px 28px;border-radius:22px;background:linear-gradient(135deg,#151b27 0%,#263b6a 58%,#d93b3b 100%);color:#fff;box-shadow:0 18px 42px rgba(20,30,55,.22);border:1px solid rgba(255,255,255,.14)}.project-launch-copy{min-width:0}.project-launch-eyebrow{font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#ffd7d7}.project-launch-banner h2{margin:4px 0 5px;font-size:clamp(22px,3vw,32px);line-height:1.2}.project-launch-banner p{margin:0;color:#dce5f8}.project-launch-url{display:block;margin-top:7px;color:#ffd7d7;font:600 12px/1.45 var(--mono);word-break:break-all}.project-launch-btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;flex:0 0 auto;padding:14px 20px;border-radius:14px;background:#fff;color:#172038;font-weight:900;box-shadow:0 10px 26px rgba(0,0,0,.2);transition:transform .18s ease,box-shadow .18s ease}.project-launch-btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,.28)}.stats{display:grid;grid-template-columns:repeat(5,minmax(120px,1fr));gap:16px;margin-bottom:26px}.stat{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 10px 28px rgba(27,35,51,.05)}.stat b{display:block;color:var(--brand);font-size:30px;line-height:1}.stat span{font-size:13px;color:var(--muted)}
+.content{margin-left:340px;padding:38px 42px 80px}.hero{background:radial-gradient(circle at 15% 10%, rgba(217,59,59,.18), transparent 28%),radial-gradient(circle at 80% 5%, rgba(49,105,255,.18), transparent 30%),var(--paper);border:1px solid var(--line);border-radius:28px;padding:42px 44px;box-shadow:var(--shadow);margin-bottom:24px}.kicker,.section-kicker{color:var(--brand);font-weight:900;letter-spacing:.08em;text-transform:uppercase;font-size:12px}.hero h1{margin:12px 0 16px;font-size:clamp(34px,5vw,58px);line-height:1.08}.hero p{margin:0;max-width:920px;color:var(--muted);font-size:18px}.hero-meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.pill{background:#f1f4fa;border:1px solid #e5ebf5;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:700;color:#3c4659}.stats{display:grid;grid-template-columns:repeat(5,minmax(120px,1fr));gap:16px;margin-bottom:26px}.stat{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 10px 28px rgba(27,35,51,.05)}.stat b{display:block;color:var(--brand);font-size:30px;line-height:1}.stat span{font-size:13px;color:var(--muted)}
 .note-section{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:34px;margin:20px 0;box-shadow:0 10px 32px rgba(27,35,51,.06);scroll-margin-top:18px}.note-section h2{margin:8px 0 8px;font-size:clamp(26px,3.3vw,42px);line-height:1.16}.lead{font-size:18px;color:var(--muted);margin:0 0 20px}p{margin:12px 0}code{font-family:var(--mono);background:#f2f5fa;border:1px solid #e7edf6;border-radius:6px;padding:1px 5px;font-size:.92em}.module-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.badges{display:flex;gap:8px;flex-wrap:wrap}.badge{background:#f2f5fb;border:1px solid var(--line);color:#445068;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:800}.two-col{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(280px,.9fr);gap:24px;align-items:start}.grid{display:grid;gap:16px;margin:18px 0}.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
 .card,.callout,.warn,.formula,.lab,.tip{border-radius:18px;padding:18px 20px;margin:16px 0}.card{background:#fbfcff;border:1px solid var(--line)}.card h4{margin:0 0 8px;font-size:18px}.card p{margin:0;color:#4d5870}.callout{background:var(--soft-blue);border:1px solid #cfe0ff}.warn{background:var(--soft-yellow);border:1px solid #f0d584}.tip{background:var(--soft-green);border:1px solid #c8e9d8}.formula{background:#151b27;color:#f4f7fb;font-family:var(--mono);overflow:auto}table{width:100%;border-collapse:collapse;margin:18px 0;font-size:15px}th,td{border:1px solid var(--line);padding:12px 14px;text-align:left;vertical-align:top}thead th{background:#f2f5fb;font-weight:850;color:#313a4d}.steps{display:grid;gap:10px}.step{display:flex;gap:10px;align-items:flex-start;background:#fff;border:1px solid var(--line);padding:12px;border-radius:14px}.step .num{width:28px;height:28px;display:grid;place-items:center;background:var(--brand);color:#fff;border-radius:50%;font-weight:900;flex:0 0 28px}.workflow,.token-flow,.rag-flow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:18px 0}.workflow div,.token-flow div,.rag-flow div{background:#fff;border:1px solid var(--line2);border-radius:14px;padding:13px 15px;font-weight:850}.workflow span,.token-flow span,.rag-flow span{font-size:22px;color:var(--brand);font-weight:900}
 .code-wrap{position:relative;margin:18px 0}pre{margin:0;padding:22px;border-radius:18px;background:#0f1420;color:#e7eefb;overflow:auto;border:1px solid #202a3d}pre code{background:transparent;border:0;color:inherit;padding:0;font-size:13.5px;line-height:1.6}.copy{position:absolute;right:12px;top:12px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.08);color:#fff;border-radius:999px;padding:6px 10px;cursor:pointer}.copy.ok{background:var(--green);border-color:var(--green)}
 .lab{background:linear-gradient(180deg,#fcfdff,#f8fbff);border:1px solid var(--line)}.lab-header{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px}.lab-title{font-weight:900}.lab-sub{font-size:13px;color:var(--muted)}.controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:10px 0 14px}.controls label{font-weight:700;color:#445068}.controls input[type=range]{width:180px}.controls button,.controls select{border:1px solid var(--line2);background:#fff;border-radius:10px;padding:8px 10px;cursor:pointer}.canvas-wrap{background:#fff;border:1px dashed var(--line2);border-radius:16px;padding:10px}.canvas-wrap canvas{width:100%;display:block;border-radius:12px;background:#fff}.result-panel{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:12px}.mini{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px}.mini b{display:block;color:var(--brand);font-size:22px}.mini span{font-size:12px;color:var(--muted)}
 .nested-ai{min-height:330px;display:grid;place-items:center}.ai-box,.ml-box,.nn-box,.dl-box{border-radius:26px;display:grid;place-items:center;font-weight:900;text-align:center}.ai-box{width:300px;height:300px;background:#fff2f2;color:var(--brand);border:3px solid #f2b7b7}.ml-box{width:235px;height:235px;background:#eef4ff;color:var(--brand2);border:3px solid #bcd0ff}.nn-box{width:170px;height:170px;background:#eefaf5;color:var(--green);border:3px solid #bde5d0}.dl-box{width:112px;height:112px;background:#161d29;color:#fff}.transformer-block{max-width:540px;margin:16px auto;display:grid;gap:10px;text-align:center}.transformer-block div{border:1px solid var(--line2);padding:14px;border-radius:14px;font-weight:900}.transformer-block .emb{background:var(--soft-yellow)}.transformer-block .att{background:var(--soft-blue)}.transformer-block .norm{background:#f4f1ff}.transformer-block .ffn{background:var(--soft-green)}
 .metric-board{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.confusion-box{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.confusion-box div{padding:14px;border-radius:14px;text-align:center;font-weight:900;border:1px solid var(--line)}.tp{background:var(--soft-green)}.tn{background:#f2fbf7}.fp{background:var(--soft-red)}.fn{background:#fff2d9}.bar-list{display:grid;gap:8px}.bar-row{display:grid;grid-template-columns:90px 1fr 50px;gap:10px;align-items:center}.bar{height:12px;background:#e9eef8;border-radius:999px;overflow:hidden}.bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--brand2),var(--brand))}.attn-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-top:12px}.attn-grid .cell{padding:10px;border-radius:12px;background:#fff;border:1px solid var(--line);text-align:center;font-size:13px}.attn-grid .head{font-weight:900;background:#f2f5fb}.hidden{display:none!important}.footer{color:var(--muted);text-align:center;padding:28px 0 0;font-size:13px}
-@media (max-width:1100px){.stats,.grid.two,.grid.three,.two-col,.result-panel,.metric-board{grid-template-columns:1fr}}@media (max-width:900px){.project-launch-banner{align-items:flex-start;flex-direction:column;padding:22px}.project-launch-btn{width:100%}.mobile-toggle{display:block}.sidebar{transform:translateX(-100%);transition:transform .25s ease;width:min(92vw,340px)}body.nav-open .sidebar{transform:translateX(0)}.content{margin-left:0;padding:70px 16px 50px}.hero,.note-section{padding:24px;border-radius:22px}.stats{grid-template-columns:repeat(2,1fr)}}@media print{.sidebar,.mobile-toggle,.progress,.copy,.controls button{display:none!important}.content{margin:0;padding:0}body{background:#fff}.hero,.note-section{box-shadow:none;border:1px solid #ddd;break-inside:avoid}pre{white-space:pre-wrap}}
+@media (max-width:1100px){.stats,.grid.two,.grid.three,.two-col,.result-panel,.metric-board{grid-template-columns:1fr}}@media (max-width:900px){.mobile-toggle{display:block}.sidebar{transform:translateX(-100%);transition:transform .25s ease;width:min(92vw,340px)}body.nav-open .sidebar{transform:translateX(0)}.content{margin-left:0;padding:70px 16px 50px}.hero,.note-section{padding:24px;border-radius:22px}.stats{grid-template-columns:repeat(2,1fr)}}@media print{.sidebar,.mobile-toggle,.progress,.copy,.controls button{display:none!important}.content{margin:0;padding:0}body{background:#fff}.hero,.note-section{box-shadow:none;border:1px solid #ddd;break-inside:avoid}pre{white-space:pre-wrap}}
 
 .source-note{margin:18px 0 0;padding:10px 14px;border-left:4px solid var(--brand2);background:#f5f8ff;color:#59667d;border-radius:0 12px 12px 0;font-size:13px}
 .architecture-map,.training-roadmap{display:flex;align-items:stretch;gap:10px;flex-wrap:wrap;margin:18px 0}.architecture-map>span,.training-roadmap>span{align-self:center;color:var(--brand);font-size:22px;font-weight:900}.arch-stage{display:grid;place-items:center;min-height:62px;padding:12px 16px;background:#fff;border:1px solid var(--line2);border-radius:14px;font-weight:850}.arch-stage.accent{background:var(--soft-blue);border-color:#bfd3ff}.training-roadmap>div{flex:1 1 180px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px}.training-roadmap p{font-size:13px;color:var(--muted);margin:6px 0 0}
@@ -24,18 +24,18 @@
 .conv-layout{display:grid;grid-template-columns:1.2fr .8fr 1fr;gap:20px;align-items:start}.number-grid{display:grid;gap:4px}.number-grid.grid-5{grid-template-columns:repeat(5,48px)}.number-grid.grid-3{grid-template-columns:repeat(3,54px)}.number-cell{height:44px;display:grid;place-items:center;border-radius:8px;background:#f0f3f8;border:1px solid var(--line);font-family:var(--mono)}.number-cell.selected{background:#ffe5a8;border-color:#e4a623;font-weight:900}.number-cell.output-active{background:var(--soft-blue);border-color:#9ab8ff}
 @media(max-width:1200px){.pipeline{grid-template-columns:repeat(4,1fr)}.timeline-deep{grid-template-columns:repeat(2,1fr)}.conv-layout{grid-template-columns:1fr}.number-grid.grid-5{grid-template-columns:repeat(5,minmax(38px,48px))}}
 @media(max-width:700px){.pipeline{grid-template-columns:repeat(2,1fr)}.timeline-deep{grid-template-columns:1fr}.matrix-cell{min-width:36px;padding:6px 4px}.number-grid.grid-5{grid-template-columns:repeat(5,40px)}.number-grid.grid-3{grid-template-columns:repeat(3,46px)}}
-</style><link href="assets/extended.css" rel="stylesheet"/><link href="assets/neural.css" rel="stylesheet"/><link href="assets/nlp.css" rel="stylesheet"/><link href="assets/project.css" rel="stylesheet"/></head>
+</style><link href="assets/extended.css" rel="stylesheet"/><link href="assets/neural.css" rel="stylesheet"/><link href="assets/nlp.css" rel="stylesheet"/></head>
 <body>
 <div class="progress" id="progress"></div><button class="mobile-toggle" id="mobileToggle" type="button">☰ 目录</button>
 <aside class="sidebar" id="sidebar">
-<div class="brand-wrap"><div class="logo">AI</div><div><h1>AI 课程笔记 · 增强版</h1><p>ML · DL · NLP · Transformer · NewsCompass 项目实战</p></div></div>
+<div class="brand-wrap"><div class="logo">AI</div><div><h1>AI 课程笔记 · 增强版</h1><p>ML · DL · NLP · RNN · Transformer · 可交互图例</p></div></div>
 <input aria-label="搜索目录" id="search" placeholder="搜索章节 / 关键词…"/>
 <div class="nav-actions"><button id="expandAll" type="button">展开全部</button><button id="collapseAll" type="button">折叠全部</button><button id="printBtn" type="button">打印 PDF</button></div>
-<nav id="toc"><details class="nav-group" open=""><summary>机器学习基础 <span>9</span></summary><a data-module="机器学习基础" data-title="AI、ML、NN、DL：概念地图" href="#ml-map"><span>AI、ML、NN、DL：概念地图</span><em>知识边界与学习路线</em></a><a data-module="机器学习基础" data-title="样本、特征、标签与任务类型" href="#ml-data"><span>样本、特征、标签与任务类型</span><em>从 X 和 y 判断任务</em></a><a data-module="机器学习基础" data-title="KNN 动态演示" href="#ml-knn"><span>KNN 动态演示</span><em>距离、近邻与投票</em></a><a data-module="机器学习基础" data-title="梯度下降与线性回归" href="#ml-gd"><span>梯度下降与线性回归</span><em>损失如何逐步下降</em></a><a data-module="机器学习基础" data-title="数据拆分与拟合问题" href="#ml-eval"><span>数据拆分与拟合问题</span><em>泛化、欠拟合和过拟合</em></a><a data-module="机器学习基础" data-title="混淆矩阵与分类指标" href="#ml-metrics"><span>混淆矩阵与分类指标</span><em>阈值联动 precision/recall</em></a><a data-module="机器学习基础" data-title="完整建模流程" href="#ml-workflow"><span>完整建模流程</span><em>数据到部署</em></a><a data-module="机器学习基础" data-title="逻辑回归" href="#ml-logreg"><span>逻辑回归</span><em>Sigmoid 与交叉熵</em></a><a data-module="机器学习基础" data-title="机器学习模块总结" href="#ml-summary"><span>机器学习模块总结</span><em>知识地图</em></a></details><details class="nav-group" open=""><summary>决策树与集成学习 <span>8</span></summary><a data-module="决策树与集成学习" data-title="决策树概述与动态划分" href="#ml-tree"><span>决策树概述与动态划分</span><em>节点、分支、叶子</em></a><a data-module="决策树与集成学习" data-title="ID3：熵与信息增益" href="#ml-tree-id3"><span>ID3：熵与信息增益</span><em>分类纯度</em></a><a data-module="决策树与集成学习" data-title="CART：基尼与回归树" href="#ml-tree-cart"><span>CART：基尼与回归树</span><em>二叉划分</em></a><a data-module="决策树与集成学习" data-title="决策树剪枝" href="#ml-tree-pruning"><span>决策树剪枝</span><em>控制过拟合</em></a><a data-module="决策树与集成学习" data-title="Bagging vs. Boosting" href="#ml-ensemble"><span>Bagging vs. Boosting</span><em>并行与串行集成</em></a><a data-module="决策树与集成学习" data-title="随机森林" href="#ml-rf"><span>随机森林</span><em>Bootstrap 与特征随机</em></a><a data-module="决策树与集成学习" data-title="GBDT" href="#ml-gbdt"><span>GBDT</span><em>拟合负梯度</em></a><a data-module="决策树与集成学习" data-title="XGBoost" href="#ml-xgb"><span>XGBoost</span><em>二阶近似与正则化</em></a></details><details class="nav-group" open=""><summary>聚类算法 <span>4</span></summary><a data-module="聚类算法" data-title="聚类概述" href="#ml-cluster"><span>聚类概述</span><em>无监督发现结构</em></a><a data-module="聚类算法" data-title="KMeans 动态迭代" href="#ml-kmeans"><span>KMeans 动态迭代</span><em>分配与更新中心</em></a><a data-module="聚类算法" data-title="SSE、肘部法与轮廓系数" href="#ml-cluster-eval"><span>SSE、肘部法与轮廓系数</span><em>无标签评估</em></a><a data-module="聚类算法" data-title="顾客分群案例" href="#ml-cluster-case"><span>顾客分群案例</span><em>业务解释</em></a></details><details class="nav-group" open=""><summary>深度学习与神经网络 <span>11</span></summary><a data-module="深度学习与神经网络" data-title="深度学习简介" href="#dl-intro"><span>深度学习简介</span><em>定义、特点、应用与发展</em></a><a data-module="深度学习与神经网络" data-title="神经元与参数量" href="#nn-neuron"><span>神经元与参数量</span><em>加权求和、矩阵形状</em></a><a data-module="深度学习与神经网络" data-title="激活函数动态曲线" href="#nn-activation"><span>激活函数动态曲线</span><em>Sigmoid、Tanh、ReLU</em></a><a data-module="深度学习与神经网络" data-title="参数初始化" href="#nn-init"><span>参数初始化</span><em>Xavier、Kaiming</em></a><a data-module="深度学习与神经网络" data-title="PyTorch 模型搭建" href="#nn-model"><span>PyTorch 模型搭建</span><em>nn.Module 与 forward</em></a><a data-module="深度学习与神经网络" data-title="损失函数" href="#nn-loss"><span>损失函数</span><em>MSE、BCE、CrossEntropy</em></a><a data-module="深度学习与神经网络" data-title="前向与反向传播" href="#nn-backprop"><span>前向与反向传播</span><em>链式法则</em></a><a data-module="深度学习与神经网络" data-title="优化器比较" href="#nn-optimizers"><span>优化器比较</span><em>SGD、Momentum、Adam</em></a><a data-module="深度学习与神经网络" data-title="学习率衰减" href="#nn-lr"><span>学习率衰减</span><em>Step、MultiStep、Exponential</em></a><a data-module="深度学习与神经网络" data-title="正则化、Dropout 与 BN" href="#nn-regularization"><span>正则化、Dropout 与 BN</span><em>泛化与训练稳定</em></a><a data-module="深度学习与神经网络" data-title="DNN 手机价格分类" href="#nn-case"><span>DNN 手机价格分类</span><em>完整训练案例</em></a></details><details class="nav-group" open=""><summary>PyTorch 与 CNN <span>9</span></summary><a data-module="PyTorch 与 CNN" data-title="PyTorch 与 Tensor" href="#torch-intro"><span>PyTorch 与 Tensor</span><em>核心数据结构</em></a><a data-module="PyTorch 与 CNN" data-title="张量创建与形状操作" href="#torch-ops"><span>张量创建与形状操作</span><em>高频 API</em></a><a data-module="PyTorch 与 CNN" data-title="自动微分与训练流程" href="#torch-autograd"><span>自动微分与训练流程</span><em>forward/backward/update</em></a><a data-module="PyTorch 与 CNN" data-title="PyTorch 总结" href="#torch-summary"><span>PyTorch 总结</span><em>知识串联</em></a><a data-module="PyTorch 与 CNN" data-title="图像基础与 CNN 概述" href="#torch-cnn"><span>图像基础与 CNN 概述</span><em>像素、通道、结构</em></a><a data-module="PyTorch 与 CNN" data-title="卷积动态计算" href="#cnn-conv"><span>卷积动态计算</span><em>局部点积与特征图</em></a><a data-module="PyTorch 与 CNN" data-title="Padding、Stride 与多通道" href="#cnn-shape"><span>Padding、Stride 与多通道</span><em>形状和参数量</em></a><a data-module="PyTorch 与 CNN" data-title="池化动态演示" href="#cnn-pool"><span>池化动态演示</span><em>MaxPool / AvgPool</em></a><a data-module="PyTorch 与 CNN" data-title="CIFAR-10 分类案例" href="#cnn-case"><span>CIFAR-10 分类案例</span><em>数据、训练、评估</em></a></details><details class="nav-group" open=""><summary>文本预处理与循环网络 <span>17</span></summary><a data-module="文本预处理与循环网络" data-title="NLP 与文本预处理总览" href="#nlp-overview"><span>NLP 与文本预处理总览</span><em>从自然语言到模型输入的完整流水线。</em></a><a data-module="文本预处理与循环网络" data-title="中文分词与 jieba 三种模式" href="#nlp-tokenization"><span>中文分词与 jieba 三种模式</span><em>精确、全模式、搜索模式及自定义词典。</em></a><a data-module="文本预处理与循环网络" data-title="词性标注与命名实体识别" href="#nlp-pos-ner"><span>词性标注与命名实体识别</span><em>词元级分类、POS、NER 与 BIO 标注。</em></a><a data-module="文本预处理与循环网络" data-title="文本语料分析" href="#nlp-corpus"><span>文本语料分析</span><em>标签分布、句长、词频和词表规模。</em></a><a data-module="文本预处理与循环网络" data-title="n-gram 特征" href="#nlp-ngram"><span>n-gram 特征</span><em>把相邻共现词组加入特征空间。</em></a><a data-module="文本预处理与循环网络" data-title="文本长度规范" href="#nlp-length"><span>文本长度规范</span><em>截断、PAD、Attention Mask 与批处理。</em></a><a data-module="文本预处理与循环网络" data-title="词袋与 TF-IDF 编码" href="#nlp-sparse"><span>词袋与 TF-IDF 编码</span><em>独热、词频、TF-IDF 与稀疏矩阵。</em></a><a data-module="文本预处理与循环网络" data-title="词嵌入与预训练向量" href="#nlp-embedding"><span>词嵌入与预训练向量</span><em>稠密向量、Word2Vec/GloVe 与加载。</em></a><a data-module="文本预处理与循环网络" data-title="回译数据增强" href="#nlp-augmentation"><span>回译数据增强</span><em>源语言到中间语言再翻回的增强流程。</em></a><a data-module="文本预处理与循环网络" data-title="RNN 与序列数据" href="#rnn-overview"><span>RNN 与序列数据</span><em>循环结构、应用场景和序列任务类型。</em></a><a data-module="文本预处理与循环网络" data-title="PyTorch 词嵌入层" href="#rnn-embedding"><span>PyTorch 词嵌入层</span><em>nn.Embedding 参数、形状与查表过程。</em></a><a data-module="文本预处理与循环网络" data-title="Vanilla RNN 原理" href="#rnn-vanilla"><span>Vanilla RNN 原理</span><em>隐藏状态、参数共享、BPTT 与梯度问题。</em></a><a data-module="文本预处理与循环网络" data-title="LSTM 门控机制" href="#rnn-lstm"><span>LSTM 门控机制</span><em>遗忘门、输入门、输出门与细胞状态。</em></a><a data-module="文本预处理与循环网络" data-title="GRU 门控机制" href="#rnn-gru"><span>GRU 门控机制</span><em>重置门、更新门与简化记忆结构。</em></a><a data-module="文本预处理与循环网络" data-title="堆叠与双向循环网络" href="#rnn-stacked-bi"><span>堆叠与双向循环网络</span><em>层级特征、双向上下文和适用边界。</em></a><a data-module="文本预处理与循环网络" data-title="PyTorch RNN API 与形状" href="#rnn-pytorch"><span>PyTorch RNN API 与形状</span><em>RNN/LSTM/GRU 输入输出和参数量。</em></a><a data-module="文本预处理与循环网络" data-title="文本生成案例" href="#rnn-generation"><span>文本生成案例</span><em>Embedding → RNN → Linear → 采样生成。</em></a></details><details class="nav-group" open=""><summary>Transformer 与大语言模型 <span>15</span></summary><a data-module="Transformer 与大语言模型" data-title="文本到模型输入" href="#llm-token"><span>文本到模型输入</span><em>Token、Embedding、Mask</em></a><a data-module="Transformer 与大语言模型" data-title="自注意力直觉与热力图" href="#llm-attention"><span>自注意力直觉与热力图</span><em>上下文更新词义</em></a><a data-module="Transformer 与大语言模型" data-title="注意力矩阵逐步推导" href="#llm-attention-math"><span>注意力矩阵逐步推导</span><em>形状与数值</em></a><a data-module="Transformer 与大语言模型" data-title="多头注意力" href="#llm-multihead"><span>多头注意力</span><em>多个语义子空间</em></a><a data-module="Transformer 与大语言模型" data-title="Encoder Block" href="#llm-encoder"><span>Encoder Block</span><em>残差、Norm、FFN</em></a><a data-module="Transformer 与大语言模型" data-title="Decoder 与因果 Mask" href="#llm-decoder"><span>Decoder 与因果 Mask</span><em>自回归与 Cross-Attention</em></a><a data-module="Transformer 与大语言模型" data-title="位置编码动态演示" href="#llm-position"><span>位置编码动态演示</span><em>Sin/Cos 与相对位置</em></a><a data-module="Transformer 与大语言模型" data-title="三类 Transformer 架构" href="#llm-families"><span>三类 Transformer 架构</span><em>Encoder / Seq2Seq / Decoder</em></a><a data-module="Transformer 与大语言模型" data-title="BERT 详解" href="#llm-bert"><span>BERT 详解</span><em>MLM、NSP、分类与 NER</em></a><a data-module="Transformer 与大语言模型" data-title="GPT 详解" href="#llm-gpt"><span>GPT 详解</span><em>Next Token 与采样</em></a><a data-module="Transformer 与大语言模型" data-title="大模型训练流程" href="#llm-training"><span>大模型训练流程</span><em>预训练、SFT、RLHF</em></a><a data-module="Transformer 与大语言模型" data-title="大模型评价指标" href="#llm-eval"><span>大模型评价指标</span><em>PPL、BLEU、ROUGE</em></a><a data-module="Transformer 与大语言模型" data-title="发展主线与结构改进" href="#llm-history"><span>发展主线与结构改进</span><em>Scaling、MoE、GQA、MLA</em></a><a data-module="Transformer 与大语言模型" data-title="Prompt、RAG、Agent、LoRA" href="#llm-related"><span>Prompt、RAG、Agent、LoRA</span><em>应用系统</em></a><a data-module="Transformer 与大语言模型" data-title="Transformer 复习清单" href="#llm-summary"><span>Transformer 复习清单</span><em>知识闭环</em></a></details><details class="nav-group" open=""><summary>NewsCompass 投满分项目 <span>17</span></summary><a data-module="NewsCompass 投满分项目" data-title="仓库审计与学习地图" href="#project-audit"><span>仓库审计与学习地图</span><em>先确认资料边界和可复现性</em></a><a data-module="NewsCompass 投满分项目" data-title="业务背景与任务定义" href="#project-business"><span>业务背景与任务定义</span><em>新闻频道分类不是完整推荐系统</em></a><a data-module="NewsCompass 投满分项目" data-title="端到端项目架构" href="#project-architecture"><span>端到端项目架构</span><em>数据、模型、部署、压缩闭环</em></a><a data-module="NewsCompass 投满分项目" data-title="数据集与标签体系" href="#project-data"><span>数据集与标签体系</span><em>18 万训练样本和 10 类标签</em></a><a data-module="NewsCompass 投满分项目" data-title="数据质检与预处理" href="#project-eda"><span>数据质检与预处理</span><em>EDA、分词、TF-IDF、Tokenizer</em></a><a data-module="NewsCompass 投满分项目" data-title="随机森林基线" href="#project-rf"><span>随机森林基线</span><em>低成本验证全流程</em></a><a data-module="NewsCompass 投满分项目" data-title="FastText 方案" href="#project-fasttext"><span>FastText 方案</span><em>字符级、词级和自动调参</em></a><a data-module="NewsCompass 投满分项目" data-title="BERT 分类方案" href="#project-bert"><span>BERT 分类方案</span><em>Dataset、DataLoader、训练与推理</em></a><a data-module="NewsCompass 投满分项目" data-title="LLM 提示分类" href="#project-llm"><span>LLM 提示分类</span><em>结构化输出、成本和适用边界</em></a><a data-module="NewsCompass 投满分项目" data-title="模型对比与选型" href="#project-benchmark"><span>模型对比与选型</span><em>效果、延迟、成本综合判断</em></a><a data-module="NewsCompass 投满分项目" data-title="API 与生产化部署" href="#project-deploy"><span>API 与生产化部署</span><em>接口契约、监控和安全</em></a><a data-module="NewsCompass 投满分项目" data-title="模型压缩总览" href="#project-compression"><span>模型压缩总览</span><em>量化、蒸馏、剪枝、低秩</em></a><a data-module="NewsCompass 投满分项目" data-title="动态量化" href="#project-quant"><span>动态量化</span><em>INT8、CPU 推理和测量方法</em></a><a data-module="NewsCompass 投满分项目" data-title="知识蒸馏" href="#project-distill"><span>知识蒸馏</span><em>教师 BERT 到学生 BiLSTM</em></a><a data-module="NewsCompass 投满分项目" data-title="模型剪枝" href="#project-prune"><span>模型剪枝</span><em>稀疏度与真实加速的区别</em></a><a data-module="NewsCompass 投满分项目" data-title="源码级审查与改进建议" href="#project-review"><span>源码级审查与改进建议</span><em>发现不一致与工程风险</em></a><a data-module="NewsCompass 投满分项目" data-title="复现路线与练习" href="#project-roadmap"><span>复现路线与练习</span><em>从文档站还原可运行项目</em></a></details><details class="nav-group" open=""><summary>学习与运行 <span>1</span></summary><a data-module="学习与运行" data-title="学习路线与示例运行" href="#study"><span>学习路线与示例运行</span><em>离线课程使用说明</em></a></details></nav>
+<nav id="toc"><details class="nav-group" open=""><summary>机器学习基础 <span>9</span></summary><a data-module="机器学习基础" data-title="AI、ML、NN、DL：概念地图" href="#ml-map"><span>AI、ML、NN、DL：概念地图</span><em>知识边界与学习路线</em></a><a data-module="机器学习基础" data-title="样本、特征、标签与任务类型" href="#ml-data"><span>样本、特征、标签与任务类型</span><em>从 X 和 y 判断任务</em></a><a data-module="机器学习基础" data-title="KNN 动态演示" href="#ml-knn"><span>KNN 动态演示</span><em>距离、近邻与投票</em></a><a data-module="机器学习基础" data-title="梯度下降与线性回归" href="#ml-gd"><span>梯度下降与线性回归</span><em>损失如何逐步下降</em></a><a data-module="机器学习基础" data-title="数据拆分与拟合问题" href="#ml-eval"><span>数据拆分与拟合问题</span><em>泛化、欠拟合和过拟合</em></a><a data-module="机器学习基础" data-title="混淆矩阵与分类指标" href="#ml-metrics"><span>混淆矩阵与分类指标</span><em>阈值联动 precision/recall</em></a><a data-module="机器学习基础" data-title="完整建模流程" href="#ml-workflow"><span>完整建模流程</span><em>数据到部署</em></a><a data-module="机器学习基础" data-title="逻辑回归" href="#ml-logreg"><span>逻辑回归</span><em>Sigmoid 与交叉熵</em></a><a data-module="机器学习基础" data-title="机器学习模块总结" href="#ml-summary"><span>机器学习模块总结</span><em>知识地图</em></a></details><details class="nav-group" open=""><summary>决策树与集成学习 <span>8</span></summary><a data-module="决策树与集成学习" data-title="决策树概述与动态划分" href="#ml-tree"><span>决策树概述与动态划分</span><em>节点、分支、叶子</em></a><a data-module="决策树与集成学习" data-title="ID3：熵与信息增益" href="#ml-tree-id3"><span>ID3：熵与信息增益</span><em>分类纯度</em></a><a data-module="决策树与集成学习" data-title="CART：基尼与回归树" href="#ml-tree-cart"><span>CART：基尼与回归树</span><em>二叉划分</em></a><a data-module="决策树与集成学习" data-title="决策树剪枝" href="#ml-tree-pruning"><span>决策树剪枝</span><em>控制过拟合</em></a><a data-module="决策树与集成学习" data-title="Bagging vs. Boosting" href="#ml-ensemble"><span>Bagging vs. Boosting</span><em>并行与串行集成</em></a><a data-module="决策树与集成学习" data-title="随机森林" href="#ml-rf"><span>随机森林</span><em>Bootstrap 与特征随机</em></a><a data-module="决策树与集成学习" data-title="GBDT" href="#ml-gbdt"><span>GBDT</span><em>拟合负梯度</em></a><a data-module="决策树与集成学习" data-title="XGBoost" href="#ml-xgb"><span>XGBoost</span><em>二阶近似与正则化</em></a></details><details class="nav-group" open=""><summary>聚类算法 <span>4</span></summary><a data-module="聚类算法" data-title="聚类概述" href="#ml-cluster"><span>聚类概述</span><em>无监督发现结构</em></a><a data-module="聚类算法" data-title="KMeans 动态迭代" href="#ml-kmeans"><span>KMeans 动态迭代</span><em>分配与更新中心</em></a><a data-module="聚类算法" data-title="SSE、肘部法与轮廓系数" href="#ml-cluster-eval"><span>SSE、肘部法与轮廓系数</span><em>无标签评估</em></a><a data-module="聚类算法" data-title="顾客分群案例" href="#ml-cluster-case"><span>顾客分群案例</span><em>业务解释</em></a></details><details class="nav-group" open=""><summary>深度学习与神经网络 <span>11</span></summary><a data-module="深度学习与神经网络" data-title="深度学习简介" href="#dl-intro"><span>深度学习简介</span><em>定义、特点、应用与发展</em></a><a data-module="深度学习与神经网络" data-title="神经元与参数量" href="#nn-neuron"><span>神经元与参数量</span><em>加权求和、矩阵形状</em></a><a data-module="深度学习与神经网络" data-title="激活函数动态曲线" href="#nn-activation"><span>激活函数动态曲线</span><em>Sigmoid、Tanh、ReLU</em></a><a data-module="深度学习与神经网络" data-title="参数初始化" href="#nn-init"><span>参数初始化</span><em>Xavier、Kaiming</em></a><a data-module="深度学习与神经网络" data-title="PyTorch 模型搭建" href="#nn-model"><span>PyTorch 模型搭建</span><em>nn.Module 与 forward</em></a><a data-module="深度学习与神经网络" data-title="损失函数" href="#nn-loss"><span>损失函数</span><em>MSE、BCE、CrossEntropy</em></a><a data-module="深度学习与神经网络" data-title="前向与反向传播" href="#nn-backprop"><span>前向与反向传播</span><em>链式法则</em></a><a data-module="深度学习与神经网络" data-title="优化器比较" href="#nn-optimizers"><span>优化器比较</span><em>SGD、Momentum、Adam</em></a><a data-module="深度学习与神经网络" data-title="学习率衰减" href="#nn-lr"><span>学习率衰减</span><em>Step、MultiStep、Exponential</em></a><a data-module="深度学习与神经网络" data-title="正则化、Dropout 与 BN" href="#nn-regularization"><span>正则化、Dropout 与 BN</span><em>泛化与训练稳定</em></a><a data-module="深度学习与神经网络" data-title="DNN 手机价格分类" href="#nn-case"><span>DNN 手机价格分类</span><em>完整训练案例</em></a></details><details class="nav-group" open=""><summary>PyTorch 与 CNN <span>9</span></summary><a data-module="PyTorch 与 CNN" data-title="PyTorch 与 Tensor" href="#torch-intro"><span>PyTorch 与 Tensor</span><em>核心数据结构</em></a><a data-module="PyTorch 与 CNN" data-title="张量创建与形状操作" href="#torch-ops"><span>张量创建与形状操作</span><em>高频 API</em></a><a data-module="PyTorch 与 CNN" data-title="自动微分与训练流程" href="#torch-autograd"><span>自动微分与训练流程</span><em>forward/backward/update</em></a><a data-module="PyTorch 与 CNN" data-title="PyTorch 总结" href="#torch-summary"><span>PyTorch 总结</span><em>知识串联</em></a><a data-module="PyTorch 与 CNN" data-title="图像基础与 CNN 概述" href="#torch-cnn"><span>图像基础与 CNN 概述</span><em>像素、通道、结构</em></a><a data-module="PyTorch 与 CNN" data-title="卷积动态计算" href="#cnn-conv"><span>卷积动态计算</span><em>局部点积与特征图</em></a><a data-module="PyTorch 与 CNN" data-title="Padding、Stride 与多通道" href="#cnn-shape"><span>Padding、Stride 与多通道</span><em>形状和参数量</em></a><a data-module="PyTorch 与 CNN" data-title="池化动态演示" href="#cnn-pool"><span>池化动态演示</span><em>MaxPool / AvgPool</em></a><a data-module="PyTorch 与 CNN" data-title="CIFAR-10 分类案例" href="#cnn-case"><span>CIFAR-10 分类案例</span><em>数据、训练、评估</em></a></details><details class="nav-group" open=""><summary>文本预处理与循环网络 <span>17</span></summary><a data-module="文本预处理与循环网络" data-title="NLP 与文本预处理总览" href="#nlp-overview"><span>NLP 与文本预处理总览</span><em>从自然语言到模型输入的完整流水线。</em></a><a data-module="文本预处理与循环网络" data-title="中文分词与 jieba 三种模式" href="#nlp-tokenization"><span>中文分词与 jieba 三种模式</span><em>精确、全模式、搜索模式及自定义词典。</em></a><a data-module="文本预处理与循环网络" data-title="词性标注与命名实体识别" href="#nlp-pos-ner"><span>词性标注与命名实体识别</span><em>词元级分类、POS、NER 与 BIO 标注。</em></a><a data-module="文本预处理与循环网络" data-title="文本语料分析" href="#nlp-corpus"><span>文本语料分析</span><em>标签分布、句长、词频和词表规模。</em></a><a data-module="文本预处理与循环网络" data-title="n-gram 特征" href="#nlp-ngram"><span>n-gram 特征</span><em>把相邻共现词组加入特征空间。</em></a><a data-module="文本预处理与循环网络" data-title="文本长度规范" href="#nlp-length"><span>文本长度规范</span><em>截断、PAD、Attention Mask 与批处理。</em></a><a data-module="文本预处理与循环网络" data-title="词袋与 TF-IDF 编码" href="#nlp-sparse"><span>词袋与 TF-IDF 编码</span><em>独热、词频、TF-IDF 与稀疏矩阵。</em></a><a data-module="文本预处理与循环网络" data-title="词嵌入与预训练向量" href="#nlp-embedding"><span>词嵌入与预训练向量</span><em>稠密向量、Word2Vec/GloVe 与加载。</em></a><a data-module="文本预处理与循环网络" data-title="回译数据增强" href="#nlp-augmentation"><span>回译数据增强</span><em>源语言到中间语言再翻回的增强流程。</em></a><a data-module="文本预处理与循环网络" data-title="RNN 与序列数据" href="#rnn-overview"><span>RNN 与序列数据</span><em>循环结构、应用场景和序列任务类型。</em></a><a data-module="文本预处理与循环网络" data-title="PyTorch 词嵌入层" href="#rnn-embedding"><span>PyTorch 词嵌入层</span><em>nn.Embedding 参数、形状与查表过程。</em></a><a data-module="文本预处理与循环网络" data-title="Vanilla RNN 原理" href="#rnn-vanilla"><span>Vanilla RNN 原理</span><em>隐藏状态、参数共享、BPTT 与梯度问题。</em></a><a data-module="文本预处理与循环网络" data-title="LSTM 门控机制" href="#rnn-lstm"><span>LSTM 门控机制</span><em>遗忘门、输入门、输出门与细胞状态。</em></a><a data-module="文本预处理与循环网络" data-title="GRU 门控机制" href="#rnn-gru"><span>GRU 门控机制</span><em>重置门、更新门与简化记忆结构。</em></a><a data-module="文本预处理与循环网络" data-title="堆叠与双向循环网络" href="#rnn-stacked-bi"><span>堆叠与双向循环网络</span><em>层级特征、双向上下文和适用边界。</em></a><a data-module="文本预处理与循环网络" data-title="PyTorch RNN API 与形状" href="#rnn-pytorch"><span>PyTorch RNN API 与形状</span><em>RNN/LSTM/GRU 输入输出和参数量。</em></a><a data-module="文本预处理与循环网络" data-title="文本生成案例" href="#rnn-generation"><span>文本生成案例</span><em>Embedding → RNN → Linear → 采样生成。</em></a></details><details class="nav-group" open=""><summary>Transformer 与大语言模型 <span>15</span></summary><a data-module="Transformer 与大语言模型" data-title="文本到模型输入" href="#llm-token"><span>文本到模型输入</span><em>Token、Embedding、Mask</em></a><a data-module="Transformer 与大语言模型" data-title="自注意力直觉与热力图" href="#llm-attention"><span>自注意力直觉与热力图</span><em>上下文更新词义</em></a><a data-module="Transformer 与大语言模型" data-title="注意力矩阵逐步推导" href="#llm-attention-math"><span>注意力矩阵逐步推导</span><em>形状与数值</em></a><a data-module="Transformer 与大语言模型" data-title="多头注意力" href="#llm-multihead"><span>多头注意力</span><em>多个语义子空间</em></a><a data-module="Transformer 与大语言模型" data-title="Encoder Block" href="#llm-encoder"><span>Encoder Block</span><em>残差、Norm、FFN</em></a><a data-module="Transformer 与大语言模型" data-title="Decoder 与因果 Mask" href="#llm-decoder"><span>Decoder 与因果 Mask</span><em>自回归与 Cross-Attention</em></a><a data-module="Transformer 与大语言模型" data-title="位置编码动态演示" href="#llm-position"><span>位置编码动态演示</span><em>Sin/Cos 与相对位置</em></a><a data-module="Transformer 与大语言模型" data-title="三类 Transformer 架构" href="#llm-families"><span>三类 Transformer 架构</span><em>Encoder / Seq2Seq / Decoder</em></a><a data-module="Transformer 与大语言模型" data-title="BERT 详解" href="#llm-bert"><span>BERT 详解</span><em>MLM、NSP、分类与 NER</em></a><a data-module="Transformer 与大语言模型" data-title="GPT 详解" href="#llm-gpt"><span>GPT 详解</span><em>Next Token 与采样</em></a><a data-module="Transformer 与大语言模型" data-title="大模型训练流程" href="#llm-training"><span>大模型训练流程</span><em>预训练、SFT、RLHF</em></a><a data-module="Transformer 与大语言模型" data-title="大模型评价指标" href="#llm-eval"><span>大模型评价指标</span><em>PPL、BLEU、ROUGE</em></a><a data-module="Transformer 与大语言模型" data-title="发展主线与结构改进" href="#llm-history"><span>发展主线与结构改进</span><em>Scaling、MoE、GQA、MLA</em></a><a data-module="Transformer 与大语言模型" data-title="Prompt、RAG、Agent、LoRA" href="#llm-related"><span>Prompt、RAG、Agent、LoRA</span><em>应用系统</em></a><a data-module="Transformer 与大语言模型" data-title="Transformer 复习清单" href="#llm-summary"><span>Transformer 复习清单</span><em>知识闭环</em></a></details><details class="nav-group" open=""><summary>学习与运行 <span>1</span></summary><a data-module="学习与运行" data-title="学习路线与示例运行" href="#study"><span>学习路线与示例运行</span><em>离线课程使用说明</em></a></details></nav>
 </aside>
 <main class="content">
-<section class="hero"><div class="kicker">Course Notes · Redesigned Enhanced Edition</div><h1>AI、机器学习、深度学习、NLP 与工业级文本分类项目实战</h1><p>依据课程 PDF 与 NewsCompass“投满分”项目仓库持续扩展：新增完整的工业级新闻文本分类项目模块，覆盖数据审计、TF-IDF、FastText、BERT、LLM、API 部署、量化、蒸馏、剪枝、代码审查与复现路线。</p><div class="hero-meta"><span class="pill">三级目录</span><span class="pill">目录搜索</span><span class="pill">代码复制</span><span class="pill">阅读进度</span><span class="pill">移动端目录</span><span class="pill">打印 PDF</span><span class="pill">交互式算法图例</span><span class="pill">NewsCompass 项目实战</span><span class="pill">DrawIO 内容已融入对应章节</span></div></section>
-<div class="stats"><div class="stat"><b>17</b><span>份原始资料</span></div><div class="stat"><b>92</b><span>重点章节</span></div><div class="stat"><b>36</b><span>动态算法演示</span></div><div class="stat"><b>65</b><span>可运行示例</span></div><div class="stat"><b>100%</b><span>离线可查看</span></div></div>
+<section class="hero"><div class="kicker">Course Notes · Redesigned Enhanced Edition</div><h1>AI、机器学习、PyTorch 与大语言模型核心架构</h1><p>依据 14 份课程 PDF 持续扩展：新增“文本预处理与循环神经网络”完整模块，覆盖分词、POS/NER、语料分析、n-gram、长度规范、TF-IDF、Embedding、回译、RNN、LSTM、GRU、双向网络与文本生成。</p><div class="hero-meta"><span class="pill">三级目录</span><span class="pill">目录搜索</span><span class="pill">代码复制</span><span class="pill">阅读进度</span><span class="pill">移动端目录</span><span class="pill">打印 PDF</span><span class="pill">交互式算法图例</span></div></section>
+<div class="stats"><div class="stat"><b>14</b><span>份原始资料</span></div><div class="stat"><b>74</b><span>重点章节</span></div><div class="stat"><b>32</b><span>动态算法演示</span></div><div class="stat"><b>54</b><span>可运行示例</span></div><div class="stat"><b>100%</b><span>离线可查看</span></div></div>
 <section class="note-section" id="ml-map"><div class="module-head"><div><div class="section-kicker">01 · 机器学习概述</div><h2>AI、ML、NN、DL：概念地图</h2><p class="lead">先知道每个概念在大图里的位置，后面学算法时才不会混淆。</p></div><div class="badges"><span class="badge">概念图</span><span class="badge">知识地图</span></div></div><div class="two-col"><div><p><strong>人工智能（AI）</strong>是最大的集合，目标是让机器完成原本需要人类智能的任务。这里的“智能”可以通过很多方式实现，不一定都依赖训练数据，比如早期专家系统主要依赖人工编写规则。</p><p><strong>机器学习（ML）</strong>是 AI 的一条重要路径。它的核心不是“手写全部规则”，而是“从数据中学习规则”。换句话说，人不再显式告诉机器每条判断规则，而是给机器样本和答案，让模型自己找到规律。</p><p><strong>神经网络（NN）</strong>是一类模型结构，灵感来自生物神经元连接方式。它擅长拟合复杂的非线性关系，所以在图像、语音、文本等复杂任务中很常见。<strong>深度学习（DL）</strong>通常指多层神经网络。层数更深，表示能力更强，模型能逐层提取更抽象的特征。</p><div class="callout"><strong>教学建议：</strong>如果给学生讲这四个概念，最容易讲清楚的方法是从“规则从哪来”切入：传统编程是人写规则，机器学习是数据学规则，深度学习是用深层神经网络学复杂规则。</div></div><div class="nested-ai"><div class="ai-box">AI 人工智能<div class="ml-box">ML 机器学习<div class="nn-box">NN 神经网络<div class="dl-box">DL 深度学习</div></div></div></div></div></div><table><thead><tr><th>概念</th><th>核心问题</th><th>典型例子</th></tr></thead><tbody><tr><td>AI</td><td>如何让机器表现出智能？</td><td>搜索规划、专家系统、智能体</td></tr><tr><td>ML</td><td>如何让机器从数据中学习规律？</td><td>线性回归、KNN、随机森林</td></tr><tr><td>NN</td><td>如何用参数化网络拟合复杂函数？</td><td>MLP、CNN、RNN</td></tr><tr><td>DL</td><td>如何通过多层网络自动学习高级特征？</td><td>图像识别、语音识别、大语言模型</td></tr></tbody></table></section>
 <section class="note-section" id="ml-data"><div class="module-head"><div><div class="section-kicker">02 · 机器学习概述</div><h2>样本、特征、标签与任务类型</h2><p class="lead">所有算法的入口，都是先明确输入是什么、输出是什么。</p></div><div class="badges"><span class="badge">表格图例</span><span class="badge">任务分类</span></div></div><p>一份结构化数据中，<strong>每一行</strong>通常代表一个样本，<strong>每一列</strong>代表一个属性。能用于预测的属性叫<strong>特征（feature）</strong>，最终要预测的结果叫<strong>标签（label / target）</strong>。当标签是连续数值时，任务通常叫<strong>回归</strong>；当标签是离散类别时，任务通常叫<strong>分类</strong>。</p><table><thead><tr><th>样本编号</th><th>培训学科</th><th>作业考试</th><th>学历</th><th>经验</th><th>工作地点</th><th>就业薪资</th></tr></thead><tbody><tr><td>1</td><td>Java</td><td>90</td><td>本科</td><td>1</td><td>北京</td><td>14k</td></tr><tr><td>2</td><td>Java</td><td>80</td><td>本科</td><td>1</td><td>武汉</td><td>10k</td></tr><tr><td>3</td><td>AI</td><td>90</td><td>本科</td><td>0</td><td>北京</td><td>15k</td></tr><tr><td>n</td><td>AI</td><td>91</td><td>本科</td><td>1</td><td>?</td><td>?</td></tr></tbody></table><div class="grid two"><div class="card"><h4>回归问题</h4><p>预测的是一个连续值，例如房价、温度、销量、薪资等。输出不是类别，而是一个实数。常见评估指标有 MAE、MSE、RMSE、R²。</p></div><div class="card"><h4>分类问题</h4><p>预测的是类别或类别概率，例如垃圾邮件/非垃圾邮件、是否违约、电影类型、情感正负面等。常见指标有 accuracy、precision、recall、F1。</p></div></div><div class="warn"><strong>容易混淆：</strong>“标签编码”和“标签 label”不是一个概念。前者是处理类别特征的方法，后者是监督学习中要预测的目标列。</div></section>
 <section class="note-section" id="ml-knn"><div class="module-head"><div><div class="section-kicker">03 · 机器学习概述</div><h2>KNN 算法详解与动态演示</h2><p class="lead">最适合入门讲解的算法之一：直观、可视化、能快速理解“学习”到底在做什么。</p></div><div class="badges"><span class="badge">算法详解</span><span class="badge">动态交互</span><span class="badge">代码示例</span></div></div><div class="two-col"><div><p>KNN（K Nearest Neighbors，K 近邻）是一个<strong>基于实例</strong>的学习算法。它训练阶段几乎不做复杂运算，而是“把数据记下来”；预测阶段才真正工作：把新样本和训练集中每个样本都算一遍距离，找出最近的 K 个邻居，然后根据这些邻居的标签进行投票。</p><div class="steps"><div class="step"><div class="num">1</div><div><strong>计算距离</strong>：对新样本与所有训练样本计算欧式距离、曼哈顿距离等。</div></div><div class="step"><div class="num">2</div><div><strong>距离排序</strong>：将距离从小到大排序，距离越小表示越相似。</div></div><div class="step"><div class="num">3</div><div><strong>选择 K 个邻居</strong>：取最近的前 K 个样本。</div></div><div class="step"><div class="num">4</div><div><strong>投票或平均</strong>：分类任务取最多类别，回归任务取平均值。</div></div></div><div class="formula">欧式距离：d(x, y) = √Σ(xᵢ − yᵢ)²　　曼哈顿距离：d(x, y) = Σ|xᵢ − yᵢ|</div><div class="callout"><strong>为什么要归一化？</strong>如果一个特征范围是 0~100000，另一个特征范围是 0~5，那么前者会主导距离计算，导致后者几乎不起作用。因此 KNN 非常依赖特征缩放。</div></div><div><div class="card"><h4>K 值影响</h4><p><strong>K 太小</strong>：容易受噪声影响，模型不稳定。<br/><strong>K 太大</strong>：可能把本不相同的类别混在一起，边界变模糊。<br/>通常用验证集或交叉验证选 K。</p></div><div class="card"><h4>优缺点</h4><p><strong>优点：</strong>简单直观、无需显式训练、适合小数据集。<br/><strong>缺点：</strong>预测慢、对高维数据不友好、对特征缩放敏感。</p></div></div></div><div class="lab"><div class="lab-header"><div><div class="lab-title">动态例图：点击画布移动查询点，拖动 K 值观察分类结果</div><div class="lab-sub">红点/蓝点是训练样本，黑色星形是查询点，金色描边表示被选中的近邻。</div></div></div><div class="controls"><label>K 值：<input id="knnK" max="5" min="1" step="1" type="range" value="3"/></label><span id="knnKVal">3</span><button id="knnReset" type="button">重置查询点</button></div><div class="canvas-wrap"><canvas height="360" id="knnCanvas" width="720"></canvas></div><div class="result-panel"><div class="mini"><b id="knnPred">蓝色类</b><span>预测类别</span></div><div class="mini"><b id="knnNearest">A / B / E</b><span>最近邻样本</span></div><div class="mini"><b id="knnVote">2 : 1</b><span>投票结果</span></div><div class="mini"><b id="knnQuery">(2.8, 2.4)</b><span>当前查询点</span></div></div></div><div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>"""KNN 从零实现：距离 -&gt; 排序 -&gt; 选 K 个近邻 -&gt; 投票。"""
@@ -216,11 +216,7 @@ model.fit(X_train, y_train)</code></pre></div>
 <table><thead><tr><th>比较项</th><th>Bagging</th><th>Boosting</th></tr></thead><tbody><tr><td>数据</td><td>对样本进行有放回抽样</td><td>通常使用全部样本，并根据前一轮结果调整关注重点</td></tr><tr><td>训练顺序</td><td>各学习器相互独立，可并行</td><td>前后依赖，串行训练</td></tr><tr><td>组合方式</td><td>平权投票或平均</td><td>加权求和或逐轮累加</td></tr><tr><td>主要作用</td><td>降低方差、提升稳定性</td><td>逐步降低偏差、修正错误</td></tr><tr><td>代表算法</td><td>随机森林</td><td>GBDT、XGBoost</td></tr></tbody></table>
 <div class="lab"><div class="lab-header"><div><div class="lab-title">动态流程：切换 Bagging 与 Boosting</div><div class="lab-sub">观察并行独立训练和平权投票，与串行纠错、逐轮累加的区别。</div></div></div><div class="process-switch"><button class="active" id="ensembleBag" type="button">Bagging</button><button id="ensembleBoost" type="button">Boosting</button></div><div class="ensemble-flow" id="ensembleDiagram"></div><div class="demo-output" id="ensembleDescription"></div></div>
 <div class="source-note">课件强调：Bagging 使用有放回抽样、可并行、平权投票；Boosting 使用串行训练并重点修正前一轮不足。</div>
-
-<figure class="card" data-drawio-integrated="true" style="padding:12px;margin:16px 0">
-<img alt="随机森林、Bagging/Boosting 与项目指标总览" loading="lazy" src="assets/drawio/project-04.jpg" style="width:100%;border-radius:14px;border:1px solid var(--line);display:block;background:#fff"/>
-<figcaption style="font-size:13px;color:var(--muted);margin-top:8px;line-height:1.6"><strong>DrawIO 串讲补充：</strong>随机森林、Bagging/Boosting 与项目指标总览。这张图把集成学习思想和投满分项目的模型路线连接起来，适合用来解释为什么要先做传统模型 baseline。</figcaption>
-</figure></section><section class="note-section" id="ml-rf">
+</section><section class="note-section" id="ml-rf">
 <div class="module-head"><div><div class="section-kicker">集成学习 · 02</div><h2>随机森林：样本随机 + 特征随机 + 多树投票</h2><p class="lead">把高方差的决策树变成稳定的集成模型。</p></div><div class="badges"><span class="badge">随机森林</span><span class="badge">Bootstrap</span><span class="badge">OOB</span></div></div>
 <div class="steps"><div class="step"><div class="num">1</div><div><strong>Bootstrap 抽样：</strong>从 M 个样本中有放回抽取 m 个样本，构成一棵树的训练集。</div></div><div class="step"><div class="num">2</div><div><strong>随机特征子集：</strong>每个节点只从部分特征中寻找最佳划分，降低树之间的相关性。</div></div><div class="step"><div class="num">3</div><div><strong>训练多棵树：</strong>各棵树彼此独立，可以并行。</div></div><div class="step"><div class="num">4</div><div><strong>组合：</strong>分类多数投票，回归取平均。</div></div></div>
 <div class="grid three"><div class="card"><h4>为什么要有放回？</h4><p>不同训练集既有重叠又有差异，既不会让每棵树完全相同，也不会让各树数据完全割裂。</p></div><div class="card"><h4>为什么随机选特征？</h4><p>如果所有树总用同一个强特征作为根节点，树之间会高度相关，平均后的收益变小。</p></div><div class="card"><h4>OOB 评估</h4><p>每棵树没有抽到的样本称为袋外样本，可用于近似验证集评估，无需额外切分一份数据。</p></div></div>
@@ -391,19 +387,7 @@ print(df.groupby("cluster")[features].mean())</code></pre></div>
 <div class="tip"><strong>解释簇时要回到原始尺度。</strong>标准化后的中心适合计算，但业务命名应查看反标准化后的金额、频次和时间指标。</div>
 </section>
 <section class="note-section" id="ml-summary"><div class="module-head"><div><div class="section-kicker">12 · 机器学习概述</div><h2>机器学习与经典算法模块总结</h2><p class="lead">从基础概念延伸到决策树、集成学习和聚类，形成完整的传统机器学习知识地图。</p></div><div class="badges"><span class="badge">复习地图</span></div></div><div class="steps"><div class="step"><div class="num">1</div><div>先分清 AI / ML / DL 的概念边界。</div></div><div class="step"><div class="num">2</div><div>明确样本、特征、标签，判断任务是回归还是分类。</div></div><div class="step"><div class="num">3</div><div>理解 KNN、梯度下降等典型算法的基本思想。</div></div><div class="step"><div class="num">4</div><div>学会用训练集/验证集/测试集和指标来评价模型。</div></div><div class="step"><div class="num">5</div><div>建立完整建模流程意识，而不是把机器学习等同于“调一个模型”。</div></div></div></section>
-<section class="note-section" id="dl-intro"><div class="module-head"><div><div class="section-kicker">深度学习 · 01</div><h2>深度学习简介：从人工特征到自动表征学习</h2><p class="lead">深度学习是机器学习的子集，以多层神经网络为核心，从原始数据中逐层学习更抽象的表示。</p></div><div class="badges"><span class="badge">定义</span><span class="badge">应用</span><span class="badge">发展主线</span></div></div><div class="two-col"><div><p>传统机器学习通常先由人设计特征，再交给分类器或回归器；深度学习把<strong>特征提取和任务预测放在同一个可训练网络中</strong>。图像浅层可学习边缘与颜色，中层组合纹理，深层识别物体；文本模型则从 token 表示逐步学习词义、句法和上下文关系。</p><p>课件强调四个特点：<strong>多层非线性变换、自动特征提取、可解释性较弱、依赖大数据和计算资源</strong>。因此它特别适合图像、语音和文本等高维非结构化数据。</p><div class="callout"><strong>核心区别：</strong>传统机器学习常见流程是“人工特征 → 模型”；深度学习更接近“原始数据 → 多层网络自动学习特征与输出”。</div></div><div class="dl-map"><div><b>输入</b><small>像素、音频、token、表格特征</small></div><div><b>低层特征</b><small>边缘、局部模式、基础词法</small></div><div><b>高层表征</b><small>物体、语义、长距离关系</small></div><div><b>任务输出</b><small>分类、检测、生成、预测</small></div></div></div><div class="model-zoo"><div><h4>CNN</h4><p>局部连接与参数共享，适合图像。</p></div><div><h4>RNN / LSTM</h4><p>通过隐藏状态处理序列。</p></div><div><h4>AutoEncoder / GAN</h4><p>表示学习、重构与生成。</p></div><div><h4>Transformer / GNN / RL</h4><p>注意力、图结构和交互决策。</p></div></div><table><thead><tr><th>领域</th><th>典型任务</th><th>常见模型</th></tr></thead><tbody><tr><td>NLP</td><td>文本分类、NER、翻译、对话、生成</td><td>RNN、Transformer</td></tr><tr><td>CV</td><td>图像分类、目标检测、图像分割</td><td>CNN、ViT</td></tr><tr><td>语音</td><td>识别、合成、音频事件检测</td><td>CNN、RNN、Transformer</td></tr><tr><td>推荐/医疗/制造</td><td>排序、诊断、异常检测、质量预测</td><td>DNN、GNN、多模态模型</td></tr></tbody></table><div class="source-note">依据《深度学习简介》：定义、自动特征提取、常见模型、应用领域，以及 AlexNet、Transformer、BERT/GPT 等发展节点。</div>
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>深度学习：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>用多层神经网络对原始数据做逐级非线性变换，低层学习简单模式，高层学习抽象语义。</td></tr>
-<tr><th>主要作用</th><td>替代大量人工特征工程，尤其适合图像、语音、文本等高维非结构化数据。</td></tr>
-<tr><th>解决问题</th><td>解决传统机器学习面对图片和文字时特征难设计、表达能力不足的问题。</td></tr>
-<tr><th>缺点/注意</th><td>需要大量数据和算力，可解释性弱，调参成本高，容易过拟合。</td></tr>
-</tbody>
-</table>
-</div>
-</section><section class="note-section" id="nn-neuron"><div class="module-head"><div><div class="section-kicker">神经网络 · 02</div><h2>人工神经元、网络层与参数量</h2><p class="lead">一个神经元的核心是“加权求和 + 偏置 + 激活函数”；多层网络就是反复堆叠这一过程。</p></div><div class="badges"><span class="badge">加权求和</span><span class="badge">矩阵形状</span><span class="badge">动态参数量</span></div></div><div class="nn-flow"><div class="node">输入 x₁…xₙ</div><div class="arrow">→</div><div class="node sum">z=x·w+b</div><div class="arrow">→</div><div class="node act">a=φ(z)</div><div class="arrow">→</div><div class="node">下一层</div></div><div class="nn-equation"><div><b>内部状态值</b><code>z=xWᵀ+b</code><br/>线性加权求和。</div><div><b>激活值</b><code>a=φ(z)</code><br/>当前层输出。</div><div><b>线性层参数</b><code>(输入维度+1)×输出维度</code><br/>“+1”来自偏置。</div><div><b>层数</b>通常按带参数的隐藏层和输出层计算，输入层不算可训练层。</div></div><p>若输入批次为 <code>[batch,in_features]</code>，权重为 <code>[out_features,in_features]</code>，输出就是 <code>[batch,out_features]</code>。PyTorch 的 <code>nn.Linear</code> 内部完成 <code>XWᵀ+b</code>。</p><div class="lab"><div class="lab-header"><div><div class="lab-title">动态参数量：调整网络宽度</div><div class="lab-sub">参数量取决于相邻层的连接数，而不仅是神经元总数。</div></div></div><div class="controls"><label>输入 <input id="nnInputDim" max="32" min="2" type="range" value="20"/></label><span id="nnInputDimVal">20</span><label>隐藏1 <input id="nnHidden1" max="128" min="4" step="4" type="range" value="32"/></label><span id="nnHidden1Val">32</span><label>隐藏2 <input id="nnHidden2" max="128" min="4" step="4" type="range" value="64"/></label><span id="nnHidden2Val">64</span><label>输出 <input id="nnOutputDim" max="10" min="1" type="range" value="4"/></label><span id="nnOutputDimVal">4</span></div><div class="canvas-wrap"><canvas height="320" id="nnParamCanvas" width="720"></canvas></div><div class="result-panel"><div class="mini"><b id="nnParamTotal">0</b><span>总参数量</span></div><div class="mini"><b id="nnParamMemory">0 KB</b><span>float32 参数内存</span></div><div class="mini" style="grid-column:span 2"><b id="nnParamBreakdown" style="font-size:15px">—</b><span>分层公式</span></div></div></div><div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>"""全连接神经网络参数量计算。"""
+<section class="note-section" id="dl-intro"><div class="module-head"><div><div class="section-kicker">深度学习 · 01</div><h2>深度学习简介：从人工特征到自动表征学习</h2><p class="lead">深度学习是机器学习的子集，以多层神经网络为核心，从原始数据中逐层学习更抽象的表示。</p></div><div class="badges"><span class="badge">定义</span><span class="badge">应用</span><span class="badge">发展主线</span></div></div><div class="two-col"><div><p>传统机器学习通常先由人设计特征，再交给分类器或回归器；深度学习把<strong>特征提取和任务预测放在同一个可训练网络中</strong>。图像浅层可学习边缘与颜色，中层组合纹理，深层识别物体；文本模型则从 token 表示逐步学习词义、句法和上下文关系。</p><p>课件强调四个特点：<strong>多层非线性变换、自动特征提取、可解释性较弱、依赖大数据和计算资源</strong>。因此它特别适合图像、语音和文本等高维非结构化数据。</p><div class="callout"><strong>核心区别：</strong>传统机器学习常见流程是“人工特征 → 模型”；深度学习更接近“原始数据 → 多层网络自动学习特征与输出”。</div></div><div class="dl-map"><div><b>输入</b><small>像素、音频、token、表格特征</small></div><div><b>低层特征</b><small>边缘、局部模式、基础词法</small></div><div><b>高层表征</b><small>物体、语义、长距离关系</small></div><div><b>任务输出</b><small>分类、检测、生成、预测</small></div></div></div><div class="model-zoo"><div><h4>CNN</h4><p>局部连接与参数共享，适合图像。</p></div><div><h4>RNN / LSTM</h4><p>通过隐藏状态处理序列。</p></div><div><h4>AutoEncoder / GAN</h4><p>表示学习、重构与生成。</p></div><div><h4>Transformer / GNN / RL</h4><p>注意力、图结构和交互决策。</p></div></div><table><thead><tr><th>领域</th><th>典型任务</th><th>常见模型</th></tr></thead><tbody><tr><td>NLP</td><td>文本分类、NER、翻译、对话、生成</td><td>RNN、Transformer</td></tr><tr><td>CV</td><td>图像分类、目标检测、图像分割</td><td>CNN、ViT</td></tr><tr><td>语音</td><td>识别、合成、音频事件检测</td><td>CNN、RNN、Transformer</td></tr><tr><td>推荐/医疗/制造</td><td>排序、诊断、异常检测、质量预测</td><td>DNN、GNN、多模态模型</td></tr></tbody></table><div class="source-note">依据《深度学习简介》：定义、自动特征提取、常见模型、应用领域，以及 AlexNet、Transformer、BERT/GPT 等发展节点。</div></section><section class="note-section" id="nn-neuron"><div class="module-head"><div><div class="section-kicker">神经网络 · 02</div><h2>人工神经元、网络层与参数量</h2><p class="lead">一个神经元的核心是“加权求和 + 偏置 + 激活函数”；多层网络就是反复堆叠这一过程。</p></div><div class="badges"><span class="badge">加权求和</span><span class="badge">矩阵形状</span><span class="badge">动态参数量</span></div></div><div class="nn-flow"><div class="node">输入 x₁…xₙ</div><div class="arrow">→</div><div class="node sum">z=x·w+b</div><div class="arrow">→</div><div class="node act">a=φ(z)</div><div class="arrow">→</div><div class="node">下一层</div></div><div class="nn-equation"><div><b>内部状态值</b><code>z=xWᵀ+b</code><br/>线性加权求和。</div><div><b>激活值</b><code>a=φ(z)</code><br/>当前层输出。</div><div><b>线性层参数</b><code>(输入维度+1)×输出维度</code><br/>“+1”来自偏置。</div><div><b>层数</b>通常按带参数的隐藏层和输出层计算，输入层不算可训练层。</div></div><p>若输入批次为 <code>[batch,in_features]</code>，权重为 <code>[out_features,in_features]</code>，输出就是 <code>[batch,out_features]</code>。PyTorch 的 <code>nn.Linear</code> 内部完成 <code>XWᵀ+b</code>。</p><div class="lab"><div class="lab-header"><div><div class="lab-title">动态参数量：调整网络宽度</div><div class="lab-sub">参数量取决于相邻层的连接数，而不仅是神经元总数。</div></div></div><div class="controls"><label>输入 <input id="nnInputDim" max="32" min="2" type="range" value="20"/></label><span id="nnInputDimVal">20</span><label>隐藏1 <input id="nnHidden1" max="128" min="4" step="4" type="range" value="32"/></label><span id="nnHidden1Val">32</span><label>隐藏2 <input id="nnHidden2" max="128" min="4" step="4" type="range" value="64"/></label><span id="nnHidden2Val">64</span><label>输出 <input id="nnOutputDim" max="10" min="1" type="range" value="4"/></label><span id="nnOutputDimVal">4</span></div><div class="canvas-wrap"><canvas height="320" id="nnParamCanvas" width="720"></canvas></div><div class="result-panel"><div class="mini"><b id="nnParamTotal">0</b><span>总参数量</span></div><div class="mini"><b id="nnParamMemory">0 KB</b><span>float32 参数内存</span></div><div class="mini" style="grid-column:span 2"><b id="nnParamBreakdown" style="font-size:15px">—</b><span>分层公式</span></div></div></div><div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>"""全连接神经网络参数量计算。"""
 def linear_params(in_features, out_features, bias=True):
     return in_features * out_features + (out_features if bias else 0)
 
@@ -414,19 +398,7 @@ for i, (din, dout) in enumerate(zip(layers, layers[1:]), 1):
     total += count
     print(f"layer{i}: ({din}+1)*{dout} = {count:,}")
 print("total parameters:", f"{total:,}")
-</code></pre></div><div class="source-note">课件使用 3→5 线性层说明参数量为 <code>(3+1)×5=20</code>，并区分输入层、隐藏层、输出层、内部状态值与激活值。</div>
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>人工神经元 / 全连接网络：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>神经元执行 z=w·x+b，再通过激活函数输出；多层神经元堆叠形成 DNN。</td></tr>
-<tr><th>主要作用</th><td>把输入特征映射成可学习的非线性函数，是 CNN、RNN、Transformer 中 FFN 的基础。</td></tr>
-<tr><th>解决问题</th><td>解决线性模型表达能力有限的问题，让模型能拟合复杂决策边界。</td></tr>
-<tr><th>缺点/注意</th><td>参数量随层宽快速增加，对特征缩放、初始化和正则化敏感。</td></tr>
-</tbody>
-</table>
-</div>
-</section><section class="note-section" id="nn-activation"><div class="module-head"><div><div class="section-kicker">神经网络 · 03</div><h2>激活函数：为网络注入非线性</h2><p class="lead">没有激活函数，多层线性变换仍等价于一个线性模型，无法形成复杂决策边界。</p></div><div class="badges"><span class="badge">Sigmoid</span><span class="badge">Tanh</span><span class="badge">ReLU</span><span class="badge">Softmax</span></div></div><p><code>W₂(W₁x+b₁)+b₂</code> 仍可合并成一次线性变换。激活函数把每层输出非线性变换，使网络可以逼近复杂函数。</p><table><thead><tr><th>函数</th><th>范围</th><th>优点</th><th>局限/用途</th></tr></thead><tbody><tr><td><span class="activation-chip">Sigmoid</span></td><td>(0,1)</td><td>可解释为概率</td><td>两端梯度接近 0；二分类输出</td></tr><tr><td><span class="activation-chip">Tanh</span></td><td>(-1,1)</td><td>以 0 为中心</td><td>两端仍梯度消失</td></tr><tr><td><span class="activation-chip">ReLU</span></td><td>[0,∞)</td><td>简单、正区间梯度稳定</td><td>负区间梯度为 0</td></tr><tr><td><span class="activation-chip">Leaky ReLU</span></td><td>(-∞,∞)</td><td>负区间保留小梯度</td><td>需要负斜率超参数</td></tr><tr><td><span class="activation-chip">Softmax</span></td><td>概率和为 1</td><td>多类概率分布</td><td>多分类输出层</td></tr></tbody></table><div class="lab"><div class="lab-header"><div><div class="lab-title">动态曲线：函数值与导数</div><div class="lab-sub">蓝线是函数，红线是导数；拖动 x 观察饱和区。</div></div></div><div class="controls"><label>函数 <select id="activationSelect"><option value="sigmoid">Sigmoid</option><option value="tanh">Tanh</option><option value="relu">ReLU</option><option value="leaky">Leaky ReLU</option></select></label><label>x <input id="activationX" max="60" min="-60" type="range" value="10"/></label><span id="activationXVal">1.0</span></div><div class="graph-split"><div class="canvas-wrap"><canvas height="300" id="activationCanvas" width="720"></canvas></div><div class="graph-side"><div class="mini"><b id="activationY">0</b><span>φ(x)</span></div><div class="mini"><b id="activationGrad">0</b><span>φ′(x)</span></div><div class="mini"><b id="activationRange">—</b><span>输出范围</span></div></div></div></div><div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>"""常见激活函数及导数。"""
+</code></pre></div><div class="source-note">课件使用 3→5 线性层说明参数量为 <code>(3+1)×5=20</code>，并区分输入层、隐藏层、输出层、内部状态值与激活值。</div></section><section class="note-section" id="nn-activation"><div class="module-head"><div><div class="section-kicker">神经网络 · 03</div><h2>激活函数：为网络注入非线性</h2><p class="lead">没有激活函数，多层线性变换仍等价于一个线性模型，无法形成复杂决策边界。</p></div><div class="badges"><span class="badge">Sigmoid</span><span class="badge">Tanh</span><span class="badge">ReLU</span><span class="badge">Softmax</span></div></div><p><code>W₂(W₁x+b₁)+b₂</code> 仍可合并成一次线性变换。激活函数把每层输出非线性变换，使网络可以逼近复杂函数。</p><table><thead><tr><th>函数</th><th>范围</th><th>优点</th><th>局限/用途</th></tr></thead><tbody><tr><td><span class="activation-chip">Sigmoid</span></td><td>(0,1)</td><td>可解释为概率</td><td>两端梯度接近 0；二分类输出</td></tr><tr><td><span class="activation-chip">Tanh</span></td><td>(-1,1)</td><td>以 0 为中心</td><td>两端仍梯度消失</td></tr><tr><td><span class="activation-chip">ReLU</span></td><td>[0,∞)</td><td>简单、正区间梯度稳定</td><td>负区间梯度为 0</td></tr><tr><td><span class="activation-chip">Leaky ReLU</span></td><td>(-∞,∞)</td><td>负区间保留小梯度</td><td>需要负斜率超参数</td></tr><tr><td><span class="activation-chip">Softmax</span></td><td>概率和为 1</td><td>多类概率分布</td><td>多分类输出层</td></tr></tbody></table><div class="lab"><div class="lab-header"><div><div class="lab-title">动态曲线：函数值与导数</div><div class="lab-sub">蓝线是函数，红线是导数；拖动 x 观察饱和区。</div></div></div><div class="controls"><label>函数 <select id="activationSelect"><option value="sigmoid">Sigmoid</option><option value="tanh">Tanh</option><option value="relu">ReLU</option><option value="leaky">Leaky ReLU</option></select></label><label>x <input id="activationX" max="60" min="-60" type="range" value="10"/></label><span id="activationXVal">1.0</span></div><div class="graph-split"><div class="canvas-wrap"><canvas height="300" id="activationCanvas" width="720"></canvas></div><div class="graph-side"><div class="mini"><b id="activationY">0</b><span>φ(x)</span></div><div class="mini"><b id="activationGrad">0</b><span>φ′(x)</span></div><div class="mini"><b id="activationRange">—</b><span>输出范围</span></div></div></div></div><div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>"""常见激活函数及导数。"""
 import math
 
 def sigmoid(x): return 1 / (1 + math.exp(-x))
@@ -437,19 +409,7 @@ for x in [-4, -1, 0, 1, 4]:
     s, t = sigmoid(x), math.tanh(x)
     print(x, "sigmoid=", round(s,4), "sigmoid'=", round(s*(1-s),4),
           "tanh=", round(t,4), "relu=", relu(x), "leaky=", leaky_relu(x))
-</code></pre></div>
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>激活函数：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>在每层线性变换后加入非线性，如 Sigmoid、Tanh、ReLU、GELU。</td></tr>
-<tr><th>主要作用</th><td>决定网络能否表达非线性关系，也影响梯度传播速度和训练稳定性。</td></tr>
-<tr><th>解决问题</th><td>解决多层线性网络等价于单层线性模型的问题。</td></tr>
-<tr><th>缺点/注意</th><td>Sigmoid/Tanh 容易饱和导致梯度消失；ReLU 可能出现神经元死亡；GELU 计算稍复杂。</td></tr>
-</tbody>
-</table>
-</div>
-</section><section class="note-section" id="nn-init"><div class="module-head"><div><div class="section-kicker">神经网络 · 04</div><h2>参数初始化：打破对称性并稳定方差</h2><p class="lead">初始化决定前向信号和反向梯度在深层网络中是稳定、衰减还是爆炸。</p></div><div class="badges"><span class="badge">Xavier</span><span class="badge">Kaiming</span><span class="badge">方差传播</span></div></div><div class="grid two"><div class="card"><h4>不能全 0</h4><p>同层神经元得到完全相同的输出和梯度，始终学到同样特征，无法打破对称性。</p></div><div class="card"><h4>随机值不能过大或过小</h4><p>过大导致激活饱和或数值爆炸，过小则使信号和梯度快速衰减。</p></div></div><table><thead><tr><th>方法</th><th>思想</th><th>搭配</th></tr></thead><tbody><tr><td>小随机数</td><td>打破对称性，适合浅层</td><td>简单网络</td></tr><tr><td>Xavier</td><td>按 fan_in/fan_out 平衡方差</td><td>Sigmoid、Tanh</td></tr><tr><td>Kaiming</td><td>考虑 ReLU 截断一半输入</td><td>ReLU、Leaky ReLU</td></tr><tr><td>偏置</td><td>通常初始化为 0</td><td>线性层、卷积层</td></tr></tbody></table><div class="formula">Xavier: Var(W)≈2/(fan_in+fan_out)　　Kaiming-ReLU: Var(W)≈2/fan_in</div><div class="lab"><div class="lab-header"><div><div class="lab-title">动态示意：层间方差传播</div><div class="lab-sub">纵轴使用 log(方差+1)，同时显示衰减和爆炸。</div></div></div><div class="controls"><label>初始化 <select id="initMethod"><option value="normal">标准正态</option><option value="zero">全0</option><option value="xavier">Xavier</option><option selected="" value="kaiming">Kaiming</option></select></label><label>激活 <select id="initActivation"><option value="linear">线性</option><option value="tanh">Tanh</option><option selected="" value="relu">ReLU</option></select></label><label>深度 <input id="initDepth" max="20" min="2" type="range" value="12"/></label><span id="initDepthVal">12</span></div><div class="canvas-wrap"><canvas height="280" id="initCanvas" width="720"></canvas></div><div class="result-panel"><div class="mini"><b id="initFinalVar">0</b><span>末层方差</span></div><div class="mini" style="grid-column:span 3"><b id="initStatus" style="font-size:16px">—</b><span>传播状态</span></div></div></div><div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>"""Xavier 与 Kaiming 初始化及前向方差观察。"""
+</code></pre></div></section><section class="note-section" id="nn-init"><div class="module-head"><div><div class="section-kicker">神经网络 · 04</div><h2>参数初始化：打破对称性并稳定方差</h2><p class="lead">初始化决定前向信号和反向梯度在深层网络中是稳定、衰减还是爆炸。</p></div><div class="badges"><span class="badge">Xavier</span><span class="badge">Kaiming</span><span class="badge">方差传播</span></div></div><div class="grid two"><div class="card"><h4>不能全 0</h4><p>同层神经元得到完全相同的输出和梯度，始终学到同样特征，无法打破对称性。</p></div><div class="card"><h4>随机值不能过大或过小</h4><p>过大导致激活饱和或数值爆炸，过小则使信号和梯度快速衰减。</p></div></div><table><thead><tr><th>方法</th><th>思想</th><th>搭配</th></tr></thead><tbody><tr><td>小随机数</td><td>打破对称性，适合浅层</td><td>简单网络</td></tr><tr><td>Xavier</td><td>按 fan_in/fan_out 平衡方差</td><td>Sigmoid、Tanh</td></tr><tr><td>Kaiming</td><td>考虑 ReLU 截断一半输入</td><td>ReLU、Leaky ReLU</td></tr><tr><td>偏置</td><td>通常初始化为 0</td><td>线性层、卷积层</td></tr></tbody></table><div class="formula">Xavier: Var(W)≈2/(fan_in+fan_out)　　Kaiming-ReLU: Var(W)≈2/fan_in</div><div class="lab"><div class="lab-header"><div><div class="lab-title">动态示意：层间方差传播</div><div class="lab-sub">纵轴使用 log(方差+1)，同时显示衰减和爆炸。</div></div></div><div class="controls"><label>初始化 <select id="initMethod"><option value="normal">标准正态</option><option value="zero">全0</option><option value="xavier">Xavier</option><option selected="" value="kaiming">Kaiming</option></select></label><label>激活 <select id="initActivation"><option value="linear">线性</option><option value="tanh">Tanh</option><option selected="" value="relu">ReLU</option></select></label><label>深度 <input id="initDepth" max="20" min="2" type="range" value="12"/></label><span id="initDepthVal">12</span></div><div class="canvas-wrap"><canvas height="280" id="initCanvas" width="720"></canvas></div><div class="result-panel"><div class="mini"><b id="initFinalVar">0</b><span>末层方差</span></div><div class="mini" style="grid-column:span 3"><b id="initStatus" style="font-size:16px">—</b><span>传播状态</span></div></div></div><div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>"""Xavier 与 Kaiming 初始化及前向方差观察。"""
 try:
     import torch
     from torch import nn
@@ -475,19 +435,7 @@ for method in ["zero", "xavier", "kaiming"]:
         y = layer(y)
         if isinstance(layer, nn.ReLU): variances.append(y.var().item())
     print(method, [round(v,4) for v in variances])
-</code></pre></div>
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>参数初始化：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>在训练开始前给权重一个合适分布，使各层输出和梯度方差不至于爆炸或消失。</td></tr>
-<tr><th>主要作用</th><td>Xavier 常配合 Tanh/Sigmoid，Kaiming 常配合 ReLU 系列激活。</td></tr>
-<tr><th>解决问题</th><td>解决“所有神经元初始完全相同”导致的对称性问题，并缓解训练初期不稳定。</td></tr>
-<tr><th>缺点/注意</th><td>初始化只能改善起点，不能替代合适的数据、模型结构和学习率。</td></tr>
-</tbody>
-</table>
-</div>
-</section><section class="note-section" id="nn-model"><div class="module-head"><div><div class="section-kicker">神经网络 · 05</div><h2>用 PyTorch 搭建多层全连接网络</h2><p class="lead">输入维度、隐藏层、激活函数、初始化、输出和损失函数必须互相匹配。</p></div><div class="badges"><span class="badge">nn.Module</span><span class="badge">forward</span><span class="badge">模型设计</span></div></div><div class="case-architecture"><div class="layer">输入 20</div><div class="arrow">→</div><div class="layer hidden">20→128 + ReLU</div><div class="arrow">→</div><div class="layer hidden">128→256 + ReLU</div><div class="arrow">→</div><div class="layer out">256→4 logits</div></div><p>Tanh/Sigmoid 常搭配 Xavier，ReLU/Leaky ReLU 常搭配 Kaiming。若使用 <code>CrossEntropyLoss</code>，输出层返回原始 logits，模型末尾不要手动 Softmax。</p><div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>import torch
+</code></pre></div></section><section class="note-section" id="nn-model"><div class="module-head"><div><div class="section-kicker">神经网络 · 05</div><h2>用 PyTorch 搭建多层全连接网络</h2><p class="lead">输入维度、隐藏层、激活函数、初始化、输出和损失函数必须互相匹配。</p></div><div class="badges"><span class="badge">nn.Module</span><span class="badge">forward</span><span class="badge">模型设计</span></div></div><div class="case-architecture"><div class="layer">输入 20</div><div class="arrow">→</div><div class="layer hidden">20→128 + ReLU</div><div class="arrow">→</div><div class="layer hidden">128→256 + ReLU</div><div class="arrow">→</div><div class="layer out">256→4 logits</div></div><p>Tanh/Sigmoid 常搭配 Xavier，ReLU/Leaky ReLU 常搭配 Kaiming。若使用 <code>CrossEntropyLoss</code>，输出层返回原始 logits，模型末尾不要手动 Softmax。</p><div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>import torch
 from torch import nn
 
 class PriceClassifier(nn.Module):
@@ -507,11 +455,7 @@ class PriceClassifier(nn.Module):
 
 model = PriceClassifier()
 print(model)
-print(sum(p.numel() for p in model.parameters()))</code></pre></div><div class="tip"><strong>设计清单：</strong>确认输入形状、输出任务、损失函数要求、初始化与激活函数组合，并用一批假数据检查每层 shape。</div>
-<figure class="card" data-drawio-integrated="true" style="padding:12px;margin:16px 0">
-<img alt="模型搭建、损失函数、优化器与 ResNet 引入" loading="lazy" src="assets/drawio/dlbert-01.jpg" style="width:100%;border-radius:14px;border:1px solid var(--line);display:block;background:#fff"/>
-<figcaption style="font-size:13px;color:var(--muted);margin-top:8px;line-height:1.6"><strong>深度学习串讲补充：</strong>模型搭建、损失函数、优化器与 ResNet 引入。这张图把 nn.Module、forward、loss、optimizer 和残差网络放在同一张串讲图里，适合用于理解模型搭建闭环。</figcaption>
-</figure></section><section class="note-section" id="nn-loss"><div class="module-head"><div><div class="section-kicker">神经网络训练 · 06</div><h2>损失函数：回归、二分类与多分类</h2><p class="lead">损失函数把预测误差变成可求导标量，是反向传播和参数更新的起点。</p></div><div class="badges"><span class="badge">MSE</span><span class="badge">BCE</span><span class="badge">CrossEntropy</span></div></div><table><thead><tr><th>任务</th><th>输出</th><th>损失</th><th>PyTorch 推荐</th></tr></thead><tbody><tr><td>回归</td><td>连续值</td><td>MSE/MAE/Huber</td><td><code>nn.MSELoss()</code></td></tr><tr><td>二分类</td><td>1 个 logit</td><td>Binary Cross Entropy</td><td><code>nn.BCEWithLogitsLoss()</code></td></tr><tr><td>多分类</td><td>C 个 logits</td><td>Softmax Cross Entropy</td><td><code>nn.CrossEntropyLoss()</code></td></tr></tbody></table><div class="formula">BCE=-[ylog(p)+(1-y)log(1-p)]　　CrossEntropy=-log(正确类别概率)</div><div class="warn"><strong>高频错误：</strong><code>CrossEntropyLoss</code> 已含 LogSoftmax；<code>BCEWithLogitsLoss</code> 已含 Sigmoid。不要重复激活。</div><div class="lab"><div class="lab-header"><div><div class="lab-title">动态损失曲线</div><div class="lab-sub">正确类别概率越低，负对数损失越大。</div></div></div><div class="controls"><label>任务 <select id="lossTask"><option value="binary">二分类 BCE</option><option value="multi">多分类 CrossEntropy</option></select></label><label id="lossLabelWrap" style="display:inline-flex;gap:6px">标签 <select id="lossLabel"><option value="1">y=1</option><option value="0">y=0</option></select></label><label>概率 <input id="lossProb" max="99" min="1" type="range" value="80"/></label><span id="lossProbVal">0.80</span></div><div class="graph-split"><div class="canvas-wrap"><canvas height="280" id="lossCanvas" width="720"></canvas></div><div class="graph-side"><div class="mini"><b id="lossValue">0</b><span>当前损失</span></div><div class="mini"><b id="lossInterpretation" style="font-size:14px">—</b><span>直觉解释</span></div></div></div></div><div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>"""MSE、BCEWithLogitsLoss 与 CrossEntropyLoss。"""
+print(sum(p.numel() for p in model.parameters()))</code></pre></div><div class="tip"><strong>设计清单：</strong>确认输入形状、输出任务、损失函数要求、初始化与激活函数组合，并用一批假数据检查每层 shape。</div></section><section class="note-section" id="nn-loss"><div class="module-head"><div><div class="section-kicker">神经网络训练 · 06</div><h2>损失函数：回归、二分类与多分类</h2><p class="lead">损失函数把预测误差变成可求导标量，是反向传播和参数更新的起点。</p></div><div class="badges"><span class="badge">MSE</span><span class="badge">BCE</span><span class="badge">CrossEntropy</span></div></div><table><thead><tr><th>任务</th><th>输出</th><th>损失</th><th>PyTorch 推荐</th></tr></thead><tbody><tr><td>回归</td><td>连续值</td><td>MSE/MAE/Huber</td><td><code>nn.MSELoss()</code></td></tr><tr><td>二分类</td><td>1 个 logit</td><td>Binary Cross Entropy</td><td><code>nn.BCEWithLogitsLoss()</code></td></tr><tr><td>多分类</td><td>C 个 logits</td><td>Softmax Cross Entropy</td><td><code>nn.CrossEntropyLoss()</code></td></tr></tbody></table><div class="formula">BCE=-[ylog(p)+(1-y)log(1-p)]　　CrossEntropy=-log(正确类别概率)</div><div class="warn"><strong>高频错误：</strong><code>CrossEntropyLoss</code> 已含 LogSoftmax；<code>BCEWithLogitsLoss</code> 已含 Sigmoid。不要重复激活。</div><div class="lab"><div class="lab-header"><div><div class="lab-title">动态损失曲线</div><div class="lab-sub">正确类别概率越低，负对数损失越大。</div></div></div><div class="controls"><label>任务 <select id="lossTask"><option value="binary">二分类 BCE</option><option value="multi">多分类 CrossEntropy</option></select></label><label id="lossLabelWrap" style="display:inline-flex;gap:6px">标签 <select id="lossLabel"><option value="1">y=1</option><option value="0">y=0</option></select></label><label>概率 <input id="lossProb" max="99" min="1" type="range" value="80"/></label><span id="lossProbVal">0.80</span></div><div class="graph-split"><div class="canvas-wrap"><canvas height="280" id="lossCanvas" width="720"></canvas></div><div class="graph-side"><div class="mini"><b id="lossValue">0</b><span>当前损失</span></div><div class="mini"><b id="lossInterpretation" style="font-size:14px">—</b><span>直觉解释</span></div></div></div></div><div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>"""MSE、BCEWithLogitsLoss 与 CrossEntropyLoss。"""
 try:
     import torch
     from torch import nn
@@ -524,19 +468,7 @@ print("BCEWithLogits =", nn.BCEWithLogitsLoss()(torch.tensor([1.4,-0.8]), torch.
 logits = torch.tensor([[1.2,2.4,0.2],[2.0,0.5,1.1]])
 target = torch.tensor([1,0], dtype=torch.long)
 print("CrossEntropy =", nn.CrossEntropyLoss()(logits,target).item())
-</code></pre></div>
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>损失函数：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>把预测值和真实值的差异变成一个可优化的标量，例如 MSE、BCE、CrossEntropy。</td></tr>
-<tr><th>主要作用</th><td>告诉模型“错在哪里、错多少”，反向传播的梯度从损失函数开始。</td></tr>
-<tr><th>解决问题</th><td>解决模型训练目标不明确的问题，使参数更新有方向。</td></tr>
-<tr><th>缺点/注意</th><td>损失函数和业务指标不一定一致；样本不平衡时普通交叉熵可能偏向多数类。</td></tr>
-</tbody>
-</table>
-</div>
-</section><section class="note-section" id="nn-backprop"><div class="module-head"><div><div class="section-kicker">神经网络训练 · 07</div><h2>前向传播、反向传播与链式法则</h2><p class="lead">前向传播计算预测和损失；反向传播从损失出发，沿计算图求每个参数的梯度。</p></div><div class="badges"><span class="badge">Forward</span><span class="badge">Backward</span><span class="badge">Chain Rule</span></div></div><div class="grid two"><div class="card"><h4>前向传播</h4><p>输入依次经过线性层、激活层和输出层，得到 logits、概率与损失。</p></div><div class="card"><h4>反向传播</h4><p>从标量损失开始，利用链式法则从后往前计算所有参数偏导。</p></div></div><div class="formula">∂L/∂w₁ = ∂L/∂z₂ · ∂z₂/∂h · ∂h/∂z₁ · ∂z₁/∂w₁</div><div class="lab"><div class="lab-header"><div><div class="lab-title">动态计算图：一个隐藏神经元</div><div class="lab-sub">目标 y=1；绿色数字为反向梯度。</div></div></div><div class="controls"><label>x <input id="bpX" max="30" min="-30" type="range" value="15"/></label><span id="bpXVal">1.5</span><label>w₁ <input id="bpW1" max="30" min="-30" type="range" value="8"/></label><span id="bpW1Val">0.8</span><label>b₁ <input id="bpB1" max="20" min="-20" type="range" value="-2"/></label><span id="bpB1Val">-0.2</span><label>w₂ <input id="bpW2" max="30" min="-30" type="range" value="11"/></label><span id="bpW2Val">1.1</span><label>b₂ <input id="bpB2" max="20" min="-20" type="range" value="1"/></label><span id="bpB2Val">0.1</span></div><div class="compute-graph" id="bpGraph"></div><div class="result-panel"><div class="mini"><b id="bpLoss">0</b><span>BCE 损失</span></div><div class="mini"><b id="bpGradW1">0</b><span>∂L/∂w₁</span></div><div class="mini"><b id="bpGradW2">0</b><span>∂L/∂w₂</span></div><div class="mini"><b>loss.backward()</b><span>PyTorch 自动求导</span></div></div></div><div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>"""标量网络的前向传播与链式法则反向传播。"""
+</code></pre></div></section><section class="note-section" id="nn-backprop"><div class="module-head"><div><div class="section-kicker">神经网络训练 · 07</div><h2>前向传播、反向传播与链式法则</h2><p class="lead">前向传播计算预测和损失；反向传播从损失出发，沿计算图求每个参数的梯度。</p></div><div class="badges"><span class="badge">Forward</span><span class="badge">Backward</span><span class="badge">Chain Rule</span></div></div><div class="grid two"><div class="card"><h4>前向传播</h4><p>输入依次经过线性层、激活层和输出层，得到 logits、概率与损失。</p></div><div class="card"><h4>反向传播</h4><p>从标量损失开始，利用链式法则从后往前计算所有参数偏导。</p></div></div><div class="formula">∂L/∂w₁ = ∂L/∂z₂ · ∂z₂/∂h · ∂h/∂z₁ · ∂z₁/∂w₁</div><div class="lab"><div class="lab-header"><div><div class="lab-title">动态计算图：一个隐藏神经元</div><div class="lab-sub">目标 y=1；绿色数字为反向梯度。</div></div></div><div class="controls"><label>x <input id="bpX" max="30" min="-30" type="range" value="15"/></label><span id="bpXVal">1.5</span><label>w₁ <input id="bpW1" max="30" min="-30" type="range" value="8"/></label><span id="bpW1Val">0.8</span><label>b₁ <input id="bpB1" max="20" min="-20" type="range" value="-2"/></label><span id="bpB1Val">-0.2</span><label>w₂ <input id="bpW2" max="30" min="-30" type="range" value="11"/></label><span id="bpW2Val">1.1</span><label>b₂ <input id="bpB2" max="20" min="-20" type="range" value="1"/></label><span id="bpB2Val">0.1</span></div><div class="compute-graph" id="bpGraph"></div><div class="result-panel"><div class="mini"><b id="bpLoss">0</b><span>BCE 损失</span></div><div class="mini"><b id="bpGradW1">0</b><span>∂L/∂w₁</span></div><div class="mini"><b id="bpGradW2">0</b><span>∂L/∂w₂</span></div><div class="mini"><b>loss.backward()</b><span>PyTorch 自动求导</span></div></div></div><div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>"""标量网络的前向传播与链式法则反向传播。"""
 import math
 x, y = 1.5, 1.0
 w1, b1, w2, b2 = 0.8, -0.2, 1.1, 0.1
@@ -544,23 +476,7 @@ z1 = w1*x+b1; h=max(0.0,z1); z2=w2*h+b2; p=1/(1+math.exp(-z2)); loss=-math.log(p
 dz2=p-y; dw2=dz2*h; dh=dz2*w2; dz1=dh if z1&gt;0 else 0.0; dw1=dz1*x
 print(f"forward: z1={z1:.4f}, h={h:.4f}, z2={z2:.4f}, p={p:.4f}, loss={loss:.4f}")
 print(f"gradients: dw1={dw1:.4f}, dw2={dw2:.4f}")
-</code></pre></div>
-<figure class="card" data-drawio-integrated="true" style="padding:12px;margin:16px 0">
-<img alt="反向传播、Adam/SGD 与 loss.backward" loading="lazy" src="assets/drawio/dlbert-02.jpg" style="width:100%;border-radius:14px;border:1px solid var(--line);display:block;background:#fff"/>
-<figcaption style="font-size:13px;color:var(--muted);margin-top:8px;line-height:1.6"><strong>深度学习串讲补充：</strong>反向传播、Adam/SGD 与 loss.backward。图中把链式求导、参数更新、SGD、Adam 和前馈网络结构串起来，适合放在反向传播章节。</figcaption>
-</figure>
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>反向传播：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>利用链式法则从 loss 反向计算每一层参数梯度。</td></tr>
-<tr><th>主要作用</th><td>是神经网络能够训练的核心机制，配合 autograd 自动完成复杂求导。</td></tr>
-<tr><th>解决问题</th><td>解决深层网络中大量参数无法手工求导和更新的问题。</td></tr>
-<tr><th>缺点/注意</th><td>深层网络仍可能出现梯度消失/爆炸，需要初始化、归一化、残差和合适优化器配合。</td></tr>
-</tbody>
-</table>
-</div>
-</section><section class="note-section" id="nn-optimizers"><div class="module-head"><div><div class="section-kicker">神经网络训练 · 08</div><h2>优化器：SGD、Momentum、AdaGrad、RMSProp 与 Adam</h2><p class="lead">梯度决定方向，优化器决定如何利用历史梯度以及如何为各参数调节步长。</p></div><div class="badges"><span class="badge">Momentum</span><span class="badge">Adaptive LR</span><span class="badge">Adam</span></div></div><div class="optim-cards"><div class="optim-card"><b>SGD</b><small>直接使用当前梯度，可能震荡。</small></div><div class="optim-card"><b>Momentum</b><small>累计速度，帮助跨过平缓区或鞍点。</small></div><div class="optim-card"><b>AdaGrad</b><small>累计平方梯度，自适应学习率。</small></div><div class="optim-card"><b>RMSProp</b><small>平方梯度指数平均，避免过快衰减。</small></div><div class="optim-card"><b>Adam</b><small>一阶矩 + 二阶矩，自适应矩估计。</small></div></div><div class="formula">Momentum: vₜ=βvₜ₋₁+(1-β)gₜ, wₜ=wₜ₋₁-ηvₜ<br/>RMSProp: sₜ=βsₜ₋₁+(1-β)gₜ², wₜ=wₜ₋₁-ηgₜ/√(sₜ+ε)</div><div class="lab"><div class="lab-header"><div><div class="lab-title">动态轨迹：狭长损失曲面</div><div class="lab-sub">普通 SGD 容易在陡峭方向来回震荡。</div></div></div><div class="controls"><label>优化器 <select id="optimizerMethod"><option value="sgd">SGD</option><option value="momentum">Momentum</option><option value="adagrad">AdaGrad</option><option value="rmsprop">RMSProp</option><option selected="" value="adam">Adam</option></select></label><button id="optimizerPlay" type="button">播放</button><button id="optimizerReset" type="button">重置</button></div><div class="canvas-wrap"><canvas height="320" id="optimizerCanvas" width="720"></canvas></div><div class="result-panel"><div class="mini"><b id="optimizerStepVal">0</b><span>步数</span></div><div class="mini"><b id="optimizerLossVal">0</b><span>损失</span></div><div class="mini"><b id="optimizerPoint">(0,0)</b><span>参数点</span></div><div class="mini"><b>目标：原点</b><span>最小值</span></div></div></div><div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>"""在二维二次函数上比较 SGD 与 Momentum。"""
+</code></pre></div></section><section class="note-section" id="nn-optimizers"><div class="module-head"><div><div class="section-kicker">神经网络训练 · 08</div><h2>优化器：SGD、Momentum、AdaGrad、RMSProp 与 Adam</h2><p class="lead">梯度决定方向，优化器决定如何利用历史梯度以及如何为各参数调节步长。</p></div><div class="badges"><span class="badge">Momentum</span><span class="badge">Adaptive LR</span><span class="badge">Adam</span></div></div><div class="optim-cards"><div class="optim-card"><b>SGD</b><small>直接使用当前梯度，可能震荡。</small></div><div class="optim-card"><b>Momentum</b><small>累计速度，帮助跨过平缓区或鞍点。</small></div><div class="optim-card"><b>AdaGrad</b><small>累计平方梯度，自适应学习率。</small></div><div class="optim-card"><b>RMSProp</b><small>平方梯度指数平均，避免过快衰减。</small></div><div class="optim-card"><b>Adam</b><small>一阶矩 + 二阶矩，自适应矩估计。</small></div></div><div class="formula">Momentum: vₜ=βvₜ₋₁+(1-β)gₜ, wₜ=wₜ₋₁-ηvₜ<br/>RMSProp: sₜ=βsₜ₋₁+(1-β)gₜ², wₜ=wₜ₋₁-ηgₜ/√(sₜ+ε)</div><div class="lab"><div class="lab-header"><div><div class="lab-title">动态轨迹：狭长损失曲面</div><div class="lab-sub">普通 SGD 容易在陡峭方向来回震荡。</div></div></div><div class="controls"><label>优化器 <select id="optimizerMethod"><option value="sgd">SGD</option><option value="momentum">Momentum</option><option value="adagrad">AdaGrad</option><option value="rmsprop">RMSProp</option><option selected="" value="adam">Adam</option></select></label><button id="optimizerPlay" type="button">播放</button><button id="optimizerReset" type="button">重置</button></div><div class="canvas-wrap"><canvas height="320" id="optimizerCanvas" width="720"></canvas></div><div class="result-panel"><div class="mini"><b id="optimizerStepVal">0</b><span>步数</span></div><div class="mini"><b id="optimizerLossVal">0</b><span>损失</span></div><div class="mini"><b id="optimizerPoint">(0,0)</b><span>参数点</span></div><div class="mini"><b>目标：原点</b><span>最小值</span></div></div></div><div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>"""在二维二次函数上比较 SGD 与 Momentum。"""
 def grad(x,y): return 0.25*x, 4.0*y
 def loss(x,y): return 0.125*x*x + 2.0*y*y
 for method in ["sgd","momentum"]:
@@ -572,19 +488,7 @@ for method in ["sgd","momentum"]:
             vx=0.85*vx+0.15*gx; vy=0.85*vy+0.15*gy; dx,dy=0.32*vx,0.32*vy
         x,y=x-dx,y-dy
     print(method, (round(x,4),round(y,4)), round(loss(x,y),6))
-</code></pre></div>
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>优化器：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>根据梯度决定参数如何移动，SGD 直接沿负梯度走，Adam 使用一阶/二阶动量自适应步长。</td></tr>
-<tr><th>主要作用</th><td>影响收敛速度、泛化能力和训练稳定性。</td></tr>
-<tr><th>解决问题</th><td>解决固定学习率 SGD 收敛慢、震荡大、不同参数尺度不一致的问题。</td></tr>
-<tr><th>缺点/注意</th><td>Adam 收敛快但有时泛化不如 SGD；自适应优化器仍需调学习率和 weight decay。</td></tr>
-</tbody>
-</table>
-</div>
-</section><section class="note-section" id="nn-lr"><div class="module-head"><div><div class="section-kicker">神经网络训练 · 09</div><h2>学习率与学习率衰减</h2><p class="lead">学习率过小收敛慢，过大则震荡甚至发散；训练后期通常逐步减小。</p></div><div class="badges"><span class="badge">StepLR</span><span class="badge">MultiStepLR</span><span class="badge">ExponentialLR</span></div></div><div class="grid two"><div><p><code>w_new=w_old-learning_rate×gradient</code> 中，梯度提供方向，学习率控制移动距离。常见策略是前期快速探索、后期精细收敛。</p><table><thead><tr><th>策略</th><th>规则</th></tr></thead><tbody><tr><td>StepLR</td><td>每隔固定 epoch 乘 γ</td></tr><tr><td>MultiStepLR</td><td>指定里程碑乘 γ</td></tr><tr><td>ExponentialLR</td><td>每轮乘 γ</td></tr></tbody></table></div><div class="warn"><strong>顺序：</strong>通常每个 epoch 完成 <code>optimizer.step()</code> 后再调用 <code>scheduler.step()</code>。</div></div><div class="lab"><div class="lab-header"><div><div class="lab-title">动态学习率计划</div><div class="lab-sub">拖动 epoch 查看当前学习率。</div></div></div><div class="controls"><label>初始 lr <input id="lrBase" max="200" min="10" type="range" value="100"/></label><span id="lrBaseVal">0.100</span><label>gamma <input id="lrGamma" max="990" min="800" type="range" value="900"/></label><span id="lrGammaVal">0.900</span><label>epoch <input id="lrEpoch" max="200" min="0" type="range" value="80"/></label><span id="lrEpochVal">80</span></div><div class="lr-legend"><span class="c1">constant</span><span class="c2">StepLR</span><span class="c3">MultiStepLR</span><span class="c4">ExponentialLR</span></div><div class="canvas-wrap"><canvas height="290" id="lrScheduleCanvas" width="720"></canvas></div><div class="demo-output" id="lrCurrent"></div></div><div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>"""PyTorch 常见学习率衰减策略。"""
+</code></pre></div></section><section class="note-section" id="nn-lr"><div class="module-head"><div><div class="section-kicker">神经网络训练 · 09</div><h2>学习率与学习率衰减</h2><p class="lead">学习率过小收敛慢，过大则震荡甚至发散；训练后期通常逐步减小。</p></div><div class="badges"><span class="badge">StepLR</span><span class="badge">MultiStepLR</span><span class="badge">ExponentialLR</span></div></div><div class="grid two"><div><p><code>w_new=w_old-learning_rate×gradient</code> 中，梯度提供方向，学习率控制移动距离。常见策略是前期快速探索、后期精细收敛。</p><table><thead><tr><th>策略</th><th>规则</th></tr></thead><tbody><tr><td>StepLR</td><td>每隔固定 epoch 乘 γ</td></tr><tr><td>MultiStepLR</td><td>指定里程碑乘 γ</td></tr><tr><td>ExponentialLR</td><td>每轮乘 γ</td></tr></tbody></table></div><div class="warn"><strong>顺序：</strong>通常每个 epoch 完成 <code>optimizer.step()</code> 后再调用 <code>scheduler.step()</code>。</div></div><div class="lab"><div class="lab-header"><div><div class="lab-title">动态学习率计划</div><div class="lab-sub">拖动 epoch 查看当前学习率。</div></div></div><div class="controls"><label>初始 lr <input id="lrBase" max="200" min="10" type="range" value="100"/></label><span id="lrBaseVal">0.100</span><label>gamma <input id="lrGamma" max="990" min="800" type="range" value="900"/></label><span id="lrGammaVal">0.900</span><label>epoch <input id="lrEpoch" max="200" min="0" type="range" value="80"/></label><span id="lrEpochVal">80</span></div><div class="lr-legend"><span class="c1">constant</span><span class="c2">StepLR</span><span class="c3">MultiStepLR</span><span class="c4">ExponentialLR</span></div><div class="canvas-wrap"><canvas height="290" id="lrScheduleCanvas" width="720"></canvas></div><div class="demo-output" id="lrCurrent"></div></div><div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>"""PyTorch 常见学习率衰减策略。"""
 try:
     import torch
 except ImportError as exc:
@@ -600,19 +504,7 @@ for name in ["step","multi","exp"]:
     vals=[]
     for _ in range(10): vals.append(opt.param_groups[0]["lr"]); opt.step(); sch.step()
     print(name,[round(v,5) for v in vals])
-</code></pre></div>
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>学习率衰减：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>训练初期用较大学习率快速靠近好区域，后期逐步减小学习率精细收敛。</td></tr>
-<tr><th>主要作用</th><td>常见策略有 StepLR、MultiStepLR、ExponentialLR、CosineAnnealing。</td></tr>
-<tr><th>解决问题</th><td>解决学习率固定时“前期太慢或后期震荡”的矛盾。</td></tr>
-<tr><th>缺点/注意</th><td>衰减过快会早停在次优点；衰减过慢可能训练不稳定或浪费轮数。</td></tr>
-</tbody>
-</table>
-</div>
-</section><section class="note-section" id="nn-regularization"><div class="module-head"><div><div class="section-kicker">神经网络训练 · 10</div><h2>正则化、Dropout 与 Batch Normalization</h2><p class="lead">神经网络表达能力强，容易过拟合；正则化通过约束参数或训练过程提升泛化。</p></div><div class="badges"><span class="badge">L1/L2</span><span class="badge">Dropout</span><span class="badge">BatchNorm</span></div></div><div class="reg-grid"><div><h4>L1/L2</h4><p>在数据损失上增加参数惩罚。L1 倾向稀疏；L2 平滑压缩权重，PyTorch 常用 <code>weight_decay</code>。</p></div><div><h4>Dropout</h4><p>训练时以概率 p 将激活置 0，保留激活缩放为 <code>1/(1-p)</code>；推理时关闭。</p></div><div><h4>BatchNorm</h4><p>先标准化，再使用可学习 γ、β 缩放和平移，稳定数值并加速收敛。</p></div><div><h4>其他策略</h4><p>更多数据、数据增强、早停、降低模型复杂度也能缓解过拟合。</p></div></div><div class="formula">L_total=L_data+λ||W||₁ 或 λ||W||₂²</div><div class="grid two"><div class="lab"><div class="lab-header"><div><div class="lab-title">Dropout 动态网络</div><div class="lab-sub">灰色带叉节点在本次训练前向中被置零。</div></div></div><div class="controls"><label>p <input id="dropoutP" max="80" min="0" type="range" value="40"/></label><span id="dropoutPVal">0.40</span><button id="dropoutResample" type="button">重新采样</button></div><div class="canvas-wrap"><canvas height="320" id="dropoutCanvas" width="720"></canvas></div><div class="dropout-summary"><span id="dropoutActive">—</span><span>缩放 <b id="dropoutScale">1.67×</b></span></div></div><div class="lab"><div class="lab-header"><div><div class="lab-title">BatchNorm：标准化、缩放、平移</div><div class="lab-sub">三排柱形依次是原始、标准化和 γx̂+β。</div></div></div><div class="controls"><label>γ <input id="bnGamma" max="30" min="1" type="range" value="10"/></label><span id="bnGammaVal">1.0</span><label>β <input id="bnBeta" max="20" min="-20" type="range" value="0"/></label><span id="bnBetaVal">0.0</span></div><div class="canvas-wrap"><canvas height="300" id="bnCanvas" width="720"></canvas></div><div class="bn-values"><div class="mini"><b id="bnMean">0</b><span>原始均值</span></div><div class="mini"><b id="bnStd">0</b><span>原始标准差</span></div><div class="mini"><b id="bnOutMean">0</b><span>输出均值≈β</span></div><div class="mini"><b id="bnOutStd">0</b><span>输出标准差≈|γ|</span></div></div></div></div><div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>"""Dropout 与 BatchNorm 的训练/推理差异。"""
+</code></pre></div></section><section class="note-section" id="nn-regularization"><div class="module-head"><div><div class="section-kicker">神经网络训练 · 10</div><h2>正则化、Dropout 与 Batch Normalization</h2><p class="lead">神经网络表达能力强，容易过拟合；正则化通过约束参数或训练过程提升泛化。</p></div><div class="badges"><span class="badge">L1/L2</span><span class="badge">Dropout</span><span class="badge">BatchNorm</span></div></div><div class="reg-grid"><div><h4>L1/L2</h4><p>在数据损失上增加参数惩罚。L1 倾向稀疏；L2 平滑压缩权重，PyTorch 常用 <code>weight_decay</code>。</p></div><div><h4>Dropout</h4><p>训练时以概率 p 将激活置 0，保留激活缩放为 <code>1/(1-p)</code>；推理时关闭。</p></div><div><h4>BatchNorm</h4><p>先标准化，再使用可学习 γ、β 缩放和平移，稳定数值并加速收敛。</p></div><div><h4>其他策略</h4><p>更多数据、数据增强、早停、降低模型复杂度也能缓解过拟合。</p></div></div><div class="formula">L_total=L_data+λ||W||₁ 或 λ||W||₂²</div><div class="grid two"><div class="lab"><div class="lab-header"><div><div class="lab-title">Dropout 动态网络</div><div class="lab-sub">灰色带叉节点在本次训练前向中被置零。</div></div></div><div class="controls"><label>p <input id="dropoutP" max="80" min="0" type="range" value="40"/></label><span id="dropoutPVal">0.40</span><button id="dropoutResample" type="button">重新采样</button></div><div class="canvas-wrap"><canvas height="320" id="dropoutCanvas" width="720"></canvas></div><div class="dropout-summary"><span id="dropoutActive">—</span><span>缩放 <b id="dropoutScale">1.67×</b></span></div></div><div class="lab"><div class="lab-header"><div><div class="lab-title">BatchNorm：标准化、缩放、平移</div><div class="lab-sub">三排柱形依次是原始、标准化和 γx̂+β。</div></div></div><div class="controls"><label>γ <input id="bnGamma" max="30" min="1" type="range" value="10"/></label><span id="bnGammaVal">1.0</span><label>β <input id="bnBeta" max="20" min="-20" type="range" value="0"/></label><span id="bnBetaVal">0.0</span></div><div class="canvas-wrap"><canvas height="300" id="bnCanvas" width="720"></canvas></div><div class="bn-values"><div class="mini"><b id="bnMean">0</b><span>原始均值</span></div><div class="mini"><b id="bnStd">0</b><span>原始标准差</span></div><div class="mini"><b id="bnOutMean">0</b><span>输出均值≈β</span></div><div class="mini"><b id="bnOutStd">0</b><span>输出标准差≈|γ|</span></div></div></div></div><div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>"""Dropout 与 BatchNorm 的训练/推理差异。"""
 try:
     import torch
     from torch import nn
@@ -623,19 +515,7 @@ torch.set_num_threads(1); torch.manual_seed(0)
 x=torch.tensor([[1.,2.,3.,4.],[2.,4.,6.,8.]])
 drop=nn.Dropout(0.5); print("dropout train:\n",drop(x)); drop.eval(); print("dropout eval:\n",drop(x))
 bn=nn.BatchNorm1d(4); bn.train(); print("batchnorm train:\n",bn(x)); bn.eval(); print("batchnorm eval:\n",bn(x))
-</code></pre></div><div class="warn"><strong>训练与推理：</strong>Dropout 和 BatchNorm 的行为不同，评估前必须调用 <code>model.eval()</code>。</div>
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>正则化 / Dropout / BatchNorm：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>正则化限制模型复杂度；Dropout 随机关闭神经元；BatchNorm 标准化中间激活。</td></tr>
-<tr><th>主要作用</th><td>提升泛化能力，减少过拟合，并让深层网络训练更稳定。</td></tr>
-<tr><th>解决问题</th><td>解决深度模型参数多、训练集表现好但测试集差的问题。</td></tr>
-<tr><th>缺点/注意</th><td>Dropout 会增加训练噪声；BatchNorm 对 batch size 敏感，训练/推理模式必须正确切换。</td></tr>
-</tbody>
-</table>
-</div>
-</section><section class="note-section" id="nn-case"><div class="module-head"><div><div class="section-kicker">神经网络案例 · 11</div><h2>DNN 手机价格区间分类：完整训练闭环</h2><p class="lead">输入手机硬件特征，输出 0、1、2、3 四个价格区间，覆盖数据、模型、训练、验证与调优。</p></div><div class="badges"><span class="badge">20→128→256→4</span><span class="badge">CrossEntropy</span><span class="badge">完整代码</span></div></div><p>课件案例约有 2000 条数据、20 个输入特征，1600 条用于训练、400 条用于验证。模型由三个全连接层构成，隐藏层使用 ReLU，输出层产生 4 个 logits。</p><div class="case-architecture"><div class="layer">20 维特征</div><div class="arrow">→</div><div class="layer hidden">128 + ReLU</div><div class="arrow">→</div><div class="layer hidden">256 + ReLU</div><div class="arrow">→</div><div class="layer out">4 类 logits</div></div><div class="training-loop"><div><b>1 数据</b>划分、Dataset、DataLoader</div><div><b>2 前向</b>logits=model(x)</div><div><b>3 损失</b>CrossEntropyLoss</div><div><b>4 反向</b>zero_grad/backward/step</div><div><b>5 评估</b>eval/no_grad/accuracy</div></div><div class="grid two"><div class="card"><h4>基础方案</h4><p>SGD、固定学习率、三层全连接、交叉熵。</p></div><div class="card"><h4>调优方向</h4><p>Adam、输入标准化、学习率衰减、深度/宽度、训练轮数、Dropout、BatchNorm、早停。</p></div></div><div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>"""合成手机参数数据上的四分类 DNN 案例。"""
+</code></pre></div><div class="warn"><strong>训练与推理：</strong>Dropout 和 BatchNorm 的行为不同，评估前必须调用 <code>model.eval()</code>。</div></section><section class="note-section" id="nn-case"><div class="module-head"><div><div class="section-kicker">神经网络案例 · 11</div><h2>DNN 手机价格区间分类：完整训练闭环</h2><p class="lead">输入手机硬件特征，输出 0、1、2、3 四个价格区间，覆盖数据、模型、训练、验证与调优。</p></div><div class="badges"><span class="badge">20→128→256→4</span><span class="badge">CrossEntropy</span><span class="badge">完整代码</span></div></div><p>课件案例约有 2000 条数据、20 个输入特征，1600 条用于训练、400 条用于验证。模型由三个全连接层构成，隐藏层使用 ReLU，输出层产生 4 个 logits。</p><div class="case-architecture"><div class="layer">20 维特征</div><div class="arrow">→</div><div class="layer hidden">128 + ReLU</div><div class="arrow">→</div><div class="layer hidden">256 + ReLU</div><div class="arrow">→</div><div class="layer out">4 类 logits</div></div><div class="training-loop"><div><b>1 数据</b>划分、Dataset、DataLoader</div><div><b>2 前向</b>logits=model(x)</div><div><b>3 损失</b>CrossEntropyLoss</div><div><b>4 反向</b>zero_grad/backward/step</div><div><b>5 评估</b>eval/no_grad/accuracy</div></div><div class="grid two"><div class="card"><h4>基础方案</h4><p>SGD、固定学习率、三层全连接、交叉熵。</p></div><div class="card"><h4>调优方向</h4><p>Adam、输入标准化、学习率衰减、深度/宽度、训练轮数、Dropout、BatchNorm、早停。</p></div></div><div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>"""合成手机参数数据上的四分类 DNN 案例。"""
 try:
     import torch
     from torch import nn
@@ -659,31 +539,7 @@ model.eval()
 with torch.no_grad():
     xv,yv=valid.tensors; acc=(model(xv).argmax(1)==yv).float().mean().item()
 print("validation accuracy =",round(acc,4))
-</code></pre></div><div class="source-note">依据 DNN 案例课件中的 20→128→256→4 结构、1600/400 数据划分和训练评估流程。</div>
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>DNN 分类案例：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>把特征输入全连接网络，经过多层非线性变换输出类别 logits。</td></tr>
-<tr><th>主要作用</th><td>适合结构化数据或已提取好的特征分类，是学习深度学习训练流程的最小完整案例。</td></tr>
-<tr><th>解决问题</th><td>解决从数据集、DataLoader、模型、loss、optimizer 到评估的完整闭环问题。</td></tr>
-<tr><th>缺点/注意</th><td>对表格数据不一定优于 XGBoost/随机森林；小数据上容易过拟合。</td></tr>
-</tbody>
-</table>
-</div>
-</section><section class="note-section" id="torch-intro"><div class="module-head"><div><div class="section-kicker">09 · PyTorch 基础</div><h2>PyTorch 与 Tensor 基础</h2><p class="lead">如果说 NumPy 的核心对象是 ndarray，那么 PyTorch 的核心对象就是 Tensor。</p></div><div class="badges"><span class="badge">张量概念</span></div></div><p><strong>Tensor（张量）</strong>可以理解为“带有更多能力的多维数组”。它不仅能像 NumPy 一样做数值运算，还能配合 GPU 做加速计算，并且支持自动微分，这使它非常适合深度学习训练。</p><div class="grid two"><div class="card"><h4>常见张量维度</h4><p>0 维：标量，例如 <code>3.14</code>。<br/>1 维：向量，例如 <code>[1, 2, 3]</code>。<br/>2 维：矩阵，例如一张灰度图。<br/>3 维及以上：图像批次、视频、序列特征等。</p></div><div class="card"><h4>PyTorch 为什么适合教学</h4><p>语法更贴近 Python，动态图机制更直观，便于逐步打印中间变量，是入门深度学习非常友好的框架。</p></div></div>
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>PyTorch / Tensor：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>Tensor 是同质、同形、多维数组，支持 GPU 加速和自动求导。</td></tr>
-<tr><th>主要作用</th><td>是 PyTorch 中表示数据、参数、梯度和中间特征的核心对象。</td></tr>
-<tr><th>解决问题</th><td>解决 Python 列表无法高效矩阵计算、无法自动求导的问题。</td></tr>
-<tr><th>缺点/注意</th><td>需要严格管理 dtype、device 和 shape；CPU/GPU 混用容易报错。</td></tr>
-</tbody>
-</table>
-</div>
-</section>
+</code></pre></div><div class="source-note">依据 DNN 案例课件中的 20→128→256→4 结构、1600/400 数据划分和训练评估流程。</div></section><section class="note-section" id="torch-intro"><div class="module-head"><div><div class="section-kicker">09 · PyTorch 基础</div><h2>PyTorch 与 Tensor 基础</h2><p class="lead">如果说 NumPy 的核心对象是 ndarray，那么 PyTorch 的核心对象就是 Tensor。</p></div><div class="badges"><span class="badge">张量概念</span></div></div><p><strong>Tensor（张量）</strong>可以理解为“带有更多能力的多维数组”。它不仅能像 NumPy 一样做数值运算，还能配合 GPU 做加速计算，并且支持自动微分，这使它非常适合深度学习训练。</p><div class="grid two"><div class="card"><h4>常见张量维度</h4><p>0 维：标量，例如 <code>3.14</code>。<br/>1 维：向量，例如 <code>[1, 2, 3]</code>。<br/>2 维：矩阵，例如一张灰度图。<br/>3 维及以上：图像批次、视频、序列特征等。</p></div><div class="card"><h4>PyTorch 为什么适合教学</h4><p>语法更贴近 Python，动态图机制更直观，便于逐步打印中间变量，是入门深度学习非常友好的框架。</p></div></div></section>
 <section class="note-section" id="torch-ops"><div class="module-head"><div><div class="section-kicker">10 · PyTorch 基础</div><h2>张量创建、运算、索引和变形</h2><p class="lead">这里是所有 PyTorch 代码的基本功。</p></div><div class="badges"><span class="badge">代码清单</span></div></div><div class="grid two"><div class="card"><h4>创建方式</h4><p><code>torch.tensor</code> 按数据创建；<code>zeros</code>、<code>ones</code>、<code>randn</code> 按形状创建；还可以从 NumPy 数组转换而来。</p></div><div class="card"><h4>形状操作</h4><p><code>view</code> / <code>reshape</code> 改形状，<code>unsqueeze</code> 增维，<code>squeeze</code> 去掉长度为 1 的维度，<code>transpose</code>/<code>permute</code> 调整维度顺序。</p></div></div><div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>import torch
 
 a = torch.tensor([[1, 2], [3, 4]], dtype=torch.float32)
@@ -717,23 +573,7 @@ for epoch in range(1, 61):
         optimizer.step()
     if epoch in {1, 2, 3, 10, 30, 60}:
         print(epoch, loss.item(), model.weight.item(), model.bias.item())
-</code></pre></div>
-<figure class="card" data-drawio-integrated="true" style="padding:12px;margin:16px 0">
-<img alt="训练循环、验证循环、模型保存与加载" loading="lazy" src="assets/drawio/dlbert-03.jpg" style="width:100%;border-radius:14px;border:1px solid var(--line);display:block;background:#fff"/>
-<figcaption style="font-size:13px;color:var(--muted);margin-top:8px;line-height:1.6"><strong>深度学习串讲补充：</strong>训练循环、验证循环、模型保存与加载。对应 PyTorch 项目中最重要的工程闭环：train_loop、test_loop、model.eval、torch.save 和 load_state_dict。</figcaption>
-</figure>
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>PyTorch 自动微分：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>动态计算图会记录前向运算，loss.backward() 按链式法则自动求梯度。</td></tr>
-<tr><th>主要作用</th><td>让模型训练变成标准流程：zero_grad → forward → loss → backward → step。</td></tr>
-<tr><th>解决问题</th><td>解决手写复杂梯度困难、模型结构需要灵活调试的问题。</td></tr>
-<tr><th>缺点/注意</th><td>忘记 zero_grad 会梯度累加；验证阶段不关梯度会浪费显存。</td></tr>
-</tbody>
-</table>
-</div>
-</section>
+</code></pre></div></section>
 <section class="note-section" id="torch-summary"><div class="module-head"><div><div class="section-kicker">12 · PyTorch 基础</div><h2>PyTorch 模块总结</h2><p class="lead">把张量、自动微分和模型训练连接起来。</p></div><div class="badges"><span class="badge">知识串联</span></div></div><p>学习 PyTorch 时要始终抓住三件事：<strong>数据用 Tensor 表示</strong>、<strong>模型是可学习的参数化函数</strong>、<strong>训练就是通过损失函数和反向传播不断调整参数</strong>。这三点理解透了，再学 CNN、RNN、Transformer 都会顺畅很多。</p></section>
 <section class="note-section" id="torch-cnn">
 <div class="module-head"><div><div class="section-kicker">CNN · 01</div><h2>图像基础与卷积神经网络概述</h2><p class="lead">依据 CNN 课件，从像素、通道和张量布局开始，再进入卷积、池化和分类网络。</p></div><div class="badges"><span class="badge">图像基础</span><span class="badge">CNN 结构</span><span class="badge">PDF 细化</span></div></div>
@@ -741,18 +581,6 @@ for epoch in range(1, 61):
 <p>浅层卷积核常学习边缘、角点和纹理；随着层数增加，后续层会组合低级特征，形成部件和物体级表示。局部连接与权重共享让 CNN 的参数量远小于把每个像素直接连接到全连接层。</p>
 <div class="workflow"><div>图像归一化</div><span>→</span><div>Conv + ReLU</div><span>→</span><div>Pooling</div><span>→</span><div>更深卷积块</div><span>→</span><div>Flatten / GAP</div><span>→</span><div>分类概率</div></div>
 <div class="source-note">课件结构：图像基础知识 → CNN 概述 → 卷积层 → 池化层 → CIFAR-10 图像分类案例。</div>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>CNN：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>卷积核在图像局部窗口滑动，通过参数共享提取边缘、纹理和局部结构。</td></tr>
-<tr><th>主要作用</th><td>是图像识别、目标检测和视觉特征提取的基础网络。</td></tr>
-<tr><th>解决问题</th><td>解决全连接网络处理图像时参数过多、忽略空间局部结构的问题。</td></tr>
-<tr><th>缺点/注意</th><td>对长距离依赖建模弱；对旋转、尺度变化仍需数据增强或特殊结构。</td></tr>
-</tbody>
-</table>
-</div>
 </section><section class="note-section" id="cnn-conv">
 <div class="module-head"><div><div class="section-kicker">CNN · 02</div><h2>卷积计算：局部点积、卷积核与特征图</h2><p class="lead">用 5×5 输入和 3×3 卷积核逐位置演示卷积计算。</p></div><div class="badges"><span class="badge">动态卷积</span><span class="badge">卷积核</span><span class="badge">特征图</span></div></div>
 <p>深度学习框架中的 <code>Conv2d</code> 实际通常计算<strong>互相关</strong>：卷积核不翻转，在输入局部窗口上做逐元素乘法再求和。每移动一个位置，就产生特征图中的一个数值。</p>
@@ -788,18 +616,6 @@ for i in range(h_out):
         output[i, j] = np.sum(patch * kernel)
 print(output)
 </code></pre></div>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>卷积层：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>用卷积核与局部像素区域点乘求和，得到特征图上的一个值。</td></tr>
-<tr><th>主要作用</th><td>提取局部模式并复用同一组参数，使模型能在不同位置识别相同特征。</td></tr>
-<tr><th>解决问题</th><td>解决图像中空间邻域信息提取和参数共享问题。</td></tr>
-<tr><th>缺点/注意</th><td>卷积核大小、步长和填充设置不当会丢失信息或计算过重。</td></tr>
-</tbody>
-</table>
-</div>
 </section><section class="note-section" id="cnn-shape">
 <div class="module-head"><div><div class="section-kicker">CNN · 03</div><h2>Padding、Stride、多通道与输出尺寸</h2><p class="lead">掌握卷积层最常见的形状计算与参数量计算。</p></div><div class="badges"><span class="badge">输出尺寸</span><span class="badge">多通道</span><span class="badge">Conv2d API</span></div></div>
 <div class="formula">H_out = floor((H + 2P - D(K-1) - 1)/S + 1)<br/>W_out = floor((W + 2P - D(K-1) - 1)/S + 1)</div>
@@ -821,22 +637,6 @@ y = conv(x)
 print(x.shape)  # [8, 3, 32, 32]
 print(y.shape)  # [8, 16, 16, 16]
 print(sum(p.numel() for p in conv.parameters()))</code></pre></div>
-
-<figure class="card" data-drawio-integrated="true" style="padding:12px;margin:16px 0">
-<img alt="GAN、卷积尺寸公式与 CNN/FC 结构补充" loading="lazy" src="assets/drawio/dlbert-04.jpg" style="width:100%;border-radius:14px;border:1px solid var(--line);display:block;background:#fff"/>
-<figcaption style="font-size:13px;color:var(--muted);margin-top:8px;line-height:1.6"><strong>深度学习串讲补充：</strong>GAN、卷积尺寸公式与 CNN/FC 结构补充。图中给出卷积输出尺寸公式 N=(M-F+2P)/S+1，并把 CNN、FC 与生成式模型联系起来。</figcaption>
-</figure>
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>Padding / Stride / 多通道：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>输出尺寸由输入大小、卷积核、padding 和 stride 决定，多通道卷积会跨通道求和。</td></tr>
-<tr><th>主要作用</th><td>帮助设计网络结构，确保各层形状可衔接。</td></tr>
-<tr><th>解决问题</th><td>解决“为什么输出变大/变小、参数量怎么算”的工程问题。</td></tr>
-<tr><th>缺点/注意</th><td>形状计算复杂时容易出错；padding 可能引入边界伪信息。</td></tr>
-</tbody>
-</table>
-</div>
 </section><section class="note-section" id="cnn-pool">
 <div class="module-head"><div><div class="section-kicker">CNN · 04</div><h2>池化层：最大池化、平均池化与下采样</h2><p class="lead">池化对每个通道独立处理，降低空间尺寸但不改变通道数。</p></div><div class="badges"><span class="badge">动态池化</span><span class="badge">MaxPool</span><span class="badge">AvgPool</span></div></div>
 <div class="two-col"><div><p><strong>最大池化</strong>保留局部最强响应，常用于突出是否出现某种特征；<strong>平均池化</strong>保留区域平均信息，输出更平滑。池化没有可学习权重。</p><p>课件强调池化可以降低计算量和内存消耗，并使模型对小范围平移和噪声更鲁棒。但过度池化会丢失精细位置信息。</p></div><div class="card"><h4>通道规则</h4><p>卷积会跨输入通道加权求和，而池化对每个通道分别计算，所以输出通道数与输入通道数相同。</p></div></div>
@@ -867,18 +667,6 @@ print('avg pool:\n', pool(x, 'avg'))
 </code></pre></div>
 <div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>max_pool = nn.MaxPool2d(kernel_size=2, stride=2)
 avg_pool = nn.AvgPool2d(kernel_size=2, stride=2)</code></pre></div>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>池化层：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>在局部窗口取最大值或平均值，对特征图下采样。</td></tr>
-<tr><th>主要作用</th><td>减少空间尺寸和计算量，提升一定平移鲁棒性。</td></tr>
-<tr><th>解决问题</th><td>解决特征图过大、参数和计算过多的问题。</td></tr>
-<tr><th>缺点/注意</th><td>会丢失精细位置信息；现代网络中有时用步幅卷积替代池化。</td></tr>
-</tbody>
-</table>
-</div>
 </section><section class="note-section" id="cnn-case">
 <div class="module-head"><div><div class="section-kicker">CNN · 05</div><h2>CIFAR-10 图像分类案例：从数据到测试准确率</h2><p class="lead">按照课件案例拆解数据加载、网络搭建、训练循环和测试评估。</p></div><div class="badges"><span class="badge">CIFAR-10</span><span class="badge">完整流程</span><span class="badge">PyTorch</span></div></div>
 <p>CIFAR-10 包含 32×32 RGB 图像和 10 个类别。课件使用两组“卷积 + ReLU + 池化”，再连接全连接分类器。形状变化如下：</p>
@@ -924,23 +712,12 @@ if '--train' in sys.argv:
 </code></pre></div>
 <div class="warn"><strong>数据泄露提醒：</strong>归一化统计量和数据增强策略只能根据训练集设计；测试集只做与模型输入一致的确定性预处理。</div>
 </section>
+
 <section class="note-section" id="nlp-overview">
 <div class="module-head"><div><div class="section-kicker">文本预处理 · 01</div><h2>NLP 与文本预处理总览</h2><p class="lead">文本不能直接输入模型：需要清洗、切分、分析、编码和规范长度，最终形成可训练的 X 与 y。</p></div><div class="badges"><span class="badge">NLP</span><span class="badge">预处理流水线</span><span class="badge">课件扩展</span></div></div>
 <div class="two-col"><div><p><strong>自然语言处理（NLP）</strong>的目标是让计算机理解和生成人类语言。理解类任务常称为 NLU，例如情感分类、命名实体识别；生成类任务常称为 NLG，例如翻译、摘要、问答和文本续写。语音系统中还常见 STT（语音转文字）与 TTS（文字转语音）。</p><p><strong>文本预处理</strong>不是固定的一套步骤，而是根据语言、任务和模型准备输入。传统词袋模型、RNN 与 Transformer 所需的切分方式、长度策略和编码方式可能不同。</p><div class="callout"><strong>核心目标：</strong>检查标签是否均衡、文本是否脏乱，完成文本数字化与张量化，并让同一批数据具有模型能够处理的统一形状。</div></div><div><table><thead><tr><th>方向</th><th>典型任务</th></tr></thead><tbody><tr><td>NLU</td><td>文本分类、情感分析、实体识别、检索</td></tr><tr><td>NLG</td><td>翻译、摘要、问答、文本生成</td></tr><tr><td>语音与文字</td><td>STT、TTS、声纹识别</td></tr></tbody></table></div></div>
 <div class="nlp-pipeline"><div><b>01</b>清洗与分词</div><div><b>02</b>POS / NER</div><div><b>03</b>语料分析</div><div><b>04</b>特征与长度</div><div><b>05</b>数值编码</div><div><b>06</b>增强与张量化</div></div>
 <div class="source-note">依据《文本预处理》课件的总体结构整理：基本处理、语料分析、特征处理、文本编码与回译数据增强。</div>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>文本预处理：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>把自然语言整理成模型可接收的 X、Y，包括分词、语料分析、编码、长度规范和增强。</td></tr>
-<tr><th>主要作用</th><td>保证训练数据干净、长度统一、编码一致，是 NLP 项目的入口。</td></tr>
-<tr><th>解决问题</th><td>解决文本不能直接输入模型、标签和长度分布不可控的问题。</td></tr>
-<tr><th>缺点/注意</th><td>不同语言、任务和模型预处理方式不同，不能一套规则通用。</td></tr>
-</tbody>
-</table>
-</div>
 </section><section class="note-section" id="nlp-tokenization">
 <div class="module-head"><div><div class="section-kicker">文本预处理 · 02</div><h2>中文分词与 jieba 三种模式</h2><p class="lead">中文没有天然空格边界，分词是文本编码和后续 NLP 任务的入口。</p></div><div class="badges"><span class="badge">Tokenization</span><span class="badge">jieba</span><span class="badge">动态演示</span></div></div>
 <p><strong>分词</strong>是把连续文字序列转换为词元序列。词元是模型处理文本的基本单位。中文分词难点在于边界不显式，例如“研究生命起源”可以因领域词典和语境产生不同切法。</p>
@@ -958,18 +735,6 @@ print([(x.word, x.flag) for x in pseg.cut(text)])
 
 # 领域词典：每行可写“词语 词频 词性”
 jieba.load_userdict("userdict.txt")</code></pre></div>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>中文分词：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>把连续中文字符序列切成词元序列，词元是后续编码和建模的基本单位。</td></tr>
-<tr><th>主要作用</th><td>是中文文本数字化和特征提取的前提。</td></tr>
-<tr><th>解决问题</th><td>解决中文没有天然空格分隔的问题。</td></tr>
-<tr><th>缺点/注意</th><td>分词错误会传播到后续模型；新词、歧义词和领域词需要自定义词典。</td></tr>
-</tbody>
-</table>
-</div>
 </section><section class="note-section" id="nlp-pos-ner">
 <div class="module-head"><div><div class="section-kicker">文本预处理 · 03</div><h2>词性标注与命名实体识别</h2><p class="lead">二者都是词元级分类，但用途不同：POS 描述语法角色，NER 抽取专有实体。</p></div><div class="badges"><span class="badge">POS</span><span class="badge">NER</span><span class="badge">序列标注</span></div></div>
 <div class="grid two"><div class="card"><h4>词性标注 POS</h4><p>为每个词标注名词、动词、形容词等类别。它可用于特征工程，例如统计名词或形容词比例，也可作为语法分析的基础。</p><div class="bio-labels"><span>自然语言/n</span><span>处理/v</span><span>很/d</span><span>有趣/a</span></div></div><div class="card"><h4>命名实体识别 NER</h4><p>识别人名、地名、机构名等专有实体。工程中常用 BIO 标签表示实体边界：B 表示实体开始，I 表示实体内部，O 表示非实体。</p><div class="bio-labels"><span>小明/B-PER</span><span>在/O</span><span>北京大学/B-ORG</span><span>学习/O</span></div></div></div>
@@ -1045,22 +810,6 @@ print(X_count.toarray())
 
 tfidf = TfidfVectorizer(token_pattern=r"(?u)\b\w+\b")
 print(tfidf.fit_transform(corpus).toarray().round(3))</code></pre></div>
-
-<figure class="card" data-drawio-integrated="true" style="padding:12px;margin:16px 0">
-<img alt="TF-IDF 特征工程串讲" loading="lazy" src="assets/drawio/project-06.jpg" style="width:100%;border-radius:14px;border:1px solid var(--line);display:block;background:#fff"/>
-<figcaption style="font-size:13px;color:var(--muted);margin-top:8px;line-height:1.6"><strong>DrawIO 串讲补充：</strong>TF-IDF 特征工程串讲。图中把词频、逆文档频率、稀疏向量和文本分类连接起来；TF-IDF 是随机森林文本分类 baseline 的关键输入。</figcaption>
-</figure>
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>词袋 / TF-IDF：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>将文本表示成稀疏向量，TF-IDF 同时考虑词频和逆文档频率。</td></tr>
-<tr><th>主要作用</th><td>适合传统模型文本分类 baseline，如逻辑回归、SVM、随机森林。</td></tr>
-<tr><th>解决问题</th><td>解决文本转数值特征的问题，并降低高频无信息词的权重。</td></tr>
-<tr><th>缺点/注意</th><td>忽略词序和上下文，一词多义和语义相似难表达。</td></tr>
-</tbody>
-</table>
-</div>
 </section><section class="note-section" id="nlp-embedding">
 <div class="module-head"><div><div class="section-kicker">文本预处理 · 08</div><h2>词嵌入与预训练向量</h2><p class="lead">Embedding 把离散词 ID 映射为低维稠密向量，并在训练中学习语义空间。</p></div><div class="badges"><span class="badge">Embedding</span><span class="badge">Word2Vec</span><span class="badge">预训练加载</span></div></div>
 <div class="two-col"><div><p>假设词表大小为 <code>V</code>、向量维度为 <code>D</code>，词嵌入矩阵形状为 <code>[V, D]</code>。输入 ID 本质上是在矩阵中查找对应行，因此 <code>[B,L]</code> 的 ID 张量会变成 <code>[B,L,D]</code>。</p><p>预训练 Word2Vec 或 GloVe 可以用更大语料学到语义关系，再加载进下游模型。可选择冻结参数，也可以继续微调。</p><div class="callout"><strong>工程约定：</strong>通常保留 <code>&lt;PAD&gt;</code>、<code>&lt;UNK&gt;</code> 等特殊 ID，并用 <code>padding_idx</code> 让 PAD 向量不参与更新。</div></div><div class="card"><h4>与稀疏编码的区别</h4><p>词袋矩阵每一维对应具体词，维度大且稀疏；Embedding 的每一维不是人工命名特征，而是模型从任务中学习到的潜在语义方向。</p></div></div>
@@ -1078,18 +827,6 @@ print(vectors.shape)  # [batch=2, seq_len=4, embedding_dim=128]
 pretrained = torch.randn(vocab_size, embedding_dim)
 pretrained[0].zero_()
 embedding = nn.Embedding.from_pretrained(pretrained, freeze=False, padding_idx=0)</code></pre></div>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>词嵌入：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>把 token id 映射成稠密向量，让相似词在向量空间中更接近。</td></tr>
-<tr><th>主要作用</th><td>是 RNN、CNN 文本模型和 Transformer 的输入基础。</td></tr>
-<tr><th>解决问题</th><td>解决 one-hot 维度高、语义不可度量的问题。</td></tr>
-<tr><th>缺点/注意</th><td>静态词向量难处理一词多义；语义会受训练语料偏差影响。</td></tr>
-</tbody>
-</table>
-</div>
 </section><section class="note-section" id="nlp-augmentation">
 <div class="module-head"><div><div class="section-kicker">文本预处理 · 09</div><h2>回译数据增强</h2><p class="lead">把文本翻译到中间语言，再翻回原语言，以获得语义近似、表达不同的新样本。</p></div><div class="badges"><span class="badge">Back Translation</span><span class="badge">数据增强</span></div></div>
 <div class="workflow"><div>中文原句</div><span>→</span><div>翻译为英文</div><span>→</span><div>再翻回中文</div><span>→</span><div>语义近似新样本</div></div>
@@ -1110,22 +847,6 @@ embedding = nn.Embedding.from_pretrained(pretrained, freeze=False, padding_idx=0
 <div class="two-col"><div><p><strong>循环神经网络（RNN）</strong>专门处理序列数据。与前馈网络不同，它在每个时间步接收当前输入 <code>xₜ</code> 和上一时刻隐藏状态 <code>hₜ₋₁</code>，从而把历史信息向后传递。</p><p>序列不一定是时间：文字、语音、音乐、传感器数据都可以看作有顺序的数据。RNN 常用于时间序列预测、语言模型、文本生成、翻译、情感分析、语音识别和音乐生成。</p></div><div><table><thead><tr><th>映射形式</th><th>任务例子</th></tr></thead><tbody><tr><td>多对一</td><td>整句情感分类</td></tr><tr><td>多对多（等长）</td><td>POS、NER</td></tr><tr><td>多对多（不等长）</td><td>翻译、摘要</td></tr><tr><td>一对多</td><td>给定主题生成序列</td></tr></tbody></table></div></div>
 <div class="lab"><div class="lab-header"><div><div class="lab-title">动态例图：隐藏状态沿序列传递</div><div class="lab-sub">示例使用简化公式 hₜ=tanh(0.72hₜ₋₁+1.1xₜ−0.05)。</div></div></div><div class="controls"><button id="rnnPlayBtn" type="button">播放</button><button id="rnnStepBtn" type="button">单步</button><button id="rnnResetBtn" type="button">重置</button></div><div class="rnn-unroll" id="rnnUnroll"></div><div class="result-panel"><div class="mini"><b id="rnnCurrentToken">—</b><span>当前词元</span></div><div class="mini"><b id="rnnPrevH">—</b><span>上一隐藏状态</span></div><div class="mini"><b id="rnnCurrentH">—</b><span>当前隐藏状态</span></div><div class="mini"><b id="rnnStepVal">—</b><span>时间步</span></div></div></div>
 <div class="formula">hₜ = tanh(Wₓₕxₜ + Wₕₕhₜ₋₁ + bₕ)<br/>yₜ = softmax(Wₕᵧhₜ + bᵧ)</div>
-
-<figure class="card" data-drawio-integrated="true" style="padding:12px;margin:16px 0">
-<img alt="RNN、LSTM、GRU、Transformer 到 BERT 的过渡" loading="lazy" src="assets/drawio/dlbert-05.jpg" style="width:100%;border-radius:14px;border:1px solid var(--line);display:block;background:#fff"/>
-<figcaption style="font-size:13px;color:var(--muted);margin-top:8px;line-height:1.6"><strong>深度学习串讲补充：</strong>RNN、LSTM、GRU、Transformer 到 BERT 的过渡。这张图适合放在 RNN 章节结尾：先理解循环网络的记忆机制，再自然过渡到 Transformer 的注意力机制和 BERT 微调。</figcaption>
-</figure>
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>RNN：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>通过隐藏状态把上一个时间步的信息传到下一个时间步。</td></tr>
-<tr><th>主要作用</th><td>用于文本、语音、时间序列等有顺序依赖的数据。</td></tr>
-<tr><th>解决问题</th><td>解决普通前馈网络无法利用序列历史信息的问题。</td></tr>
-<tr><th>缺点/注意</th><td>长序列训练慢且难并行，容易梯度消失/爆炸。</td></tr>
-</tbody>
-</table>
-</div>
 </section><section class="note-section" id="rnn-embedding">
 <div class="module-head"><div><div class="section-kicker">循环神经网络 · 02</div><h2>PyTorch 词嵌入层：从词表索引到序列向量</h2><p class="lead">RNN 不接收字符串，而是接收每个时间步的稠密向量。</p></div><div class="badges"><span class="badge">nn.Embedding</span><span class="badge">查表</span><span class="badge">形状</span></div></div>
 <div class="steps"><div class="step"><div class="num">1</div><div><strong>分词：</strong>把文本变成词元序列。</div></div><div class="step"><div class="num">2</div><div><strong>建词表：</strong>为每个词分配唯一 ID。</div></div><div class="step"><div class="num">3</div><div><strong>Embedding 查表：</strong>ID 映射到低维稠密向量。</div></div><div class="step"><div class="num">4</div><div><strong>输入 RNN：</strong>沿序列维逐步提取上下文特征。</div></div></div>
@@ -1144,18 +865,6 @@ print(vectors.shape)  # [batch=2, seq_len=4, embedding_dim=128]
 pretrained = torch.randn(vocab_size, embedding_dim)
 pretrained[0].zero_()
 embedding = nn.Embedding.from_pretrained(pretrained, freeze=False, padding_idx=0)</code></pre></div>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>Embedding 层：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>本质是一个可学习查表矩阵，把词表索引变成连续向量。</td></tr>
-<tr><th>主要作用</th><td>降低输入维度并让模型学习词语的语义关系。</td></tr>
-<tr><th>解决问题</th><td>解决 token id 只是离散编号、无法表达语义的问题。</td></tr>
-<tr><th>缺点/注意</th><td>未登录词、稀有词和领域词需要特殊处理；向量质量依赖数据规模。</td></tr>
-</tbody>
-</table>
-</div>
 </section><section class="note-section" id="rnn-vanilla">
 <div class="module-head"><div><div class="section-kicker">循环神经网络 · 03</div><h2>Vanilla RNN：参数共享、展开计算与 BPTT</h2><p class="lead">图中看似有多个神经元，实际是同一个单元在不同时间步重复使用同一组参数。</p></div><div class="badges"><span class="badge">Vanilla RNN</span><span class="badge">BPTT</span><span class="badge">梯度裁剪</span></div></div>
 <p>在时间步 <code>t</code>，RNN 将当前输入和历史隐藏状态合并。所有时间步共享 <code>Wₓₕ</code>、<code>Wₕₕ</code> 和偏置，因此可以处理不同长度的序列。</p>
@@ -1184,18 +893,6 @@ for t in range(seq_len):
 output = torch.stack(outputs, dim=1)
 print(output.shape)</code></pre></div>
 <div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)</code></pre></div>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>Vanilla RNN：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>每个时间步共享同一组参数，h_t=f(Wx_t+Uh_{t-1}+b)。</td></tr>
-<tr><th>主要作用</th><td>适合入门理解序列模型和 BPTT。</td></tr>
-<tr><th>解决问题</th><td>解决“同一模型如何处理任意长度序列”的问题。</td></tr>
-<tr><th>缺点/注意</th><td>长依赖能力弱，训练不稳定，实际常被 LSTM/GRU/Transformer 替代。</td></tr>
-</tbody>
-</table>
-</div>
 </section><section class="note-section" id="rnn-lstm">
 <div class="module-head"><div><div class="section-kicker">循环神经网络 · 04</div><h2>LSTM：让长期记忆沿细胞状态传递</h2><p class="lead">LSTM 增加细胞状态 Cₜ，并用三个门控制遗忘、写入和输出。</p></div><div class="badges"><span class="badge">Forget Gate</span><span class="badge">Input Gate</span><span class="badge">Output Gate</span></div></div>
 <div class="formula small">fₜ = σ(Wf[hₜ₋₁,xₜ] + bf)<br/>iₜ = σ(Wi[hₜ₋₁,xₜ] + bi)<br/>õₜ = σ(Wo[hₜ₋₁,xₜ] + bo)<br/>C̃ₜ = tanh(Wc[hₜ₋₁,xₜ] + bc)<br/>Cₜ = fₜ ⊙ Cₜ₋₁ + iₜ ⊙ C̃ₜ<br/>hₜ = oₜ ⊙ tanh(Cₜ)</div>
@@ -1215,18 +912,6 @@ output, (h_n, c_n) = lstm(x)
 print(output.shape)  # [4, 7, 32]
 print(h_n.shape)     # [2, 4, 32]
 print(c_n.shape)     # [2, 4, 32]</code></pre></div>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>LSTM：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>通过遗忘门、输入门、输出门和细胞状态控制信息保留、写入和输出。</td></tr>
-<tr><th>主要作用</th><td>适合较长序列中的依赖建模。</td></tr>
-<tr><th>解决问题</th><td>解决普通 RNN 长期记忆差和梯度消失问题。</td></tr>
-<tr><th>缺点/注意</th><td>结构复杂、参数多、训练和推理慢于 GRU 和 Transformer。</td></tr>
-</tbody>
-</table>
-</div>
 </section><section class="note-section" id="rnn-gru">
 <div class="module-head"><div><div class="section-kicker">循环神经网络 · 05</div><h2>GRU：用重置门与更新门简化 LSTM</h2><p class="lead">GRU 没有独立细胞状态，参数更少、计算更快，常与 LSTM 作为并列基线。</p></div><div class="badges"><span class="badge">Reset Gate</span><span class="badge">Update Gate</span></div></div>
 <div class="formula small">rₜ = σ(Wr[hₜ₋₁,xₜ] + br)<br/>zₜ = σ(Wz[hₜ₋₁,xₜ] + bz)<br/>h̃ₜ = tanh(Wh[rₜ⊙hₜ₋₁,xₜ] + bh)<br/>hₜ = (1-zₜ)⊙hₜ₋₁ + zₜ⊙h̃ₜ</div>
@@ -1240,18 +925,6 @@ gru = nn.GRU(16, 32, num_layers=2, batch_first=True)
 output, h_n = gru(x)
 print(output.shape)  # [4, 7, 32]
 print(h_n.shape)     # [2, 4, 32]</code></pre></div>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>GRU：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>用更新门和重置门合并部分 LSTM 机制，结构更简洁。</td></tr>
-<tr><th>主要作用</th><td>在很多任务中以更少参数获得接近 LSTM 的效果。</td></tr>
-<tr><th>解决问题</th><td>解决 LSTM 参数多、训练慢的问题。</td></tr>
-<tr><th>缺点/注意</th><td>表达能力可能略弱于 LSTM；长文本并行能力仍不如 Transformer。</td></tr>
-</tbody>
-</table>
-</div>
 </section><section class="note-section" id="rnn-stacked-bi">
 <div class="module-head"><div><div class="section-kicker">循环神经网络 · 06</div><h2>堆叠网络与双向网络</h2><p class="lead">堆叠提高层级表征能力；双向结构同时利用前文与后文。</p></div><div class="badges"><span class="badge">Stacked</span><span class="badge">Bidirectional</span></div></div>
 <div class="rnn-family"><div><h4>单层单向</h4><p>每个位置只看到当前与过去信息，适合在线预测和自回归生成。</p><div class="shape-flow"><span>xₜ</span><i>→</i><span>hₜ</span></div></div><div><h4>多层堆叠</h4><p>下层输出作为上层输入，逐层组合局部特征形成更抽象表示。</p><div class="shape-flow"><span>Layer 1</span><i>→</i><span>Layer 2</span><i>→</i><span>Layer 3</span></div></div><div><h4>双向网络</h4><p>正向与反向分别编码，再拼接。适合分类、NER 等可看到完整句子的任务。</p><div class="shape-flow"><span>h→</span><i>+</i><span>h←</span><i>→</i><span>[h→;h←]</span></div></div></div>
@@ -1271,18 +944,6 @@ model = nn.LSTM(
 output, (h_n, c_n) = model(x)
 print(output.shape)  # [8, 20, 256]，双向会拼接两个方向
 print(h_n.shape)     # [3*2, 8, 128]</code></pre></div>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>堆叠/双向 RNN：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>堆叠增加层次抽象，双向同时利用左文和右文。</td></tr>
-<tr><th>主要作用</th><td>适合序列标注、文本分类、语音识别等需要上下文的任务。</td></tr>
-<tr><th>解决问题</th><td>解决单层单向 RNN 表达能力和上下文不足的问题。</td></tr>
-<tr><th>缺点/注意</th><td>双向模型不能用于严格自回归生成；层数过深会更难训练。</td></tr>
-</tbody>
-</table>
-</div>
 </section><section class="note-section" id="rnn-pytorch">
 <div class="module-head"><div><div class="section-kicker">循环神经网络 · 07</div><h2>PyTorch RNN / LSTM / GRU API 与形状</h2><p class="lead">最常见错误不是公式，而是把 batch、序列、层数和方向维度弄混。</p></div><div class="badges"><span class="badge">Shape</span><span class="badge">Parameter Count</span><span class="badge">动态计算器</span></div></div>
 <div class="formula">batch_first=True 时：input = [B,L,I]<br/>output = [B,L,D×H]<br/>h_n = [D×N,B,H]<br/>LSTM 额外返回 c_n = [D×N,B,H]</div>
@@ -1304,18 +965,6 @@ out, (h_n, c_n) = lstm(x)
 
 gru = nn.GRU(I, H, N, batch_first=True, bidirectional=True)
 out, h_n = gru(x)</code></pre></div>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>PyTorch RNN API：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>输入通常是 batch、seq_len、feature，输出包括每个时间步输出和最终隐藏状态。</td></tr>
-<tr><th>主要作用</th><td>统一调用 RNN/LSTM/GRU，便于快速替换模型结构。</td></tr>
-<tr><th>解决问题</th><td>解决手写循环单元低效且容易出错的问题。</td></tr>
-<tr><th>缺点/注意</th><td>shape 约定容易混淆，batch_first、num_layers、bidirectional 要特别检查。</td></tr>
-</tbody>
-</table>
-</div>
 </section><section class="note-section" id="rnn-generation">
 <div class="module-head"><div><div class="section-kicker">循环神经网络 · 08</div><h2>文本生成案例：Embedding → RNN → Linear → 采样</h2><p class="lead">课件以歌词生成说明 RNN 文本生成；本页使用原创小语料展示同一训练与推理流程。</p></div><div class="badges"><span class="badge">Language Model</span><span class="badge">Teacher Forcing</span><span class="badge">Temperature</span></div></div>
 <div class="steps"><div class="step"><div class="num">1</div><div><strong>建立字符/词元词表：</strong>文本映射为 ID 序列。</div></div><div class="step"><div class="num">2</div><div><strong>构造右移标签：</strong>输入 <code>[t₀...tₙ₋₁]</code>，目标 <code>[t₁...tₙ]</code>。</div></div><div class="step"><div class="num">3</div><div><strong>网络结构：</strong>Embedding 数值化，RNN/LSTM 提取上下文，全连接层输出词表 logits。</div></div><div class="step"><div class="num">4</div><div><strong>训练：</strong>对每个时间步使用交叉熵，反向传播并更新参数。</div></div><div class="step"><div class="num">5</div><div><strong>推理：</strong>采样下一个 token，再把它送回模型循环生成。</div></div></div>
@@ -1343,18 +992,6 @@ class CharacterGenerator(nn.Module):
 # 损失：CrossEntropyLoss(logits.reshape(-1,V), targets.reshape(-1))
 # 推理：将上一步采样出的 token 再喂给模型，循环生成。</code></pre></div>
 <div class="source-note">《循环神经网络》课件案例的三层结构是词嵌入层、循环网络层和全连接输出层；本页进一步补充了右移标签、温度采样和推理闭环。</div>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>RNN 文本生成：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>模型根据前面 token 预测下一个 token，再把预测结果接回输入继续生成。</td></tr>
-<tr><th>主要作用</th><td>是理解语言模型自回归生成的入门案例。</td></tr>
-<tr><th>解决问题</th><td>解决如何从分类模型过渡到序列生成的问题。</td></tr>
-<tr><th>缺点/注意</th><td>生成质量受数据规模和模型能力限制，长文本一致性较差。</td></tr>
-</tbody>
-</table>
-</div>
 </section><section class="note-section" id="llm-token">
 <div class="module-head"><div><div class="section-kicker">Transformer · 01</div><h2>从文本到模型输入：Token、ID、Embedding 与 Mask</h2><p class="lead">Transformer 的输入不是字符串，而是形状明确的张量和掩码。</p></div><div class="badges"><span class="badge">Tokenization</span><span class="badge">Embedding</span><span class="badge">输入形状</span></div></div>
 <div class="token-flow"><div>原始文本</div><span>→</span><div>Tokenization</div><span>→</span><div>Token IDs</div><span>→</span><div>Token Embeddings</div><span>+</span><div>Position Information</div><span>→</span><div>Transformer</div></div>
@@ -1371,35 +1008,11 @@ x = embedding(input_ids)             # [B=2, L=4, d_model=512]
 padding_mask = input_ids.eq(0)       # True 表示需要忽略
 print(x.shape, padding_mask.shape)</code></pre></div>
 <div class="source-note">课件先从分词、词嵌入和“一词多义”问题切入，再引出使用上下文更新词义的自注意力机制。</div>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>Token / Embedding / Mask：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>文本先分词成 token，再映射为 token id 和 embedding，并用 mask 标记有效位置。</td></tr>
-<tr><th>主要作用</th><td>是 Transformer 能处理文本的输入接口。</td></tr>
-<tr><th>解决问题</th><td>解决自然语言不能直接进入矩阵计算的问题。</td></tr>
-<tr><th>缺点/注意</th><td>不同 tokenizer 会影响长度、成本和语义切分；长文本会受到上下文窗口限制。</td></tr>
-</tbody>
-</table>
-</div>
 </section><section class="note-section" id="llm-attention">
 <div class="module-head"><div><div class="section-kicker">Transformer · 02</div><h2>自注意力直觉：每个 token 都向整段上下文“提问”</h2><p class="lead">Q 表示当前需要寻找的信息，K 表示可匹配的索引，V 表示真正被汇总的内容。</p></div><div class="badges"><span class="badge">Q / K / V</span><span class="badge">上下文表示</span><span class="badge">动态热力图</span></div></div>
 <div class="two-col"><div><p>输入 <code>X</code> 通过三组可学习线性变换得到 <code>Q=XWᴽ</code>、<code>K=XWᴷ</code>、<code>V=XWⱽ</code>。某个 token 的 Query 与所有 Key 做点积，得到它对所有位置的相关性分数；softmax 将分数归一化为权重，再对 Value 加权求和。</p><div class="formula">Attention(Q,K,V) = softmax(QKᵀ / √dₖ) V</div><p>这一步让“苹果”在“苹果很甜”和“苹果发布手机”中获得不同表示，因为它会分别关注“甜”和“手机/发布”等上下文。</p></div><div class="card"><h4>Q / K / V 的类比</h4><p><strong>Query：</strong>我现在想找什么？<br/><strong>Key：</strong>我有哪些可供匹配的标签？<br/><strong>Value：</strong>如果你关注我，我真正提供什么内容？</p></div></div>
 <div class="lab"><div class="lab-header"><div><div class="lab-title">动态热力图：选择 Query token，查看它关注哪些 Key</div><div class="lab-sub">颜色越深，注意力权重越大。该矩阵用于教学直觉，并非真实模型输出。</div></div></div><div class="controls"><label>句子：<select id="attnSentenceSel"><option value="fruit">这 家 苹果 很 甜</option><option value="phone">苹果 发布 新 手机 了</option></select></label><button class="attn-focus" data-idx="0" type="button">第1词</button><button class="attn-focus" data-idx="1" type="button">第2词</button><button class="attn-focus" data-idx="2" type="button">第3词</button><button class="attn-focus" data-idx="3" type="button">第4词</button></div><div class="bar-list" id="attnBars"></div><div class="attn-grid" id="attnGrid"></div></div>
 <div class="callout"><strong>为什么能处理长距离关系？</strong>任意两个位置可以直接计算相关性，不需要像传统 RNN 那样逐时间步传递隐藏状态，信息路径更短，并且所有位置可以并行计算。</div>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>自注意力：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>每个 token 用 Query 与其他 token 的 Key 计算相关性，再加权汇总 Value。</td></tr>
-<tr><th>主要作用</th><td>让词义根据上下文动态变化，解决一词多义和长距离依赖。</td></tr>
-<tr><th>解决问题</th><td>解决 RNN 信息传递路径长、并行度低的问题。</td></tr>
-<tr><th>缺点/注意</th><td>复杂度随序列长度平方增长，长文本计算和显存成本高。</td></tr>
-</tbody>
-</table>
-</div>
 </section><section class="note-section" id="llm-attention-math">
 <div class="module-head"><div><div class="section-kicker">Transformer · 03</div><h2>Scaled Dot-Product Attention：矩阵形状逐步推导</h2><p class="lead">从 X 到 Q/K/V、分数矩阵、缩放、Softmax 和输出，每一步都标明维度。</p></div><div class="badges"><span class="badge">矩阵推导</span><span class="badge">Shape</span><span class="badge">动态步骤</span></div></div>
 <div class="shape-flow"><span>X:[L,d_model]</span><i>→</i><span>Q:[L,d_k]</span><span>K:[L,d_k]</span><span>V:[L,d_v]</span><i>→</i><span>S=QKᵀ:[L,L]</span><i>→</i><span>A:[L,L]</span><i>→</i><span>Z=AV:[L,d_v]</span></div>
@@ -1433,18 +1046,6 @@ for name, value in {
     print(f'\n{name} shape={value.shape}\n{value}')
 </code></pre></div>
 <div class="warn"><strong>复杂度：</strong>完整注意力分数矩阵大小为 L×L，因此时间和显存通常随序列长度近似按 O(L²) 增长。</div>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>Scaled Dot-Product Attention：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>Attention(Q,K,V)=softmax(QKᵀ/√d_k)V，缩放项防止 softmax 饱和。</td></tr>
-<tr><th>主要作用</th><td>提供 Transformer 注意力层的矩阵化计算方式。</td></tr>
-<tr><th>解决问题</th><td>解决批量并行计算上下文相关表示的问题。</td></tr>
-<tr><th>缺点/注意</th><td>对超长序列昂贵，注意力权重不等于完整可解释性。</td></tr>
-</tbody>
-</table>
-</div>
 </section><section class="note-section" id="llm-multihead">
 <div class="module-head"><div><div class="section-kicker">Transformer · 04</div><h2>多头注意力：在多个子空间学习不同关系</h2><p class="lead">把 d_model 切成多个 head，每个 head 独立注意，再拼接并投影。</p></div><div class="badges"><span class="badge">Multi-Head</span><span class="badge">并行子空间</span><span class="badge">动态 Head</span></div></div>
 <div class="formula">headᵢ = Attention(XWᵢᴽ, XWᵢᴷ, XWᵢⱽ)<br/>MultiHead(X) = Concat(head₁,…,headₕ)Wᴼ</div>
@@ -1473,18 +1074,6 @@ print('output:', output.shape)  # [B, L, d_model]
 print('weights:', weights.shape) # [B, heads, L, L]
 print('head-0 weights of sample-0:\n', weights[0, 0].round(decimals=3))
 </code></pre></div>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>多头注意力：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>把 Q/K/V 切到多个子空间并行做注意力，再拼接融合。</td></tr>
-<tr><th>主要作用</th><td>让不同头关注句法、实体、位置或语义等不同关系。</td></tr>
-<tr><th>解决问题</th><td>解决单一注意力头表达能力不足的问题。</td></tr>
-<tr><th>缺点/注意</th><td>头数过多会增加计算；有些头可能冗余。</td></tr>
-</tbody>
-</table>
-</div>
 </section><section class="note-section" id="llm-encoder">
 <div class="module-head"><div><div class="section-kicker">Transformer · 05</div><h2>Encoder Block：残差、LayerNorm 与前馈网络</h2><p class="lead">注意力负责位置间通信，FFN 负责逐位置加工；残差和归一化让深层训练可行。</p></div><div class="badges"><span class="badge">Encoder</span><span class="badge">Pre-Norm</span><span class="badge">FFN</span></div></div>
 <div class="arch-columns"><div class="arch-column"><h4>输入</h4><div class="stack"><span>Token Embedding</span><span>+ Position</span></div></div><div class="arch-column"><h4>注意力子层</h4><div class="stack"><span class="att">LayerNorm</span><span class="att">Multi-Head Self-Attention</span><span>Residual Add</span></div></div><div class="arch-column"><h4>前馈子层</h4><div class="stack"><span class="ffn">LayerNorm</span><span class="ffn">Linear → GELU → Linear</span><span>Residual Add</span></div></div></div>
@@ -1527,18 +1116,6 @@ block = EncoderBlock()
 y, weights = block(x)
 print(y.shape, weights.shape)
 </code></pre></div>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>Encoder Block：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>Self-Attention + 残差/LayerNorm + FFN 反复堆叠，输出上下文表示。</td></tr>
-<tr><th>主要作用</th><td>适合理解类任务，如分类、检索、NER。</td></tr>
-<tr><th>解决问题</th><td>解决固定词向量无法根据全文上下文更新表示的问题。</td></tr>
-<tr><th>缺点/注意</th><td>不能天然逐词生成，需要额外解码头或任务设计。</td></tr>
-</tbody>
-</table>
-</div>
 </section><section class="note-section" id="llm-decoder">
 <div class="module-head"><div><div class="section-kicker">Transformer · 06</div><h2>Decoder：因果 Mask、Cross-Attention 与自回归生成</h2><p class="lead">训练时并行预测所有位置，推理时逐 token 生成。</p></div><div class="badges"><span class="badge">Causal Mask</span><span class="badge">Cross-Attention</span><span class="badge">Autoregressive</span></div></div>
 <div class="arch-columns"><div class="arch-column"><h4>Masked Self-Attention</h4><div class="stack"><span class="mask">只能看当前位置及之前</span><span>建立输出前缀内部关系</span></div></div><div class="arch-column"><h4>Cross-Attention</h4><div class="stack"><span class="att">Q 来自 Decoder</span><span class="att">K/V 来自 Encoder</span></div></div><div class="arch-column"><h4>FFN + 输出头</h4><div class="stack"><span class="ffn">逐位置加工</span><span>Linear → Vocabulary logits</span><span>Softmax</span></div></div></div>
@@ -1555,18 +1132,6 @@ print('0/1 allow mask:\n', allow)
 print('\nadditive mask used before softmax:\n', additive_mask)
 </code></pre></div>
 <div class="callout"><strong>Teacher Forcing：</strong>训练时每个位置使用真实前缀，因此可以一次并行算出全部位置损失；推理时没有未来真实 token，只能把模型刚生成的 token 继续喂回模型。</div>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>Decoder：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>带因果 Mask 的自注意力保证当前位置只能看过去，并可加 Cross-Attention。</td></tr>
-<tr><th>主要作用</th><td>适合自回归生成、对话、代码和续写。</td></tr>
-<tr><th>解决问题</th><td>解决生成任务中不能偷看未来 token 的因果约束。</td></tr>
-<tr><th>缺点/注意</th><td>长序列生成慢，错误会自回归累积。</td></tr>
-</tbody>
-</table>
-</div>
 </section><section class="note-section" id="llm-position">
 <div class="module-head"><div><div class="section-kicker">Transformer · 07</div><h2>位置编码：正弦余弦、可学习位置与相对位置</h2><p class="lead">自注意力本身对顺序不敏感，必须显式加入位置信息。</p></div><div class="badges"><span class="badge">Sin/Cos</span><span class="badge">动态曲线</span><span class="badge">RoPE 扩展</span></div></div>
 <div class="formula">PE(pos,2i)=sin(pos/10000^(2i/d_model))<br/>PE(pos,2i+1)=cos(pos/10000^(2i/d_model))</div>
@@ -1591,34 +1156,10 @@ np.set_printoptions(precision=3, suppress=True)
 print('shape =', pe.shape)
 print(pe)
 </code></pre></div>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>位置编码：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>向 token embedding 注入位置信息，使模型知道顺序。</td></tr>
-<tr><th>主要作用</th><td>弥补自注意力本身对排列不敏感的问题。</td></tr>
-<tr><th>解决问题</th><td>解决“同一组词换顺序含义不同”但 Attention 不知道顺序的问题。</td></tr>
-<tr><th>缺点/注意</th><td>绝对位置外推能力有限；现代模型常改用 RoPE/相对位置等方案。</td></tr>
-</tbody>
-</table>
-</div>
 </section><section class="note-section" id="llm-families">
 <div class="module-head"><div><div class="section-kicker">Transformer · 08</div><h2>三类架构：Encoder-only、Encoder-Decoder、Decoder-only</h2><p class="lead">结构差异决定可见上下文、训练目标和最擅长的任务。</p></div><div class="badges"><span class="badge">架构对比</span><span class="badge">BERT</span><span class="badge">GPT</span></div></div>
 <div class="arch-columns"><div class="arch-column"><h4>Encoder-only</h4><div class="stack"><span class="att">双向自注意力</span><span class="ffn">上下文表征</span><span>分类/检索/NER</span></div><p>代表：BERT。每个位置可以看到左右上下文。</p></div><div class="arch-column"><h4>Encoder-Decoder</h4><div class="stack"><span class="att">Encoder 双向</span><span class="mask">Decoder 因果</span><span>Cross-Attention</span></div><p>代表：原始 Transformer、T5、BART。适合输入到输出的转换。</p></div><div class="arch-column"><h4>Decoder-only</h4><div class="stack"><span class="mask">因果自注意力</span><span class="ffn">逐 token 生成</span><span>统一文本接口</span></div><p>代表：GPT。把任务统一为“根据前文继续生成”。</p></div></div>
 <table><thead><tr><th>模型类型</th><th>训练目标</th><th>典型任务</th><th>每个位置可见范围</th></tr></thead><tbody><tr><td>Encoder-only</td><td>掩码语言建模等</td><td>理解、分类、检索、序列标注</td><td>左右双向</td></tr><tr><td>Encoder-Decoder</td><td>条件序列生成</td><td>翻译、摘要、问答</td><td>Encoder 双向；Decoder 看前缀和 Encoder</td></tr><tr><td>Decoder-only</td><td>Next Token Prediction</td><td>对话、写作、代码、推理</td><td>只看当前及之前 token</td></tr></tbody></table>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>Transformer 三类架构：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>Encoder-only 偏理解，Encoder-Decoder 偏转换，Decoder-only 偏生成。</td></tr>
-<tr><th>主要作用</th><td>帮助根据任务选择 BERT、T5/BART 或 GPT 类模型。</td></tr>
-<tr><th>解决问题</th><td>解决同一 Transformer 组件如何适配不同任务的问题。</td></tr>
-<tr><th>缺点/注意</th><td>架构边界不是绝对，实际能力还受数据、规模和训练目标影响。</td></tr>
-</tbody>
-</table>
-</div>
 </section><section class="note-section" id="llm-bert">
 <div class="module-head"><div><div class="section-kicker">Transformer · 09</div><h2>BERT：双向编码、MLM、NSP 与任务微调</h2><p class="lead">利用 Encoder 得到每个 token 的双向上下文表示。</p></div><div class="badges"><span class="badge">BERT</span><span class="badge">MLM / NSP</span><span class="badge">分类与 NER</span></div></div>
 <p>BERT 的输入通常由 Token Embedding、Position Embedding 和 Segment/Token-Type Embedding 相加。原始预训练包含两项任务：</p>
@@ -1647,18 +1188,6 @@ print('classification logits:', cls_logits.shape)  # [B, C]
 print('NER logits:', ner_logits.shape)             # [B, L, tags]
 </code></pre></div>
 <div class="warn"><strong>MLM 与真实生成不同：</strong>BERT 预训练时可以同时看左右文，因此它不是天然的从左到右生成器。</div>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>BERT：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>Encoder-only 双向上下文模型，通过 MLM 等目标预训练，再接任务头微调。</td></tr>
-<tr><th>主要作用</th><td>适合文本分类、匹配、NER、检索语义表示等理解任务。</td></tr>
-<tr><th>解决问题</th><td>解决传统词向量静态、一词多义和上下文不足问题。</td></tr>
-<tr><th>缺点/注意</th><td>不擅长长文本生成；微调对数据、学习率和类别分布敏感。</td></tr>
-</tbody>
-</table>
-</div>
 </section><section class="note-section" id="llm-gpt">
 <div class="module-head"><div><div class="section-kicker">Transformer · 10</div><h2>GPT：Next Token Prediction 与自回归生成</h2><p class="lead">训练目标简单统一：给定前文，预测下一个 token。</p></div><div class="badges"><span class="badge">GPT</span><span class="badge">Next Token</span><span class="badge">采样策略</span></div></div>
 <div class="formula">L = -Σₜ log P(xₜ | x₁,…,xₜ₋₁)</div>
@@ -1698,36 +1227,12 @@ for temperature in (0.4, 1.0, 1.8):
     print(f'T={temperature}:', candidates, 'sample=', token)
 </code></pre></div>
 <div class="callout"><strong>KV Cache：</strong>推理时缓存历史 token 每层的 K/V，避免每生成一个 token 都重复计算整个前缀；它降低计算量，但缓存会占用显存。</div>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>GPT：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>Decoder-only 自回归模型，根据上文预测下一个 token。</td></tr>
-<tr><th>主要作用</th><td>适合开放式生成、对话、代码、推理和工具调用。</td></tr>
-<tr><th>解决问题</th><td>解决通用文本生成和少样本任务泛化问题。</td></tr>
-<tr><th>缺点/注意</th><td>可能幻觉、上下文成本高、输出不可完全控，需要安全和检索增强。</td></tr>
-</tbody>
-</table>
-</div>
 </section><section class="note-section" id="llm-training">
 <div class="module-head"><div><div class="section-kicker">Transformer · 11</div><h2>大语言模型训练：预训练、SFT、偏好建模与 RLHF</h2><p class="lead">课件概括为两个阶段、三个对齐步骤；这里补充每一步的数据和目标。</p></div><div class="badges"><span class="badge">Pre-training</span><span class="badge">SFT</span><span class="badge">RLHF</span></div></div>
 <div class="timeline-detail"><div class="year">阶段 1</div><div class="event"><b>大规模预训练</b>在海量文本上做 Next Token Prediction，学习语言规律、事实关联、代码模式和通用表示。数据质量、去重、文档边界掩码和训练稳定性都很关键。</div><div class="year">阶段 2 / Step 1</div><div class="event"><b>SFT 监督微调</b>使用“指令 - 高质量回答”样本，让基座模型学会对话格式、任务遵循和领域输出风格。</div><div class="year">阶段 2 / Step 2</div><div class="event"><b>奖励模型 / 偏好训练</b>收集同一提示下多个回答的人类排序，训练模型预测哪个回答更符合偏好。</div><div class="year">阶段 2 / Step 3</div><div class="event"><b>RLHF</b>使用奖励信号优化语言模型策略，同时通过 KL 约束避免模型偏离参考模型过远。</div></div>
 <div class="formula">预训练：min -log P(next token | prefix)<br/>奖励模型：学习 preference(chosen &gt; rejected)<br/>RLHF：max E[reward] - β·KL(policy || reference)</div>
 <div class="grid three"><div class="card"><h4>数据层</h4><p>去重、质量过滤、语言比例、代码与数学数据、版权与隐私治理。</p></div><div class="card"><h4>优化层</h4><p>大 batch、学习率预热与衰减、梯度裁剪、混合精度、分布式并行。</p></div><div class="card"><h4>对齐层</h4><p>有帮助、诚实、安全并不完全由预训练损失保证，需要额外偏好数据与评估。</p></div></div>
 <div class="callout"><strong>DPO 扩展：</strong>工程上也常直接用成对偏好数据优化策略与参考模型的相对概率，不必显式训练奖励模型再运行在线强化学习。</div>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>大模型训练流程：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>通常包括预训练、监督微调、偏好建模/RLHF 或 DPO 等对齐阶段。</td></tr>
-<tr><th>主要作用</th><td>把通用语言能力转化为可对话、可遵循指令的助手能力。</td></tr>
-<tr><th>解决问题</th><td>解决“会语言”到“按任务和人类偏好回答”的差距。</td></tr>
-<tr><th>缺点/注意</th><td>数据、算力和评估成本极高，对齐可能牺牲部分多样性。</td></tr>
-</tbody>
-</table>
-</div>
 </section><section class="note-section" id="llm-eval">
 <div class="module-head"><div><div class="section-kicker">Transformer · 12</div><h2>评价指标：Perplexity、BLEU、ROUGE 与 Benchmark</h2><p class="lead">单个指标只能观察能力的一部分，生成质量通常需要自动指标与人工评估结合。</p></div><div class="badges"><span class="badge">PPL</span><span class="badge">BLEU</span><span class="badge">ROUGE</span></div></div>
 <div class="grid two"><div class="card"><h4>Perplexity</h4><p>真实 token 平均负对数似然的指数形式。越低表示模型对测试文本越不“困惑”，但不同词表和分词器之间不能简单横向比较。</p><div class="formula">PPL = exp(-1/N Σ log P(xₜ|x&lt;t))</div></div><div class="card"><h4>BLEU</h4><p>偏精确率方向，统计候选与参考答案的 n-gram 重合，并使用长度惩罚。常用于翻译。</p></div><div class="card"><h4>ROUGE</h4><p>偏召回率方向，衡量参考答案中的 n-gram 或最长公共子序列被覆盖多少。常用于摘要。</p></div><div class="card"><h4>Benchmark</h4><p>用数学、代码、常识、阅读理解、安全性等任务集系统评估；必须警惕数据污染和只针对榜单优化。</p></div></div>
@@ -1752,18 +1257,6 @@ recall = overlap / len(reference)     # ROUGE 更偏召回率方向
 print('unigram precision =', round(precision, 4))
 print('unigram recall =', round(recall, 4))
 </code></pre></div>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>大模型评价：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>使用 PPL、BLEU、ROUGE、准确率、人工评测、Benchmark 等多维指标。</td></tr>
-<tr><th>主要作用</th><td>从语言建模、生成质量、任务能力和安全性评估模型。</td></tr>
-<tr><th>解决问题</th><td>解决单一 loss 无法代表真实应用效果的问题。</td></tr>
-<tr><th>缺点/注意</th><td>自动指标与人类偏好不总一致，benchmark 可能被污染或过拟合。</td></tr>
-</tbody>
-</table>
-</div>
 </section><section class="note-section" id="llm-history">
 <div class="module-head"><div><div class="section-kicker">Transformer · 13</div><h2>发展主线与结构改进：从 Transformer 到现代大模型</h2><p class="lead">不追逐易过时的排行榜，而是理解每一代模型主要解决了什么结构或训练问题。</p></div><div class="badges"><span class="badge">发展历史</span><span class="badge">Scaling</span><span class="badge">MoE / GQA / MLA</span></div></div>
 <div class="timeline-detail"><div class="year">2017</div><div class="event"><b>Transformer</b>用纯注意力替代循环结构，建立 Encoder-Decoder 基础。</div><div class="year">2018</div><div class="event"><b>BERT / GPT</b>分别推动 Encoder-only 双向理解和 Decoder-only 自回归生成。</div><div class="year">2019-2020</div><div class="event"><b>规模扩展</b>模型参数、训练数据和计算量增加，零样本、少样本和上下文学习能力更明显。</div><div class="year">后续</div><div class="event"><b>长上下文与推理效率</b>相对位置/RoPE、GQA、文档间注意力隔离和 KV Cache 优化长文本训练与推理。</div><div class="year">后续</div><div class="event"><b>稀疏与专家化</b>MoE 只激活部分专家，提高总参数容量与单位计算效率；MLA 等方法压缩注意力缓存；MTP 同时预测多个未来 token。</div></div>
@@ -1786,614 +1279,11 @@ for n, rank in [(768, 8), (4096, 8), (4096, 64)]:
     full, lora, ratio = lora_stats(n, rank)
     print(f'n={n}, rank={rank}: full={full:,}, LoRA={lora:,}, ratio={ratio:.4%}')
 </code></pre></div>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>RAG / Agent / LoRA：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>RAG 检索外部知识，Agent 调工具执行任务，LoRA 用低秩适配降低微调成本。</td></tr>
-<tr><th>主要作用</th><td>把大模型从“单一生成器”扩展成可落地系统。</td></tr>
-<tr><th>解决问题</th><td>解决知识更新、私有数据接入、工具调用和低成本定制问题。</td></tr>
-<tr><th>缺点/注意</th><td>RAG 受检索质量影响，Agent 不稳定，LoRA 仍需高质量数据和评估。</td></tr>
-</tbody>
-</table>
-</div>
 </section><section class="note-section" id="llm-summary">
 <div class="module-head"><div><div class="section-kicker">Transformer · 15</div><h2>Transformer 复习清单：从形状到训练与应用</h2><p class="lead">能解释每个模块为什么存在，比只记住结构图更重要。</p></div><div class="badges"><span class="badge">复习题</span><span class="badge">知识闭环</span></div></div>
 <div class="quiz"><details open=""><summary>Q1：为什么需要 Q、K、V 三组投影？</summary><p>它们把“匹配关系”和“被汇总内容”分离。Q/K 学习如何比较，V 学习真正传递什么信息。</p></details><details><summary>Q2：为什么注意力复杂度随长度平方增长？</summary><p>长度为 L 时需要构造 L×L 的两两分数矩阵。</p></details><details><summary>Q3：残差、LayerNorm、FFN 各做什么？</summary><p>残差保证信息和梯度通路；LayerNorm 稳定数值；FFN 对每个 token 的表示做非线性加工和知识存储。</p></details><details><summary>Q4：Encoder-only 与 Decoder-only 的根本区别？</summary><p>Encoder 允许双向上下文，适合理解；Decoder 使用因果掩码，训练目标与逐 token 生成一致。</p></details><details><summary>Q5：RAG 与微调的区别？</summary><p>RAG 在推理时检索外部知识；微调改变模型参数和行为。两者可以组合。</p></details></div>
 <div class="callout"><strong>建议学习顺序：</strong>先把单头注意力的每一步和形状手算清楚，再学多头、Encoder/Decoder，最后连接 BERT、GPT、训练与应用系统。</div>
 </section>
-<section class="note-section" id="project-audit">
-<div class="module-head"><div><div class="section-kicker">项目实战 · 01</div><h2>仓库审计：这份 Download ZIP 到底包含什么？</h2><p class="lead">先确认资料的真实边界，再决定如何学习和复现。</p></div><div class="badges"><span class="badge">仓库检查</span><span class="badge">资料边界</span><span class="badge">可复现性</span></div></div>
-<div aria-label="NewsCompass 投满分项目在线入口" class="project-launch-banner"><div class="project-launch-copy"><div class="project-launch-eyebrow">投满分完整项目</div><h2>查看 NewsCompass「投满分」独立项目页面</h2><p>完整项目讲义、架构、模型训练、部署与模型压缩内容请进入项目站点。</p><span class="project-launch-url">https://zyh249.github.io/HMtoumanfen666/index.html</span></div><a class="project-launch-btn" href="https://zyh249.github.io/HMtoumanfen666/index.html" rel="noopener noreferrer" target="_blank" title="打开投满分项目完整站点">打开投满分项目 <span aria-hidden="true">↗</span></a></div>
-<div class="project-audit-grid">
-<div class="project-audit-item"><b>12</b><span>主题教学页面</span></div>
-<div class="project-audit-item"><b>4</b><span>项目阶段</span></div>
-<div class="project-audit-item"><b>4</b><span>模型路线</span></div>
-<div class="project-audit-item"><b>3+</b><span>压缩技术实操</span></div>
-</div>
-<p>压缩包中的主体是一个由 <strong>MkDocs 构建后的静态教学网站</strong>，站点名为 <code>NewsCompass投满分项目V7.5</code>。内容按“项目背景 → 数据及预处理 → 模型训练与部署 → 模型压缩”组织，覆盖随机森林、FastText、BERT、LLM API、量化、蒸馏和剪枝。</p>
-<div class="grid two">
-<div class="card"><h4>仓库中实际存在</h4><p>HTML 教学页面、站点搜索索引、CSS/JavaScript、架构图、流程图、运行日志截图，以及大量嵌入式 Python 代码片段。</p></div>
-<div class="card"><h4>仓库中未实际提供</h4><p>页面反复引用的 <code>TMFCode/</code> Python 源码目录、<code>train.txt</code>/<code>dev.txt</code>/<code>test.txt</code> 数据集、BERT 权重、FastText 模型文件和训练产物。</p></div>
-</div>
-<div class="project-code-tree"><span class="folder">HMtoumanfen666-main/</span><br/>
-├── <span class="file">index.html</span>　课程首页<br/>
-├── <span class="folder">① 项目背景/</span>　业务背景、项目架构<br/>
-├── <span class="folder">② 数据及预处理/</span>　数据介绍、EDA<br/>
-├── <span class="folder">③ 模型训练与部署/</span>　RF、FastText、BERT、LLM<br/>
-├── <span class="folder">④ 模型压缩/</span>　量化、蒸馏、剪枝<br/>
-├── <span class="folder">assets/</span>　图像、样式与脚本<br/>
-└── <span class="missing">TMFCode/　（文档引用，但压缩包中缺失）</span></div>
-<div class="warn"><strong>重要结论：</strong>这是一份非常完整的“项目讲义站点”，但不是能够直接执行的完整源码仓库。下面的学习文档已经把页面中的代码重新组织、修正并补充为可运行模板，配套脚本放在本课程的 <code>examples/55–65</code>。</div>
-<div class="project-source-note"><strong>审计方法：</strong>逐页检查 12 个主题 HTML、站点搜索索引、图片资源和代码块；项目指标均保留为“文档快照”，不把不同数据划分和硬件上的结果当作严格排行榜。</div>
-</section><section class="note-section" id="project-business">
-<div class="module-head"><div><div class="section-kicker">项目实战 · 02</div><h2>业务背景：新闻分类如何服务推荐系统</h2><p class="lead">项目目标是短文本多分类；推荐排序是更大的上游/下游系统。</p></div><div class="badges"><span class="badge">业务建模</span><span class="badge">十分类</span><span class="badge">标签边界</span></div></div>
-<p>“投满分”来自新闻内容像快递一样被投递到对应频道的业务比喻。系统输入是一条新闻标题或短文本，输出是一个频道类别。分类结果可以作为推荐召回、频道流构建、内容审核、内容检索或用户兴趣建模的特征。</p>
-<div class="workflow"><div>新闻文本</div><span>→</span><div>文本分类器</div><span>→</span><div>频道标签</div><span>→</span><div>召回/推荐/检索</div><span>→</span><div>用户曝光</div></div>
-<div class="grid two">
-<div class="card"><h4>分类任务负责什么</h4><p>判断内容属于财经、房产、股票、教育、科技、社会、时政、体育、游戏或娱乐中的哪一类，并返回置信度。</p></div>
-<div class="card"><h4>分类任务不负责什么</h4><p>它并不直接决定“哪个用户应该看到哪篇新闻”。完整推荐系统还需要用户画像、召回、排序、重排、探索利用和反馈闭环。</p></div>
-</div>
-<h3>十类标签体系</h3>
-<div class="project-label-grid"><div class="project-label"><b>finance</b><span>财经</span><small>银行、基金、理财、宏观财经</small></div><div class="project-label"><b>realty</b><span>房产</span><small>楼盘、购房、住宅、地产政策</small></div><div class="project-label"><b>stocks</b><span>股票</span><small>A 股、上市公司、证券市场</small></div><div class="project-label"><b>education</b><span>教育</span><small>高校、招生、考试、培训</small></div><div class="project-label"><b>science</b><span>科技</span><small>互联网、产品、技术与科研</small></div><div class="project-label"><b>society</b><span>社会</span><small>民生、公共事件、人物故事</small></div><div class="project-label"><b>politics</b><span>时政</span><small>政策、国际政治、政府事务</small></div><div class="project-label"><b>sports</b><span>体育</span><small>赛事、球队、运动员</small></div><div class="project-label"><b>game</b><span>游戏</span><small>网游、手游、电竞与攻略</small></div><div class="project-label"><b>entertainment</b><span>娱乐</span><small>影视、明星、综艺与音乐</small></div></div>
-<div class="formula">任务契约：f(text) → label ∈ 10 个闭集类别；工程上建议扩展 reject / unknown 拒识结果</div>
-<table><thead><tr><th>设计问题</th><th>必须在项目开始时明确</th></tr></thead><tbody>
-<tr><td>标签边界</td><td>“财经”和“股票”、“社会”和“时政”、“科技”和“游戏”如何区分？</td></tr>
-<tr><td>多主题新闻</td><td>只允许单标签，还是支持多标签？本项目按单标签设计。</td></tr>
-<tr><td>拒识机制</td><td>不属于十类、信息太短、广告或乱码时是否输出 <code>reject</code>？</td></tr>
-<tr><td>业务指标</td><td>只看 Accuracy 还是更重视每类 Recall、Macro-F1、延迟和成本？</td></tr>
-</tbody></table>
-<div class="tip"><strong>推荐实践：</strong>把“标签定义文档 + 正反例 + 边界样本 + 冲突处理规则”作为数据标注规范。模型错误经常来自标签体系模糊，而不只是算法能力不足。</div>
-</section><section class="note-section" id="project-architecture">
-<div class="module-head"><div><div class="section-kicker">项目实战 · 03</div><h2>端到端架构：从数据到在线服务与压缩</h2><p class="lead">把仓库中的超大架构图拆解成可执行的六个阶段。</p></div><div class="badges"><span class="badge">架构图</span><span class="badge">交互流程</span><span class="badge">MLOps</span></div></div>
-<div class="project-pipeline">
-<button class="project-stage" data-stage="business" type="button"><b>1 业务定义</b><small>标签与目标</small></button>
-<button class="project-stage" data-stage="data" type="button"><b>2 数据质检</b><small>EDA 与切分</small></button>
-<button class="project-stage" data-stage="feature" type="button"><b>3 特征处理</b><small>TF-IDF / Tokenizer</small></button>
-<button class="project-stage" data-stage="train" type="button"><b>4 模型训练</b><small>RF / FT / BERT / LLM</small></button>
-<button class="project-stage" data-stage="deploy" type="button"><b>5 服务部署</b><small>Flask / Streamlit</small></button>
-<button class="project-stage" data-stage="compress" type="button"><b>6 压缩迭代</b><small>量化 / 蒸馏 / 剪枝</small></button>
-</div>
-<div class="project-stage-detail" id="projectStageDetail"></div>
-<figure class="project-figure"><img alt="投满分项目整体架构图" src="assets/project/project_architecture.jpg"/><figcaption>原仓库项目架构图的压缩版。它把业务背景、数据分析、四条模型路线、压缩优化和最终应用连接在一张图中。</figcaption></figure>
-<div class="grid three">
-<div class="card"><h4>离线训练链路</h4><p>数据版本 → 训练配置 → 模型产物 → 指标报告 → 模型注册。任何模型结果都应能追溯到数据、代码和超参数。</p></div>
-<div class="card"><h4>在线推理链路</h4><p>请求校验 → 预处理 → 模型推理 → 标签映射 → 置信度/拒识 → 响应与日志。预处理必须与训练完全一致。</p></div>
-<div class="card"><h4>反馈闭环</h4><p>监控低置信度、错误样本和分布漂移，定期回流标注并重新训练。模型上线不是项目终点。</p></div>
-</div>
-<div class="warn"><strong>最常见的线上事故：</strong>训练时使用 Jieba + TF-IDF，线上却忘记分词或加载了错误的向量化器；标签顺序与 <code>class.txt</code> 不一致；模型和 tokenizer 版本不匹配。</div>
-
-<figure class="card" data-drawio-integrated="true" style="padding:12px;margin:16px 0">
-<img alt="投满分项目全景图" loading="lazy" src="assets/drawio/project-01.jpg" style="width:100%;border-radius:14px;border:1px solid var(--line);display:block;background:#fff"/>
-<figcaption style="font-size:13px;color:var(--muted);margin-top:8px;line-height:1.6"><strong>DrawIO 串讲补充：</strong>投满分项目全景图。把 NewsCompass 项目、传统文本分类、Transformer/BERT/GPT、RAG/LLM 应用和工程部署放在一张图里，适合放在项目架构章节作为总览。</figcaption>
-</figure></section><section class="note-section" id="project-data">
-<div class="module-head"><div><div class="section-kicker">项目实战 · 04</div><h2>数据集、文件格式与标签映射</h2><p class="lead">理解数据规模只是第一步，更重要的是建立不会泄漏的切分与版本管理。</p></div><div class="badges"><span class="badge">数据规模</span><span class="badge">TSV</span><span class="badge">数据治理</span></div></div>
-<div class="project-audit-grid">
-<div class="project-audit-item"><b>180,000</b><span>train.txt 训练样本</span></div>
-<div class="project-audit-item"><b>10,000</b><span>dev.txt 验证样本</span></div>
-<div class="project-audit-item"><b>10,000</b><span>test.txt 测试样本</span></div>
-<div class="project-audit-item"><b>18,000</b><span>每类训练样本（文档描述）</span></div>
-</div>
-<p>每行样本格式为 <code>文本	数字标签</code>，标签编号通过 <code>class.txt</code> 映射为英文类别名。训练集在讲义描述中是完全均衡的，但仍应通过代码验证，而不是只相信说明文档。</p>
-<div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>from pathlib import Path
-import pandas as pd
-
-CLASS_NAMES = [line.strip() for line in Path("class.txt").read_text(encoding="utf-8").splitlines()]
-df = pd.read_csv("train.txt", sep="\t", names=["text", "label"], dtype={"text": str, "label": int})
-
-assert df["text"].notna().all(), "存在空文本"
-assert df["label"].between(0, len(CLASS_NAMES) - 1).all(), "标签越界"
-assert not df.duplicated(["text", "label"]).any(), "存在重复样本"
-
-df["length"] = df["text"].str.len()
-print(df["label"].value_counts().sort_index())
-print(df["length"].describe(percentiles=[0.5, 0.9, 0.95, 0.99]))</code></pre></div>
-<h3>数据来源的三种类型</h3>
-<table><thead><tr><th>类型</th><th>项目语境</th><th>典型风险</th></tr></thead><tbody>
-<tr><td>日志数据</td><td>点击、浏览、点赞、曝光、搜索等高频行为</td><td>噪声高、重复、缺失、时间漂移、埋点版本变化</td></tr>
-<tr><td>业务数据</td><td>文章元数据、用户画像、订单、频道配置</td><td>字段口径变化、主键关联错误、更新延迟</td></tr>
-<tr><td>第三方数据</td><td>公开数据集、合作数据、外部 API</td><td>许可、质量、格式、隐私和分布差异</td></tr>
-</tbody></table>
-<div class="callout"><strong>切分原则：</strong>同一文章的改写、转载或重复标题不能跨 train/dev/test；若数据具有时间属性，优先考虑按时间切分，以模拟未来数据而不是随机打散历史。</div>
-<div class="project-source-note">原讲义 BERT 示例还使用了一个仅 511 条的 <code>dev3.txt</code> 进行快速验证。快速开发集与最终验证集应明确区分，避免把小集结果当成正式指标。</div>
-
-<figure class="card" data-drawio-integrated="true" style="padding:12px;margin:16px 0">
-<img alt="服务器、数据路径与训练/测试文件" loading="lazy" src="assets/drawio/project-02.jpg" style="width:100%;border-radius:14px;border:1px solid var(--line);display:block;background:#fff"/>
-<figcaption style="font-size:13px;color:var(--muted);margin-top:8px;line-height:1.6"><strong>DrawIO 串讲补充：</strong>服务器、数据路径与训练/测试文件。图中强调服务器环境、数据文件、label_classname、train/test 切分以及长短文本分布；这部分应与数据集和标签体系一起学习。</figcaption>
-</figure></section><section class="note-section" id="project-eda">
-<div class="module-head"><div><div class="section-kicker">项目实战 · 05</div><h2>数据质检与模型特定预处理</h2><p class="lead">同一份文本，在随机森林、FastText、BERT 和 LLM 路线上需要不同的输入表示。</p></div><div class="badges"><span class="badge">EDA</span><span class="badge">TF-IDF</span><span class="badge">Tokenizer</span></div></div>
-<div class="grid two">
-<div class="card"><h4>基础 EDA</h4><p>样本数、标签分布、空文本、重复率、文本长度分位数、特殊字符、乱码、数字比例、英文比例、URL/表情和高频词。</p></div>
-<div class="card"><h4>错误分析 EDA</h4><p>混淆最多的类别对、短文本错误、跨领域词、多主题新闻、低置信度样本和训练/线上分布差异。</p></div>
-</div>
-<table><thead><tr><th>路线</th><th>输入处理</th><th>关键产物</th><th>容易犯的错</th></tr></thead><tbody>
-<tr><td>TF-IDF + 传统模型</td><td>Jieba 或字符 n-gram、停用词、词频统计</td><td>训练集拟合的 vectorizer</td><td>在全量数据上 fit 导致泄漏；线上忘记加载同一 vectorizer</td></tr>
-<tr><td>FastText</td><td>字符级或词级切分，前缀 <code>__label__</code></td><td>FastText 文本格式与 <code>.bin</code></td><td>训练文件名与预测切分方式不一致</td></tr>
-<tr><td>BERT</td><td>Tokenizer、特殊 token、padding、truncation、mask</td><td>tokenizer + checkpoint + class order</td><td>只 padding 不 truncation；训练 DataLoader 不 shuffle</td></tr>
-<tr><td>LLM API</td><td>原始文本 + 标签说明 + 结构化输出约束</td><td>prompt 版本、解析器、缓存</td><td>自由文本难解析；拒识标签未纳入评估映射</td></tr>
-</tbody></table>
-<div class="formula">TF-IDF(t,d) = TF(t,d) × log((N + 1)/(df(t) + 1)) + 平滑常数</div>
-<div class="code-wrap"><button class="copy" type="button">复制</button><pre><code># 训练集：fit_transform；验证/测试/线上：只能 transform
-vectorizer = TfidfVectorizer(
-    analyzer="char",
-    ngram_range=(2, 4),
-    min_df=2,
-    max_features=100_000,
-)
-x_train = vectorizer.fit_transform(train_texts)
-x_dev = vectorizer.transform(dev_texts)
-x_test = vectorizer.transform(test_texts)</code></pre></div>
-<div class="warn"><strong>关于“截取前 30 个词”：</strong>它能控制计算量，但可能截断新闻标题后半部分的关键实体。应根据长度分布选择分位点，并对“截断前后指标”做消融实验。</div>
-</section><section class="note-section" id="project-rf">
-<div class="module-head"><div><div class="section-kicker">项目实战 · 06</div><h2>随机森林基线：快速验证任务、数据和部署链路</h2><p class="lead">基线的价值不是“最终最优”，而是用最低成本得到可信参照。</p></div><div class="badges"><span class="badge">Baseline</span><span class="badge">TF-IDF</span><span class="badge">传统模型</span></div></div>
-<div class="workflow"><div>Jieba/字符切分</div><span>→</span><div>TF-IDF 稀疏矩阵</div><span>→</span><div>RandomForest</div><span>→</span><div>指标评估</div><span>→</span><div>Pickle + Flask</div></div>
-<p>讲义记录的随机森林准确率约为 <strong>82.48%</strong>。这条路线验证了“数据能读取、标签能映射、模型能训练、接口能返回”的完整闭环，因此非常适合第一版。</p>
-<figure class="project-figure"><img alt="随机森林项目代码结构图" src="assets/project/rf_pipeline.png"/><figcaption>随机森林路线的教学结构：配置、预处理、训练、预测、API 和前端。</figcaption></figure>
-<div class="grid three">
-<div class="card"><h4>优点</h4><p>实现简单、可解释性较强、CPU 训练和部署方便，对流程错误暴露得快。</p></div>
-<div class="card"><h4>局限</h4><p>高维稀疏文本并不是随机森林最擅长的输入；树多时内存和延迟可能上升。</p></div>
-<div class="card"><h4>应增加的对照</h4><p>LinearSVC、LogisticRegression、朴素贝叶斯往往是更强、更快的文本传统基线。</p></div>
-</div>
-<div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>from sklearn.pipeline import Pipeline
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.svm import LinearSVC
-from sklearn.metrics import classification_report
-
-# 对高维稀疏文本，线性模型通常是值得优先比较的强基线。
-model = Pipeline([
-    ("tfidf", TfidfVectorizer(
-        analyzer="char",
-        ngram_range=(2, 4),
-        min_df=2,
-        max_df=0.98,
-        sublinear_tf=True,
-    )),
-    ("classifier", LinearSVC(C=1.0)),
-])
-model.fit(train_texts, train_labels)
-pred = model.predict(dev_texts)
-print(classification_report(dev_labels, pred, target_names=class_names, zero_division=0))</code></pre></div>
-<div class="warn"><strong>代码审查：</strong>讲义使用 <code>tqdm(range(1))</code> 包住一次 <code>model.fit()</code>，这并不能显示森林内部训练进度；此外，反序列化不可信来源的 Pickle 文件存在代码执行风险。</div>
-
-<figure class="card" data-drawio-integrated="true" style="padding:12px;margin:16px 0">
-<img alt="随机森林训练代码与指标计算" loading="lazy" src="assets/drawio/project-07.jpg" style="width:100%;border-radius:14px;border:1px solid var(--line);display:block;background:#fff"/>
-<figcaption style="font-size:13px;color:var(--muted);margin-top:8px;line-height:1.6"><strong>DrawIO 串讲补充：</strong>随机森林训练代码与指标计算。图中展示 train_test_split、fit、score、accuracy、precision、recall、F1 等步骤，可直接放在随机森林项目章节作为代码流程图。</figcaption>
-</figure>
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>项目随机森林 baseline：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>用 TF-IDF 文本特征训练多棵决策树并投票。</td></tr>
-<tr><th>主要作用</th><td>快速验证标签、数据切分和评估脚本是否可靠。</td></tr>
-<tr><th>解决问题</th><td>解决项目早期没有复杂深度模型时的可解释基线问题。</td></tr>
-<tr><th>缺点/注意</th><td>稀疏高维文本上模型体积和延迟可能偏大，语义表达有限。</td></tr>
-</tbody>
-</table>
-</div>
-</section><section class="note-section" id="project-fasttext">
-<div class="module-head"><div><div class="section-kicker">项目实战 · 07</div><h2>FastText：字符级与词级的高性价比文本分类</h2><p class="lead">用极低推理成本获得接近 BERT 的项目快照指标。</p></div><div class="badges"><span class="badge">FastText</span><span class="badge">字符级</span><span class="badge">AutoTune</span></div></div>
-<p>FastText 的监督分类格式把标签直接写在每一行前面，例如：</p>
-<div class="formula">__label__education 中 华 女 子 学 院 本 科 层 次 招 生</div>
-<div class="grid two">
-<div class="card"><h4>字符级</h4><p>无需依赖分词词典，对新词、人名、数字和缩写更稳健；序列更长，但中文短标题通常可接受。</p></div>
-<div class="card"><h4>词级</h4><p>语义单位更完整，词表更大；受分词错误和未登录词影响，更依赖领域词典。</p></div>
-</div>
-<table><thead><tr><th>实验</th><th>文档记录的测试结果</th><th>解释</th></tr></thead><tbody>
-<tr><td>字符级默认参数</td><td>87.61%</td><td>比随机森林提升约 5 个百分点</td></tr>
-<tr><td>字符级 AutoTune</td><td><strong>91.65%</strong></td><td>文档中的 FastText 最优方案</td></tr>
-<tr><td>词级默认参数</td><td>日志为 90.79%</td><td>正文写成 90.97%，存在笔误</td></tr>
-<tr><td>词级 AutoTune</td><td>90.41%</td><td>低于字符级自动调参</td></tr>
-</tbody></table>
-<figure class="project-figure"><img alt="FastText代码结构" src="assets/project/fasttext_pipeline.jpg"/><figcaption>FastText 路线包含数据格式转换、四组实验、模型预测与 Flask 服务化。</figcaption></figure>
-<div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>import fasttext
-
-# 每行格式：__label__类别 token1 token2 ...
-model = fasttext.train_supervised(
-    input="final_data/train_fastText_char.txt",
-    autotuneValidationFile="final_data/dev_fastText_char.txt",
-    autotuneDuration=300,
-    thread=4,
-    verbose=2,
-)
-model.save_model("models/fasttext_char_auto.bin")
-print(model.test("final_data/test_fastText_char.txt"))
-label, probability = model.predict("俄 达 吉 斯 坦 共 和 国 区 长 被 枪 杀")
-print(label[0].removeprefix("__label__"), float(probability[0]))</code></pre></div>
-<div class="callout"><strong>AutoTune 调什么：</strong>学习率、epoch、向量维度、词频阈值、word n-gram、字符子词范围、损失函数等。自动调参必须只看验证集，最终测试集只能评估一次。</div>
-<div class="warn"><strong>仓库中的不一致：</strong>部署章节文字称要上线“词级自动调参模型”，但示例预测函数加载的是 <code>fastText_char_default</code>；部分文件又使用 <code>jieba</code> 与 <code>word</code> 两种命名。复现时必须统一“模型文件、切分方式、训练数据文件名”。</div>
-
-<figure class="card" data-drawio-integrated="true" style="padding:12px;margin:16px 0">
-<img alt="FastText 文本与标签预处理" loading="lazy" src="assets/drawio/project-09.jpg" style="width:100%;border-radius:14px;border:1px solid var(--line);display:block;background:#fff"/>
-<figcaption style="font-size:13px;color:var(--muted);margin-top:8px;line-height:1.6"><strong>DrawIO 串讲补充：</strong>FastText 文本与标签预处理。FastText 要求把样本整理成 __label__类别 + 分词文本的格式，这张图适合放在 FastText 章节说明数据格式和 predict 流程。</figcaption>
-</figure>
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>FastText 文本分类：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>把词和子词 n-gram 的向量平均后接线性分类器。</td></tr>
-<tr><th>主要作用</th><td>训练快、部署轻、对短文本分类性价比高。</td></tr>
-<tr><th>解决问题</th><td>解决传统稀疏特征语义弱、深度模型成本高的问题。</td></tr>
-<tr><th>缺点/注意</th><td>上下文建模有限，长距离关系和复杂语义不如 BERT。</td></tr>
-</tbody>
-</table>
-</div>
-</section><section class="note-section" id="project-bert">
-<div class="module-head"><div><div class="section-kicker">项目实战 · 08</div><h2>BERT 分类器：Dataset、Batch 编码、微调与部署</h2><p class="lead">把预训练语言表示接上线性分类头，学习上下文语义。</p></div><div class="badges"><span class="badge">BERT</span><span class="badge">微调</span><span class="badge">上下文语义</span></div></div>
-<div class="workflow"><div>text / label</div><span>→</span><div>Dataset</div><span>→</span><div>DataLoader</div><span>→</span><div>Tokenizer</div><span>→</span><div>BERT [CLS]</div><span>→</span><div>Linear 10 类</div></div>
-<p>讲义使用 <code>bert-base-chinese</code>，隐藏维度 768、12 层 Encoder，在 pooled/[CLS] 表示后接一个 <code>Linear(768, 10)</code>。页面日志展示的验证集 F1/Accuracy 最高约 <strong>93.64%</strong>，是四条主路线中的最好监督模型快照。</p>
-<figure class="project-figure"><img alt="BERT分类项目结构" src="assets/project/bert_pipeline.jpg"/><figcaption>BERT 项目结构：配置、数据加载、分类模型、训练、预测和部署。</figcaption></figure>
-<h3>数据批次的三个核心张量</h3>
-<table><thead><tr><th>张量</th><th>典型形状</th><th>作用</th></tr></thead><tbody>
-<tr><td><code>input_ids</code></td><td>[batch, seq_len]</td><td>Token ID，包含 [CLS]/[SEP]/[PAD]</td></tr>
-<tr><td><code>attention_mask</code></td><td>[batch, seq_len]</td><td>1 表示有效 token，0 表示 padding</td></tr>
-<tr><td><code>labels</code></td><td>[batch]</td><td>0~9 的类别索引，直接供 CrossEntropyLoss 使用</td></tr>
-</tbody></table>
-<div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>def collate_fn(batch):
-    texts, labels = zip(*batch)
-    encoded = tokenizer(
-        list(texts),
-        padding=True,
-        truncation=True,
-        max_length=64,
-        return_tensors="pt",
-    )
-    return encoded["input_ids"], encoded["attention_mask"], torch.tensor(labels)
-
-class BertClassifier(nn.Module):
-    def __init__(self, encoder, num_classes=10):
-        super().__init__()
-        self.encoder = encoder
-        self.dropout = nn.Dropout(0.1)
-        self.fc = nn.Linear(encoder.config.hidden_size, num_classes)
-
-    def forward(self, input_ids, attention_mask):
-        output = self.encoder(input_ids=input_ids, attention_mask=attention_mask)
-        cls = output.last_hidden_state[:, 0]
-        return self.fc(self.dropout(cls))</code></pre></div>
-<div class="grid two">
-<div class="card"><h4>训练循环</h4><p><code>train → forward → loss → zero_grad → backward → clip_grad_norm → optimizer.step → scheduler.step</code>，每轮在 dev 上评估并保存最佳 checkpoint。</p></div>
-<div class="card"><h4>推理循环</h4><p>启动时加载 tokenizer、模型和标签；<code>eval()</code> + <code>no_grad()</code>；softmax 后输出类别、置信度和模型版本。</p></div>
-</div>
-<div class="warn"><strong>仓库代码需要修正：</strong>训练 DataLoader 设置了 <code>shuffle=False</code>；<code>batch_encode_plus(..., padding=True)</code> 没有显式 <code>truncation=True, max_length=...</code>；预测时应使用 <code>pred_ids.item()</code>；API 文件还残留未使用的 FastText/Jieba 导入。</div>
-<div class="tip"><strong>进一步优化：</strong>增加学习率 warmup/衰减、梯度裁剪、混合精度、类别级 Macro-F1、误差矩阵、早停和固定随机种子。部署前测 batch=1 延迟、批量吞吐与峰值内存。</div>
-
-<figure class="card" data-drawio-integrated="true" style="padding:12px;margin:16px 0">
-<img alt="PyTorch 数据形状、Dataset/DataLoader 与 BERT 入口" loading="lazy" src="assets/drawio/project-11.jpg" style="width:100%;border-radius:14px;border:1px solid var(--line);display:block;background:#fff"/>
-<figcaption style="font-size:13px;color:var(--muted);margin-top:8px;line-height:1.6"><strong>DrawIO 串讲补充：</strong>PyTorch 数据形状、Dataset/DataLoader 与 BERT 入口。BERT 微调前必须明确 input_ids、attention_mask、label、batch_size 和 sequence_length 的张量形状。</figcaption>
-</figure>
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>BERT 微调：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>预训练 BERT 编码文本，[CLS] 表示接分类头输出类别。</td></tr>
-<tr><th>主要作用</th><td>提升文本分类语义理解能力，尤其适合类别边界复杂的任务。</td></tr>
-<tr><th>解决问题</th><td>解决 TF-IDF/FastText 对上下文理解不足的问题。</td></tr>
-<tr><th>缺点/注意</th><td>训练和推理成本高，依赖 GPU，部署需要压缩或蒸馏。</td></tr>
-</tbody>
-</table>
-</div>
-</section><section class="note-section" id="project-llm">
-<div class="module-head"><div><div class="section-kicker">项目实战 · 09</div><h2>LLM 提示分类：能力强不等于适合固定闭集任务</h2><p class="lead">大模型适合冷启动、开放集和辅助标注，但要控制输出、成本与延迟。</p></div><div class="badges"><span class="badge">LLM API</span><span class="badge">Prompt</span><span class="badge">拒识与兜底</span></div></div>
-<p>讲义采用远程大模型 API，通过 system prompt 给出 10 个备选标签、一个参考案例和“只返回类别”的约束。文档快照在 511 条验证数据上记录了约 <strong>69.08%</strong> 的 Accuracy/F1，平均约 <strong>5.31 秒/条</strong>，整批耗时约 45 分钟。</p>
-<div class="grid three">
-<div class="card"><h4>适合场景</h4><p>缺少标注数据的冷启动、开放类别、复杂解释、弱标注、生成候选标签、疑难样本兜底。</p></div>
-<div class="card"><h4>不适合默认替代</h4><p>标签固定、数据充足、吞吐大、延迟敏感、成本敏感的十分类主链路。</p></div>
-<div class="card"><h4>正确架构</h4><p>本地模型主判；低置信度样本进入 LLM 或人工复核；结果回流形成主动学习。</p></div>
-</div>
-<div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>import json
-
-ALLOWED = {
-    "finance", "realty", "stocks", "education", "science",
-    "society", "politics", "sports", "game", "entertainment", "reject",
-}
-
-system_prompt = f"""你是新闻分类器。只能从 {sorted(ALLOWED)} 中选择一个标签。
-严格输出 JSON：{{"label": "...", "confidence": 0.0}}。
-信息不足或不属于任何类别时输出 reject，不要解释。"""
-
-def parse_model_output(raw):
-    obj = json.loads(raw)
-    label = obj["label"]
-    if label not in ALLOWED:
-        raise ValueError(f"未知标签：{label}")
-    return label, float(obj.get("confidence", 0.0))</code></pre></div>
-<table><thead><tr><th>工程问题</th><th>改进方式</th></tr></thead><tbody>
-<tr><td>自由文本难解析</td><td>严格 JSON schema / function calling，并对标签白名单校验</td></tr>
-<tr><td>“拒识”不在类别映射</td><td>把 reject 纳入评估逻辑，或在解析后单独处理</td></tr>
-<tr><td>同一输入结果波动</td><td>低 temperature、固定 prompt 版本、缓存与回归测试</td></tr>
-<tr><td>API 密钥泄漏</td><td>仅从环境变量/密钥管理读取，禁止写入代码和前端</td></tr>
-<tr><td>逐条串行调用慢</td><td>受限并发、批处理、重试退避、超时和配额监控</td></tr>
-</tbody></table>
-<div class="warn"><strong>讲义中的评估 bug：</strong>函数返回了 <code>recall_score</code> 函数对象而不是计算后的召回率；<code>name2id[result]</code> 对任何额外空格、前缀或“拒识”都会报错。生产代码必须先规范化并校验结构化输出。</div>
-<div class="project-source-note">页面中的具体模型版本、上下文长度和 API 信息是仓库制作时的快照；复现时应以实际服务文档、价格和版本为准。</div>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>LLM 闭集分类：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>通过 Prompt 让大模型把新闻映射到固定标签集合。</td></tr>
-<tr><th>主要作用</th><td>适合冷启动、规则复杂或需要解释的场景。</td></tr>
-<tr><th>解决问题</th><td>解决缺少训练数据时快速获得可用分类器的问题。</td></tr>
-<tr><th>缺点/注意</th><td>成本高、延迟大、输出不稳定，需要约束格式和校验。</td></tr>
-</tbody>
-</table>
-</div>
-</section><section class="note-section" id="project-benchmark">
-<div class="module-head"><div><div class="section-kicker">项目实战 · 10</div><h2>模型结果对比与选型：不要只按 Accuracy 排名</h2><p class="lead">把效果、延迟、资源、稳定性、可解释性和维护成本一起放进决策。</p></div><div class="badges"><span class="badge">指标对比</span><span class="badge">动态选型</span><span class="badge">公平评测</span></div></div>
-<div class="project-scoreboard">
-<div class="project-score-row" data-score="82.48"><span>TF-IDF + RandomForest</span><div class="track"><div class="fill"></div></div><strong>82.48%</strong></div>
-<div class="project-score-row" data-score="87.61"><span>FastText 字符默认</span><div class="track"><div class="fill"></div></div><strong>87.61%</strong></div>
-<div class="project-score-row" data-score="91.65"><span>FastText 字符 AutoTune</span><div class="track"><div class="fill"></div></div><strong>91.65%</strong></div>
-<div class="project-score-row" data-score="93.64"><span>BERT 分类器</span><div class="track"><div class="fill"></div></div><strong>≈93.64%</strong></div>
-<div class="project-score-row" data-score="69.08"><span>LLM API 提示分类</span><div class="track"><div class="fill"></div></div><strong>≈69.08%</strong></div>
-<div class="project-score-row" data-score="91.25"><span>蒸馏 BiLSTM（另一日志）</span><div class="track"><div class="fill"></div></div><strong>≈91.25%</strong></div>
-</div>
-<p class="project-score-note">这些数字来自仓库不同章节中的日志快照，验证集大小、模型 checkpoint、硬件和统计口径并不完全一致，只能用于理解趋势，不能作为严格公平榜单。</p>
-<div class="lab"><div class="lab-header"><div><div class="lab-title">交互式选型卡</div><div class="lab-sub">点击模型，查看仓库快照下的效果、成本和推荐用途。</div></div></div>
-<div class="project-model-selector"><button data-project-model="rf" type="button">随机森林</button><button data-project-model="ft" type="button">FastText</button><button data-project-model="bert" type="button">BERT</button><button data-project-model="llm" type="button">LLM API</button><button data-project-model="distill" type="button">蒸馏 BiLSTM</button></div>
-<div class="project-model-detail"><div class="mini"><b id="projectModelName">—</b><span>方案</span></div><div class="mini"><b id="projectModelScore">—</b><span>文档快照指标</span></div><div class="mini"><b id="projectModelLatency">—</b><span>延迟级别</span></div><div class="mini"><b id="projectModelCost">—</b><span>成本</span></div></div>
-<div class="callout"><strong>推荐用途：</strong><span id="projectModelUse"></span><br/><span id="projectModelNote"></span></div></div>
-<table><thead><tr><th>需求</th><th>优先方案</th><th>原因</th></tr></thead><tbody>
-<tr><td>快速做出可信基线</td><td>字符 n-gram + LinearSVC / TF-IDF 模型</td><td>训练快、易分析、容易发现数据问题</td></tr>
-<tr><td>CPU 低延迟、高吞吐</td><td>FastText 字符级</td><td>模型轻、预测快、中文短文本表现强</td></tr>
-<tr><td>追求闭集分类质量</td><td>BERT 微调</td><td>上下文表示更强，但资源和延迟更高</td></tr>
-<tr><td>数据少、类别开放或需要解释</td><td>LLM 作为辅助/兜底</td><td>无需训练或少样本，但成本、延迟和稳定性较差</td></tr>
-<tr><td>接近 BERT、资源受限</td><td>蒸馏学生模型 / 量化 BERT</td><td>用少量精度换取显著体积和延迟收益</td></tr>
-</tbody></table>
-
-<figure class="card" data-drawio-integrated="true" style="padding:12px;margin:16px 0">
-<img alt="随机森林与 FastText 指标对比" loading="lazy" src="assets/drawio/project-10.jpg" style="width:100%;border-radius:14px;border:1px solid var(--line);display:block;background:#fff"/>
-<figcaption style="font-size:13px;color:var(--muted);margin-top:8px;line-height:1.6"><strong>DrawIO 串讲补充：</strong>随机森林与 FastText 指标对比。图中强调模型选型不能只看 accuracy，还要比较训练速度、预测延迟、模型大小、部署成本和可维护性。</figcaption>
-</figure></section><section class="note-section" id="project-deploy">
-<div class="module-head"><div><div class="section-kicker">项目实战 · 11</div><h2>API 服务化：从“能跑”升级为“可上线”</h2><p class="lead">Flask 示例能验证链路；生产系统还需要契约、并发、监控、安全和版本治理。</p></div><div class="badges"><span class="badge">Flask</span><span class="badge">API 契约</span><span class="badge">生产化</span></div></div>
-<div class="workflow"><div>Client</div><span>→</span><div>Gateway</div><span>→</span><div>校验/限流</div><span>→</span><div>预处理</div><span>→</span><div>Model Worker</div><span>→</span><div>结构化响应</div></div>
-<div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>from flask import Flask, jsonify, request
-
-app = Flask(__name__)
-model = load_model_once()           # 进程启动时加载一次
-MODEL_VERSION = "news-bert-2026-01"
-
-@app.get("/health")
-def health():
-    return {"status": "ok", "model_version": MODEL_VERSION}
-
-@app.post("/v1/predict")
-def predict_api():
-    payload = request.get_json(silent=True) or {}
-    text = payload.get("text")
-    if not isinstance(text, str) or not text.strip():
-        return jsonify({"error": "text must be a non-empty string"}), 400
-    label, score = model.predict(text.strip())
-    return jsonify({
-        "label": label,
-        "score": score,
-        "model_version": MODEL_VERSION,
-    })</code></pre></div>
-<h3>建议接口契约</h3>
-<table><thead><tr><th>字段</th><th>方向</th><th>说明</th></tr></thead><tbody>
-<tr><td><code>text</code></td><td>请求</td><td>非空字符串，限制长度和编码</td></tr>
-<tr><td><code>label</code></td><td>响应</td><td>十类标签或 reject</td></tr>
-<tr><td><code>score</code></td><td>响应</td><td>置信度或可校准分数；不同模型不可直接混用</td></tr>
-<tr><td><code>model_version</code></td><td>响应</td><td>方便日志追踪、灰度和回滚</td></tr>
-<tr><td><code>request_id</code></td><td>双向</td><td>串联调用链、错误和延迟日志</td></tr>
-</tbody></table>
-<div class="project-checklist">
-<div class="project-check"><div class="mark">✓</div><div><strong>模型单例：</strong>进程启动时加载，避免每个请求重复读权重。</div></div>
-<div class="project-check"><div class="mark">✓</div><div><strong>生产 WSGI/ASGI：</strong>不要使用 Flask debug development server 对外提供生产流量。</div></div>
-<div class="project-check"><div class="mark">✓</div><div><strong>可观测性：</strong>记录 P50/P95/P99 延迟、错误率、吞吐、类别分布、拒识率和低置信度比例。</div></div>
-<div class="project-check"><div class="mark">✓</div><div><strong>安全：</strong>输入长度、内容类型、速率限制、依赖锁定、模型文件校验和 API Key 管理。</div></div>
-<div class="project-check"><div class="mark">✓</div><div><strong>灰度发布：</strong>新旧模型并行影子测试，按版本分流，并保留快速回滚。</div></div>
-</div>
-<div class="warn"><strong>端口与拷贝问题：</strong>仓库多个模型示例重复使用 8003 端口，BERT API 还保留 FastText 导入。真实项目应使用统一服务框架，通过模型配置选择后端，而不是复制多份近似 API 文件。</div>
-
-<figure class="card" data-drawio-integrated="true" style="padding:12px;margin:16px 0">
-<img alt="Flask、FastAPI、Streamlit、Docker 部署路线" loading="lazy" src="assets/drawio/project-08.jpg" style="width:100%;border-radius:14px;border:1px solid var(--line);display:block;background:#fff"/>
-<figcaption style="font-size:13px;color:var(--muted);margin-top:8px;line-height:1.6"><strong>DrawIO 串讲补充：</strong>Flask、FastAPI、Streamlit、Docker 部署路线。模型部署不是只保存一个 pkl 文件，还包括请求校验、预处理一致性、接口响应、演示页面和容器化。</figcaption>
-</figure></section><section class="note-section" id="project-compression">
-<div class="module-head"><div><div class="section-kicker">项目实战 · 12</div><h2>模型压缩总览：体积、延迟、精度三者的权衡</h2><p class="lead">压缩的真正目标是满足目标硬件和业务 SLA，而不是只把参数变成零。</p></div><div class="badges"><span class="badge">模型压缩</span><span class="badge">SLA</span><span class="badge">权衡</span></div></div>
-<figure class="project-figure"><img alt="模型压缩方法概览" src="assets/project/compression_overview.jpg"/><figcaption>仓库把压缩路线概括为量化、蒸馏、剪枝和低秩分解。</figcaption></figure>
-<div class="project-compression-grid">
-<div class="project-compression-card"><h4>量化 Quantization</h4><p>降低权重/激活位宽，如 FP32 → INT8。常用于 CPU 或支持低精度算子的硬件。</p></div>
-<div class="project-compression-card"><h4>蒸馏 Distillation</h4><p>让小模型学习大模型的概率分布和标签，改变模型结构，通常能真正减少计算量。</p></div>
-<div class="project-compression-card"><h4>剪枝 Pruning</h4><p>删除低重要度权重、通道、注意力头或层。结构化剪枝更容易获得真实加速。</p></div>
-<div class="project-compression-card"><h4>低秩分解</h4><p>把大矩阵近似为两个小矩阵，减少参数和乘加；LoRA 也建立在低秩增量思想上。</p></div>
-</div>
-<table><thead><tr><th>方法</th><th>是否改变结构</th><th>主要收益</th><th>主要风险</th></tr></thead><tbody>
-<tr><td>动态量化</td><td>算子替换</td><td>CPU 体积和延迟</td><td>精度下降、硬件/算子支持差异</td></tr>
-<tr><td>知识蒸馏</td><td>是</td><td>参数、FLOPs、延迟均可下降</td><td>训练复杂、学生容量不足</td></tr>
-<tr><td>非结构化剪枝</td><td>形状通常不变</td><td>稀疏度</td><td>没有稀疏内核时不一定加速</td></tr>
-<tr><td>结构化剪枝</td><td>是</td><td>通道/头/层减少，易加速</td><td>精度恢复需微调</td></tr>
-</tbody></table>
-<div class="callout"><strong>压缩评测四件套：</strong>质量指标（Macro-F1 等）、序列化文件大小、真实硬件端到端延迟/吞吐、峰值内存。缺少任何一项都不能完整说明压缩效果。</div>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>模型压缩：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>通过量化、蒸馏、剪枝降低模型体积、延迟和算力需求。</td></tr>
-<tr><th>主要作用</th><td>让高精度模型更容易落地到 CPU、边缘设备或低成本服务器。</td></tr>
-<tr><th>解决问题</th><td>解决 BERT 等模型部署贵、慢、占内存的问题。</td></tr>
-<tr><th>缺点/注意</th><td>压缩可能损失精度，且实际加速取决于硬件和算子支持。</td></tr>
-</tbody>
-</table>
-</div>
-</section><section class="note-section" id="project-quant">
-<div class="module-head"><div><div class="section-kicker">项目实战 · 13</div><h2>动态量化：把 Linear 权重从 FP32 压到 INT8</h2><p class="lead">位宽理论比例很直观，但真实模型大小和加速取决于未量化层、打包格式与硬件。</p></div><div class="badges"><span class="badge">INT8</span><span class="badge">动态量化</span><span class="badge">交互计算</span></div></div>
-<figure class="project-figure"><img alt="量化前后对比" src="assets/project/quantization_compare.jpg"/><figcaption>量化用较低精度近似高精度权重，换取更小存储和更快整数运算。</figcaption></figure>
-<div class="lab"><div class="lab-header"><div><div class="lab-title">位宽与理论权重大小计算器</div><div class="lab-sub">以 390 MB 的纯 FP32 权重为假设；这只是理论比例，不包含未量化参数和序列化开销。</div></div></div>
-<div class="controls"><label>位宽：<input id="projectQuantBits" max="32" min="4" step="4" type="range" value="8"/></label><span id="projectQuantBitsVal">8-bit</span></div>
-<div class="project-quant-meter"><div id="projectQuantMeterFill"></div></div><div class="project-quant-labels"><span>更小</span><span>FP32 原始大小</span></div>
-<div class="result-panel"><div class="mini"><b id="projectQuantRatio">25%</b><span>理论权重占比</span></div><div class="mini"><b id="projectQuantEstimate">97.5 MB</b><span>理论权重大小</span></div><div class="mini"><b>Linear</b><span>动态量化主要对象</span></div><div class="mini"><b>CPU</b><span>仓库示例运行设备</span></div></div></div>
-<p>仓库记录的案例快照为：模型文件约 <strong>390 MB → 145 MB</strong>，测试 F1 约 <strong>89.26%</strong>，单条示例延迟约 <strong>140 ms → 26.02 ms</strong>。这些结果与硬件、线程、输入长度和计时方式密切相关，复现时必须重新测。</p>
-<div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>import io
-import torch
-from torch import nn
-
-model = BertClassifier().eval().cpu()
-model.load_state_dict(torch.load("bert_classifier.pt", map_location="cpu"))
-quantized = torch.ao.quantization.quantize_dynamic(
-    model,
-    {nn.Linear},
-    dtype=torch.qint8,
-)
-
-# 用序列化后的真实字节数比较，而不是只遍历 parameters()。
-buffer = io.BytesIO()
-torch.save(quantized.state_dict(), buffer)
-print(f"quantized state_dict: {len(buffer.getvalue()) / 1024**2:.2f} MB")</code></pre></div>
-<div class="warn"><strong>测量陷阱：</strong>量化模型的权重可能以 packed 形式保存，简单遍历 <code>model.parameters()</code> 不一定反映真实文件大小；应同时比较 <code>state_dict</code> 序列化字节、进程内存和端到端延迟。</div>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>动态量化：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>把 Linear 等层的权重从 FP32 转为 INT8，在推理时动态处理激活。</td></tr>
-<tr><th>主要作用</th><td>CPU 推理场景常用于压缩模型和降低延迟。</td></tr>
-<tr><th>解决问题</th><td>解决模型文件大、CPU 乘法计算慢的问题。</td></tr>
-<tr><th>缺点/注意</th><td>并非所有层都收益明显，GPU 上不一定更快。</td></tr>
-</tbody>
-</table>
-</div>
-</section><section class="note-section" id="project-distill">
-<div class="module-head"><div><div class="section-kicker">项目实战 · 14</div><h2>知识蒸馏：BERT 教师如何教会 BiLSTM 学生</h2><p class="lead">软标签不仅告诉学生“答案是什么”，还传递类别之间的相似关系。</p></div><div class="badges"><span class="badge">Teacher-Student</span><span class="badge">KL 散度</span><span class="badge">动态温度</span></div></div>
-<figure class="project-figure"><img alt="知识蒸馏方式" src="assets/project/distillation_methods.png"/><figcaption>蒸馏可以使用硬标签、软概率，或组合中间表示、注意力图等更丰富知识。</figcaption></figure>
-<div class="formula">L = α · T² · KL(softmax(z_teacher/T) || softmax(z_student/T)) + (1-α) · CE(z_student, y_true)</div>
-<div class="grid two">
-<div class="card"><h4>教师模型</h4><p>BERT，容量大、上下文能力强，先训练到较好质量并固定参数。</p></div>
-<div class="card"><h4>学生模型</h4><p>BiLSTM，参数和计算量更小，通过真实标签与教师软分布共同学习。</p></div>
-</div>
-<div class="lab"><div class="lab-header"><div><div class="lab-title">温度 T 对教师软标签的影响</div><div class="lab-sub">固定 logits=[4,2,0]。T 越大，分布越平滑，学生能看到更多“次优类别”信息。</div></div></div>
-<div class="controls"><label>温度：<input id="projectDistillTemp" max="60" min="5" type="range" value="20"/></label><span id="projectDistillTempVal">2.0</span></div>
-<div class="project-temp-bars"><div class="project-temp-row"><span>类别 A</span><div class="project-temp-track"><div class="project-temp-fill" id="projectTempFill0"></div></div><strong id="projectTempValue0"></strong></div><div class="project-temp-row"><span>类别 B</span><div class="project-temp-track"><div class="project-temp-fill" id="projectTempFill1"></div></div><strong id="projectTempValue1"></strong></div><div class="project-temp-row"><span>类别 C</span><div class="project-temp-track"><div class="project-temp-fill" id="projectTempFill2"></div></div><strong id="projectTempValue2"></strong></div></div></div>
-<div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>import torch.nn.functional as F
-
-def distillation_loss(student_logits, teacher_logits, labels, T=2.0, alpha=0.7):
-    hard_loss = F.cross_entropy(student_logits, labels)
-    student_log_probs = F.log_softmax(student_logits / T, dim=-1)
-    teacher_probs = F.softmax(teacher_logits / T, dim=-1)
-    soft_loss = F.kl_div(
-        student_log_probs,
-        teacher_probs,
-        reduction="batchmean",
-        log_target=False,
-    ) * (T ** 2)
-    return alpha * soft_loss + (1 - alpha) * hard_loss</code></pre></div>
-<p>仓库记录 BERT 约 390 MB、BiLSTM 约 104 MB；学生结果在不同段落出现 <strong>89.89%</strong> 和 <strong>91.25%</strong> 两种 Accuracy。正确复现必须固定相同数据切分、checkpoint、epoch 与评估脚本后再报告。</p>
-<div class="warn"><strong>关键代码错误：</strong>原软标签示例把教师的普通概率传给 <code>F.kl_div(..., log_target=True)</code>，而该参数表示 target 已经是 log 概率。这里已改为 <code>log_target=False</code>；硬损失也建议使用真实标签，而不是教师 argmax。</div>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>知识蒸馏：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>用教师模型的软标签指导学生模型学习。</td></tr>
-<tr><th>主要作用</th><td>把大模型知识迁移到小模型，兼顾精度和速度。</td></tr>
-<tr><th>解决问题</th><td>解决小模型训练信号不足、大模型部署成本高的问题。</td></tr>
-<tr><th>缺点/注意</th><td>需要训练教师模型和学生模型，蒸馏效果受温度、损失权重和数据质量影响。</td></tr>
-</tbody>
-</table>
-</div>
-</section><section class="note-section" id="project-prune">
-<div class="module-head"><div><div class="section-kicker">项目实战 · 15</div><h2>模型剪枝：30% 稀疏度不等于 30% 加速</h2><p class="lead">必须区分“权重变成零”“模型文件变小”和“真实硬件更快”三件事。</p></div><div class="badges"><span class="badge">Pruning</span><span class="badge">稀疏度</span><span class="badge">真实性能</span></div></div>
-<figure class="project-figure"><img alt="模型剪枝示意" src="assets/project/pruning_overview.jpg"/><figcaption>剪枝通过移除低重要度连接或结构降低冗余；结构化形式更容易被通用硬件利用。</figcaption></figure>
-<p>仓库示例对 BERT 12 层注意力中的 <code>query.weight</code> 做全局 L1 非结构化剪枝，比例为 30%。日志快照中稀疏度达到 0.30，Accuracy 约从 96% 降到 94%，F1 从 94.07% 降到 91.87%。</p>
-<div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>from torch.nn.utils import prune
-
-parameters = [
-    (model.bert.encoder.layer[i].attention.self.query, "weight")
-    for i in range(12)
-]
-prune.global_unstructured(
-    parameters,
-    pruning_method=prune.L1Unstructured,
-    amount=0.30,
-)
-for module, name in parameters:
-    prune.remove(module, name)
-
-# 仍需重新测：准确率、序列化大小、真实 CPU/GPU 延迟和吞吐。
-# 非结构化零值若没有稀疏内核，通常不会自动带来等比例加速。</code></pre></div>
-<table><thead><tr><th>剪枝类型</th><th>删除对象</th><th>真实加速难度</th></tr></thead><tbody>
-<tr><td>非结构化权重剪枝</td><td>单个权重</td><td>高；需要稀疏存储和专用内核</td></tr>
-<tr><td>通道/神经元剪枝</td><td>完整通道或隐藏单元</td><td>较低；矩阵维度真实缩小</td></tr>
-<tr><td>注意力头剪枝</td><td>完整 head</td><td>中；需要同步修改投影形状</td></tr>
-<tr><td>层剪枝</td><td>完整 Transformer 层</td><td>低；延迟通常直接下降，但质量风险较大</td></tr>
-</tbody></table>
-<div class="callout"><strong>正确流程：</strong>重要度评估 → 分阶段剪枝 → 微调恢复 → 导出结构化模型 → 在目标硬件测 latency/throughput。只打印“零权重比例”不能证明部署收益。</div>
-
-<div class="card" data-algo-deepen="true" style="border-left:4px solid var(--brand);background:#fcfdff">
-<h4>剪枝：核心解释、作用、解决问题与局限</h4>
-<table>
-<tbody>
-<tr><th style="width:120px">核心解释</th><td>删除或置零不重要的权重、通道或结构，让模型更稀疏。</td></tr>
-<tr><th>主要作用</th><td>减少模型参数和理论计算量。</td></tr>
-<tr><th>解决问题</th><td>解决模型冗余参数多的问题。</td></tr>
-<tr><th>缺点/注意</th><td>稀疏不等于实际加速，非结构化剪枝需要硬件/框架支持。</td></tr>
-</tbody>
-</table>
-</div>
-</section><section class="note-section" id="project-review">
-<div class="module-head"><div><div class="section-kicker">项目实战 · 16</div><h2>源码级审查：仓库中值得修正的 12 个问题</h2><p class="lead">学习项目不仅要会照着写，更要能发现可复现性、正确性和生产化风险。</p></div><div class="badges"><span class="badge">Code Review</span><span class="badge">工程风险</span><span class="badge">测试</span></div></div>
-<div class="project-risk-list"><div class="project-risk"><b>1. 静态站点而非源码仓库</b><span>TMFCode、数据和权重未包含，不能直接按文档路径运行。</span></div><div class="project-risk"><b>2. 硬编码绝对/Windows 路径</b><span>应使用 pathlib、环境变量和项目根目录解析。</span></div><div class="project-risk"><b>3. 训练 DataLoader 不打乱</b><span>BERT 训练应使用 shuffle=True 或随机采样器。</span></div><div class="project-risk"><b>4. Tokenizer 未显式截断</b><span>应设置 truncation=True、max_length，并分析截断率。</span></div><div class="project-risk"><b>5. FastText 方案命名冲突</b><span>char/jieba/word 文件名和部署模型版本不一致。</span></div><div class="project-risk"><b>6. 多个 API 端口冲突</b><span>FastText/BERT 示例重复使用 8003，且代码复制残留无关导入。</span></div><div class="project-risk"><b>7. LLM 输出解析脆弱</b><span>自由文本、空格、前缀、拒识都可能导致 name2id KeyError。</span></div><div class="project-risk"><b>8. LLM 召回率未真正计算</b><span>返回的是 recall_score 函数对象，需调用 recall_score(...).</span></div><div class="project-risk"><b>9. 蒸馏 KL 参数错误</b><span>概率 target 不应配合 log_target=True。</span></div><div class="project-risk"><b>10. 指标口径不一致</b><span>BERT/FastText/蒸馏页面存在文本与日志数字不一致。</span></div><div class="project-risk"><b>11. Pickle 反序列化风险</b><span>只加载可信模型，生产可考虑 safer format / 签名校验。</span></div><div class="project-risk"><b>12. 剪枝与量化收益测量不完整</b><span>必须测文件、内存、延迟、吞吐和质量，而非只算参数。</span></div></div>
-<h3>推荐的可维护目录</h3>
-<div class="project-folder"><h4>从讲义路径升级为统一工程结构</h4><pre><code>newscompass/
-├── configs/                 # YAML / 环境配置，不硬编码个人路径
-├── data/                    # raw / interim / processed / splits
-├── src/newscompass/
-│   ├── data/                # 读取、校验、切分、tokenize
-│   ├── features/            # TF-IDF / FastText format
-│   ├── models/              # rf / fasttext / bert / distill
-│   ├── evaluation/          # 统一指标、混淆矩阵、错误分析
-│   ├── serving/             # API schema、predictor、health
-│   └── compression/         # quantize / distill / prune
-├── tests/                   # 数据、预处理、模型、API 单元测试
-├── scripts/                 # train.py / evaluate.py / export.py
-├── artifacts/               # 版本化模型和报告，不直接提交大权重
-├── pyproject.toml
-└── README.md</code></pre></div>
-<h3>最低测试集</h3>
-<div class="project-checklist">
-<div class="project-check"><div class="mark">1</div><div>同一文本在训练预处理和线上预处理后得到完全相同的 token/特征。</div></div>
-<div class="project-check"><div class="mark">2</div><div>class.txt 的顺序与训练 checkpoint、API 输出映射一致。</div></div>
-<div class="project-check"><div class="mark">3</div><div>空文本、超长文本、乱码、未知类别、缺字段和非 JSON 请求均返回可控错误。</div></div>
-<div class="project-check"><div class="mark">4</div><div>固定随机种子后，小数据 smoke test 可以稳定训练、保存、加载和预测。</div></div>
-<div class="project-check"><div class="mark">5</div><div>模型升级前执行离线回归集、延迟基准和接口兼容测试。</div></div>
-</div>
-</section><section class="note-section" id="project-roadmap">
-<div class="module-head"><div><div class="section-kicker">项目实战 · 17</div><h2>复现与学习路线：从静态讲义还原一个可运行项目</h2><p class="lead">按阶段交付，每一步都有可验证产物，而不是一次性堆完所有模型。</p></div><div class="badges"><span class="badge">学习路线</span><span class="badge">复现计划</span><span class="badge">交付物</span></div></div>
-<div class="project-roadmap">
-<div class="card"><div class="week">1</div><h4>数据与基线</h4><p>重建 class.txt 和小样本；完成数据审计、稳定切分、字符 TF-IDF + LinearSVC；输出 Macro-F1 和混淆矩阵。</p></div>
-<div class="card"><div class="week">2</div><h4>FastText</h4><p>实现字符/词级格式；四组实验保持同一切分；记录模型大小、P95 延迟和错误类别。</p></div>
-<div class="card"><div class="week">3</div><h4>BERT</h4><p>实现 Dataset/DataLoader、微调、最佳 checkpoint、预测器和 API；补充梯度裁剪与 scheduler。</p></div>
-<div class="card"><div class="week">4</div><h4>压缩与上线</h4><p>先量化，再蒸馏，最后尝试结构化剪枝；在目标 CPU 上做统一 benchmark 和灰度方案。</p></div>
-</div>
-<h3>建议验收产物</h3>
-<table><thead><tr><th>阶段</th><th>必须提交</th><th>通过条件</th></tr></thead><tbody>
-<tr><td>数据</td><td>数据卡、标签规范、审计报告、切分清单</td><td>无泄漏、无越界、分布可解释</td></tr>
-<tr><td>训练</td><td>配置、日志、checkpoint、指标 JSON、错误样本</td><td>可重复运行，结果波动在合理范围</td></tr>
-<tr><td>部署</td><td>API schema、容器/启动脚本、健康检查、benchmark</td><td>满足延迟、吞吐、错误率和内存 SLA</td></tr>
-<tr><td>压缩</td><td>压缩前后同口径报告</td><td>质量损失在预算内且真实硬件收益明确</td></tr>
-</tbody></table>
-<div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>cd examples
-python 55_news_dataset_audit.py
-python 56_news_tfidf_baseline.py
-python 57_fasttext_data_format.py
-python 61_llm_classifier_guardrails.py
-python 63_distillation_loss_correct.py
-python 64_pruning_sparsity_demo.py
-python 65_project_model_benchmark.py
-
-# 需要额外依赖的示例
-pip install -r ../requirements.txt
-python 58_bert_batch_pipeline.py
-python 62_dynamic_quantization_demo.py</code></pre></div>
-<div class="callout"><strong>最终学习目标：</strong>你不仅能说出 TF-IDF、FastText、BERT、LLM、量化、蒸馏和剪枝是什么，还能用同一数据、同一指标和同一硬件证明“为什么这个业务应该选这个方案”。</div>
-
-<figure class="card" data-drawio-integrated="true" style="padding:12px;margin:16px 0">
-<img alt="Conda、PyCharm、VSCode 与依赖安装路线" loading="lazy" src="assets/drawio/project-03.jpg" style="width:100%;border-radius:14px;border:1px solid var(--line);display:block;background:#fff"/>
-<figcaption style="font-size:13px;color:var(--muted);margin-top:8px;line-height:1.6"><strong>DrawIO 串讲补充：</strong>Conda、PyCharm、VSCode 与依赖安装路线。它对应项目复现的第一步：先把 Python 环境、requirements、IDE 与运行路径固定，再进入模型训练。</figcaption>
-</figure></section>
-
 <section class="note-section" id="study"><div class="module-head"><div><div class="section-kicker">课程导航 · 学习与运行</div><h2>学习路线、复习问题与示例运行</h2><p class="lead">页面现已覆盖传统机器学习、深度神经网络训练与正则化、CNN、Transformer 与大模型；动态示例可直接用于课堂演示。</p></div><div class="badges"><span class="badge">运行指南</span></div></div><div class="grid three"><div class="card"><h4>第一遍：搭框架</h4><p>先读机器学习概述，理解样本、特征、标签、损失、指标这些通用概念。</p></div><div class="card"><h4>第二遍：看动态图</h4><p>重点演示 KNN、梯度下降、分类阈值、自注意力，先理解算法直觉再写代码。</p></div><div class="card"><h4>第三遍：跑示例</h4><p>结合 <code>examples/</code> 下脚本运行，把页面中的概念变成实际输出。</p></div></div><div class="code-wrap"><button class="copy" type="button">复制</button><pre><code>cd examples
 python 08_knn_step_by_step.py
 python 16_attention_shapes_numpy.py
@@ -2404,6 +1294,6 @@ python 42_phone_price_dnn.py
 
 pip install numpy scikit-learn torch torchvision xgboost
 python run_all.py</code></pre></div><table><thead><tr><th>复习问题</th><th>能答出来才算掌握</th></tr></thead><tbody><tr><td>KNN 为什么需要归一化？</td><td>因为距离会被量纲大的特征主导，导致某些特征失去作用。</td></tr><tr><td>为什么梯度下降沿负梯度方向走？</td><td>因为梯度指向函数上升最快方向，取反就是下降最快方向。</td></tr><tr><td>precision 与 recall 有什么区别？</td><td>前者关心“判为正的准不准”，后者关心“真正为正的找全没有”。</td></tr><tr><td>Attention 为什么除以 √dₖ？</td><td>为了避免点积过大导致 softmax 饱和，训练不稳定。</td></tr><tr><td>BERT 与 GPT 的核心差异是什么？</td><td>结构不同、训练目标不同，因此一个偏理解，一个偏生成。</td></tr></tbody></table></section>
-<div class="footer">依据课程课件、NewsCompass 投满分项目仓库与 DrawIO 串讲图整理。DrawIO 内容已按主题补充到对应算法和项目章节，页面完全离线，配套代码位于 examples/。</div>
+<div class="footer">依据上传课件整理：机器学习、决策树、集成学习、聚类、深度学习、PyTorch、CNN、文本预处理、RNN 与 Transformer。页面完全离线，配套代码位于 examples/。</div>
 </main>
-<script src="assets/core.js"></script><script src="assets/extended.js"></script><script src="assets/neural.js"></script><script src="assets/nlp.js"></script><script src="assets/project.js"></script></body></html>
+<script src="assets/core.js"></script><script src="assets/extended.js"></script><script src="assets/neural.js"></script><script src="assets/nlp.js"></script></body></html>
