@@ -29,3 +29,13 @@
 - `assets/drawio/`：提取出的 16 张串讲图和原始 `.drawio` 文件。
 
 本次更新：DrawIO 串讲内容不再单独成章，已分别补充到投满分项目、TF-IDF、随机森林、FastText、部署、PyTorch、CNN、RNN、BERT 等对应章节。
+
+
+## 本次补充：深度学习细节强化
+- 激活函数：Sigmoid、Tanh、ReLU、LeakyReLU、GELU、Softmax 的作用、解决问题与局限。
+- 初始化：全 0、随机、Xavier、Kaiming、Orthogonal 的适用场景。
+- 损失函数：MSE、MAE、BCE、BCEWithLogits、CrossEntropy、类别不平衡加权。
+- 优化器：SGD、Momentum、Nesterov、AdaGrad、RMSProp、Adam、AdamW 的核心解释、公式、优缺点和 PyTorch 写法。
+- 学习率：固定 LR、StepLR、MultiStepLR、ExponentialLR、Cosine、ReduceLROnPlateau、Warmup 的选择建议。
+- 正则化：L1/L2、weight_decay、Dropout、BatchNorm、LayerNorm、EarlyStopping、数据增强。
+- 额外加入 CNN、RNN、Transformer 小点细化表格。
